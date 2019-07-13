@@ -1,0 +1,12 @@
+{
+    "short_name": "Joshua Dowding",
+    "name": "Joshua Dowding",
+    "icons": [{
+        "src": "",
+        "type": "image/png",
+        "sizes": "64x64"
+    }],
+    "background_color": "#1E90FF",
+    "theme_color": "#1E90FF",
+    "start_url": "/"
+}

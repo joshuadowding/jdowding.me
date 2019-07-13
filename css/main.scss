@@ -1,0 +1,264 @@
+---
+---
+
+$colour-text-highlight: #0aa3ff;
+
+@mixin transition-colour-text-highlight($duration) {
+  -webkit-transition: color $duration ease-in-out;
+  -ms-transition: color $duration ease-in-out;
+  transition: color $duration ease-in-out;
+}
+
+:root {
+  --colour-background: white;
+  --colour-text: black;
+}
+
+:root.theme-dark {
+  --colour-background: black;
+  --colour-text: white;
+}
+
+html {
+  font-size: 62.5%;
+  max-width: 1920px;
+
+  body {
+    background-color: var(--colour-background);
+
+    h1 {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--colour-text);
+
+      &.title {
+        &.title-name {
+          font-size: 2.8rem;
+          font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+      }
+    }
+
+    h2 {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--colour-text);
+    }
+
+    h3 {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--colour-text);
+    }
+
+    h4 {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: var(--colour-text);
+    }
+
+    h5 {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--colour-text);
+    }
+
+    h6 {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--colour-text);
+    }
+
+    div,
+    span,
+    input,
+    textarea {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--colour-text);
+    }
+
+    p {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--colour-text);
+    }
+
+    a {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--colour-text);
+      //@include transition-colour-text-highlight(0.1s);
+
+      &:hover {
+        color: $colour-text-highlight;
+        text-decoration: none;
+        //@include transition-colour-text-highlight(0.1s);
+      }
+
+      &.link-icon {
+        position: relative;
+        display: inline-block;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    i {
+      font-size: 2.8rem;
+      font-weight: 300;
+      color: var(--colour-text);
+      //@include transition-colour-text-highlight(0.1s);
+
+      &:hover {
+        color: $colour-text-highlight;
+        //@include transition-colour-text-highlight(0.1s);
+      }
+    }
+
+    ul {
+      li {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: var(--colour-text);
+      }
+
+      &.nav {
+        li {
+          a {
+            font-family: "Poppins", "Helvetica Neue", Helvetica, Arial,
+              sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      height: 92px;
+      overflow: hidden;
+
+      .header-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 92px;
+        width: 100%;
+
+        .header-title {
+          .title {
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .header-icons {
+          display: flex;
+          margin: 0 0 0 16px;
+
+          .link-icon {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            color: var(--colour-text);
+            margin: 0 8px 0 0;
+            height: 32px;
+            width: 32px;
+            //@include transition-colour-text-highlight(0.1s);
+
+            &:hover {
+              color: $colour-text-highlight;
+              //@include transition-colour-text-highlight(0.1s);
+            }
+
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+
+        .header-nav {
+          display: flex;
+          margin: 0 0 0 16px;
+
+          .nav {
+            list-style: none;
+
+            .nav-item {
+              margin: 0 8px 0 0;
+
+              &:last-child {
+                margin: 0;
+              }
+            }
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          .header-nav {
+            display: none;
+          }
+        }
+
+        .header-menu {
+          display: flex;
+          margin-left: auto;
+
+          .link-icon {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            color: var(--colour-text);
+            margin: 0 8px 0 0;
+            height: 32px;
+            width: 32px;
+            //@include transition-colour-text-highlight(0.1s);
+
+            &:hover {
+              color: $colour-text-highlight;
+              //@include transition-colour-text-highlight(0.1s);
+            }
+
+            &:last-child {
+              margin: 0;
+            }
+
+            &#menu-toggle {
+              display: none;
+            }
+          }
+
+          @media screen and (max-width: 768px) {
+            .link-icon {
+              &#menu-toggle {
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
