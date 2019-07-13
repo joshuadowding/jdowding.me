@@ -11,6 +11,11 @@ layout: default
         <article class="post">
           <h3>{{ post.title }}</h3>
           <p>{{ post.date | date: "%B %-d, %Y" }}</p>
+          <div class="post-tags">
+            {% for tags in post.tags %}
+            <p>{{ tags }}</p>
+            {% endfor %}
+          </div>
           <div class="entry">
             {{ post.excerpt | strip_html | truncatewords:128 }}
           </div>

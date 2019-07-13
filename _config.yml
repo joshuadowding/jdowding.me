@@ -8,6 +8,9 @@ name: Joshua Dowding
 title: Joshua Dowding
 description: Joshua Dowding's personal website, portfolio and blog.
 
+author:
+  twitter: Mordaval
+
 url: https://joshdowding.github.io
 baseurl: ""
 
@@ -31,6 +34,7 @@ plugins:
   - jekyll-sass-converter
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
 
 exclude:
   - Rakefile
