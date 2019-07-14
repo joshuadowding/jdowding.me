@@ -11,12 +11,18 @@ $colour-text-highlight: #0aa3ff;
 
 :root {
   --colour-background: white;
+  --colour-background-invert: black;
+  --colour-button-disabled: grey;
   --colour-text: black;
+  --colour-text-invert: white;
 }
 
 :root.theme-dark {
   --colour-background: black;
+  --colour-background-invert: white;
+  --colour-button-disabled: grey;
   --colour-text: white;
+  --colour-text-invert: black;
 }
 
 html {
@@ -85,6 +91,31 @@ html {
       color: var(--colour-text);
     }
 
+    span {
+      &.button {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        color: var(--colour-text-invert);
+        background-color: var(--colour-background-invert);
+        padding: 4px 8px;
+
+        &.button-disabled {
+          background-color: var(--colour-button-disabled);
+          cursor: default;
+
+          &:hover {
+            background-color: var(--colour-button-disabled);
+          }
+        }
+
+        &:hover {
+          background-color: $colour-text-highlight;
+          //@include transition-colour-text-highlight(0.1s);
+        }
+      }
+    }
+
     p {
       font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
@@ -111,6 +142,29 @@ html {
 
         &:hover {
           text-decoration: none;
+        }
+      }
+
+      &.button {
+        position: relative;
+        display: inline-block;
+        font-weight: 500;
+        color: var(--colour-text-invert);
+        background-color: var(--colour-background-invert);
+        padding: 4px 8px;
+
+        &.button-disabled {
+          background-color: var(--colour-button-disabled);
+          cursor: default;
+
+          &:hover {
+            background-color: var(--colour-button-disabled);
+          }
+        }
+
+        &:hover {
+          background-color: $colour-text-highlight;
+          //@include transition-colour-text-highlight(0.1s);
         }
       }
     }
@@ -256,6 +310,78 @@ html {
                 display: flex;
               }
             }
+          }
+        }
+      }
+    }
+
+    footer {
+      height: 92px;
+      margin: 24px 0 0 0;
+
+      .footer-inner {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .footer-title {
+          .title {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+
+    .body-content {
+      .posts {
+        .post {
+          border-left: 5px solid var(--colour-background-invert);
+          padding: 16px 0 16px 24px;
+          margin: 24px 0 24px 0;
+
+          &:first-child {
+            margin: 0 0 24px 0;
+          }
+
+          &:last-child {
+            margin: 24px 0 0 0;
+          }
+
+          .post-header {
+            .post-title {
+              margin: 0;
+            }
+
+            .post-date {
+              margin: 0;
+            }
+
+            .post-tags {
+              .tag {
+                margin: 0;
+              }
+            }
+
+            .post-catagories {
+              .category {
+                margin: 0;
+              }
+            }
+          }
+
+          .post-body {
+            .post-excerpt {
+              margin: 8px 0;
+            }
+          }
+        }
+
+        .pagination {
+          .page_number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 8px;
           }
         }
       }

@@ -12,7 +12,12 @@ layout: default
         </div>
         <div class="post-tags">
           {% for tags in page.tags %}
-          <p>{{ tags }}</p>
+            <p>{{ tags }}</p>
+          {% endfor %}
+        </div>
+        <div class="post-catagories">
+          {% for category in page.categories %}
+            <p>{{ category }}</p>
           {% endfor %}
         </div>
         <div class="entry">
