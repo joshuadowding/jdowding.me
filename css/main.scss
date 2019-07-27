@@ -1,7 +1,9 @@
 ---
 ---
 
-$colour-text-highlight: #0aa3ff;
+$colour-text-white: #FEFCFF; // 'Milk White'
+$colour-text-black: #0C090A; // 'Night Black'
+$colour-text-highlight: #4EE2EC; // 'Deep Sky Blue'
 
 @mixin transition-colour-text-highlight($duration) {
   -webkit-transition: color $duration ease-in-out;
@@ -10,19 +12,19 @@ $colour-text-highlight: #0aa3ff;
 }
 
 :root {
-  --colour-background: white;
-  --colour-background-invert: black;
+  --colour-background: #FEFCFF;
+  --colour-background-invert: #0C090A;
   --colour-button-disabled: grey;
-  --colour-text: black;
-  --colour-text-invert: white;
+  --colour-text: #0C090A;
+  --colour-text-invert: #FEFCFF;
 }
 
 :root.theme-dark {
-  --colour-background: black;
-  --colour-background-invert: white;
+  --colour-background: #0C090A;
+  --colour-background-invert: #FEFCFF;
   --colour-button-disabled: grey;
-  --colour-text: white;
-  --colour-text-invert: black;
+  --colour-text: #FEFCFF;
+  --colour-text-invert: #0C090A;
 }
 
 html {
@@ -96,9 +98,9 @@ html {
         position: relative;
         display: inline-block;
         font-weight: 500;
-        color: var(--colour-text-invert);
-        background-color: var(--colour-background-invert);
+        color: var(--colour-text);
         padding: 4px 8px;
+        border: 2px solid var(--colour-background-invert);
 
         &.button-disabled {
           background-color: var(--colour-button-disabled);
@@ -149,9 +151,9 @@ html {
         position: relative;
         display: inline-block;
         font-weight: 500;
-        color: var(--colour-text-invert);
-        background-color: var(--colour-background-invert);
+        color: var(--colour-text);
         padding: 4px 8px;
+        border: 2px solid var(--colour-background-invert);
 
         &.button-disabled {
           background-color: var(--colour-button-disabled);
@@ -192,8 +194,7 @@ html {
       &.nav {
         li {
           a {
-            font-family: "Poppins", "Helvetica Neue", Helvetica, Arial,
-              sans-serif;
+            font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-size: 1.8rem;
             font-weight: 700;
 
@@ -275,9 +276,20 @@ html {
           }
         }
 
+        .header-separator {
+          width: auto;
+          flex-grow: 1;
+          margin: 0 0 0 16px;
+
+          .separator {
+            height: 2px;
+            background-color: var(--colour-text);
+          }
+        }
+
         .header-menu {
           display: flex;
-          margin-left: auto;
+          margin: 0 0 0 16px;
 
           .link-icon {
             display: flex;
@@ -325,8 +337,46 @@ html {
         height: 100%;
 
         .footer-title {
-          .title {
-            font-size: 1.8rem;
+          .footer-copyright {
+            font-size: 1.4rem;
+            margin: 0;
+          }
+        }
+
+        .footer-separator {
+          width: auto;
+          flex-grow: 1;
+          margin: 0 0 0 16px;
+
+          .separator {
+            height: 2px;
+            background-color: var(--colour-text);
+          }
+        }
+
+        .footer-menu {
+          display: flex;
+          margin: 0 0 0 16px;
+
+          .link-icon {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;
+            color: var(--colour-text);
+            margin: 0 8px 0 0;
+            height: 32px;
+            width: 32px;
+            //@include transition-colour-text-highlight(0.1s);
+
+            &:hover {
+              color: $colour-text-highlight;
+              //@include transition-colour-text-highlight(0.1s);
+            }
+
+            &:last-child {
+              margin: 0;
+            }
           }
         }
       }
@@ -335,7 +385,7 @@ html {
     .body-content {
       .posts {
         .post {
-          border-left: 5px solid var(--colour-background-invert);
+          border-left: 2px solid var(--colour-background-invert);
           padding: 16px 0 16px 24px;
           margin: 24px 0 24px 0;
 
