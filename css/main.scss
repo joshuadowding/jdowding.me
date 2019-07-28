@@ -30,8 +30,10 @@ $colour-text-highlight: #4EE2EC; // 'Deep Sky Blue'
 html {
   font-size: 62.5%;
   max-width: 1920px;
+  min-width: 320px;
 
   body {
+    min-width: 320px;
     background-color: var(--colour-background);
 
     h1 {
@@ -84,8 +86,8 @@ html {
     }
 
     div,
-    span,
     input,
+    span,
     textarea {
       font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
@@ -131,7 +133,6 @@ html {
       font-weight: 300;
       color: var(--colour-text);
       //@include transition-colour-text-highlight(0.1s);
-
       &:hover {
         color: $colour-text-highlight;
         text-decoration: none;
@@ -176,7 +177,6 @@ html {
       font-weight: 300;
       color: var(--colour-text);
       //@include transition-colour-text-highlight(0.1s);
-
       &:hover {
         color: $colour-text-highlight;
         //@include transition-colour-text-highlight(0.1s);
@@ -241,7 +241,6 @@ html {
             height: 32px;
             width: 32px;
             //@include transition-colour-text-highlight(0.1s);
-
             &:hover {
               color: $colour-text-highlight;
               //@include transition-colour-text-highlight(0.1s);
@@ -250,6 +249,12 @@ html {
             &:last-child {
               margin: 0;
             }
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          .header-icons {
+            display: none;
           }
         }
 
@@ -288,7 +293,7 @@ html {
         }
 
         .header-menu {
-          display: flex;
+          display: none;
           margin: 0 0 0 16px;
 
           .link-icon {
@@ -315,8 +320,12 @@ html {
               display: none;
             }
           }
+        }
 
-          @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
+          .header-menu {
+            display: flex;
+
             .link-icon {
               &#menu-toggle {
                 display: flex;
@@ -329,7 +338,7 @@ html {
 
     footer {
       height: 92px;
-      margin: 24px 0 0 0;
+      margin: 24px 0 0;
 
       .footer-inner {
         display: flex;
@@ -368,7 +377,6 @@ html {
             height: 32px;
             width: 32px;
             //@include transition-colour-text-highlight(0.1s);
-
             &:hover {
               color: $colour-text-highlight;
               //@include transition-colour-text-highlight(0.1s);
@@ -387,14 +395,14 @@ html {
         .post {
           border-left: 2px solid var(--colour-background-invert);
           padding: 16px 0 16px 24px;
-          margin: 24px 0 24px 0;
+          margin: 24px 0;
 
           &:first-child {
-            margin: 0 0 24px 0;
+            margin: 0 0 24px;
           }
 
           &:last-child {
-            margin: 24px 0 0 0;
+            margin: 24px 0 0;
           }
 
           .post-header {
