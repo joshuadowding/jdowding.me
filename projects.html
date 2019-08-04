@@ -7,7 +7,20 @@ permalink: /projects/
 <div class="container">
   <div class="row">
     <div class="col">
-
+      <div class="posts">
+        {% for post in site.categories.portfolio reversed %}
+          <article class="post portfolio">
+            <div class="post-image">
+              <img src="{{ post.image }}" />
+            </div>
+            <div class="post-body">
+              <h3 class="post-title">{{ post.title }}</h3>
+              <h6 class="post-title">{{ post.subtitle }}</h6>
+              <p>{{ post.content }}</p>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>

@@ -19,10 +19,14 @@ $(document).ready(function () {
 
   $("#menu-toggle").click(function () {
     if ($("#menu-toggle #close").is(":hidden")) {
+      document.getElementById("mySidenav").style.width = "256px";
+
       $("#menu-toggle #close").show();
       $("#menu-toggle #open").hide();
     }
     else {
+      document.getElementById("mySidenav").style.width = "0";
+
       $("#menu-toggle #close").hide();
       $("#menu-toggle #open").show();
     }

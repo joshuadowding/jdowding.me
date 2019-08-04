@@ -32,14 +32,30 @@
   <script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
 
   <script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-132821024-2"></script>
-  <script type="text/javascript">window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-132821024-2');</script>
+  <script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-132821024-2');
+  </script>
 </head>
 
 <body>
   {% include header.html %}
 
-  <div class="body-content">
+  <div class="body-content" id="main">
     {{ content }}
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
   </div>
 
   {% include footer.html %}
