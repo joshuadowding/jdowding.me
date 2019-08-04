@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("#theme-toggle #dark").hide();
-  $("#menu-toggle #close").hide();
+  $(".menu-toggle #close").hide();
 
   $("#theme-toggle").click(function () {
     if ($("#theme-toggle #dark").is(":hidden")) {
