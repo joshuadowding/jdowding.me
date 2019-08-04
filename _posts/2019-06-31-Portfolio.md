@@ -1,14 +1,14 @@
 ---
 layout: post
-title: ASOS Integration Utility
-subtitle: Esperus Systems
+title: Kaleidoscope Web Portals
+subtitle: MSX International
 image: /img/portfolio/bombjour-1.jpg
 categories: portfolio
 hidden: true
 tags:
- - Desktop Application
- - Windows Forms
- - Visual Basic .NET
+ - Web Application
+ - JavaServer Pages
+ - Java EE
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).

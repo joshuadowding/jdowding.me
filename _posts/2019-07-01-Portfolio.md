@@ -7,7 +7,7 @@ categories: portfolio
 hidden: true
 tags:
  - Web Application
- - JavaScript
+ - JavaServer Pages
  - Java EE
 ---
 
