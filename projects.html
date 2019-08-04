@@ -8,15 +8,22 @@ permalink: /projects/
   <div class="row">
     <div class="col">
       <div class="posts">
-        {% for post in site.categories.portfolio reversed %}
+        {% for post in site.categories.portfolio %}
           <article class="post portfolio">
             <div class="post-image">
               <img src="{{ post.image }}" />
             </div>
             <div class="post-body">
               <h3 class="post-title">{{ post.title }}</h3>
-              <h6 class="post-title">{{ post.subtitle }}</h6>
-              <p>{{ post.content }}</p>
+              <h6 class="post-subtitle">{{ post.subtitle }}</h6>
+
+              <div class="post-tags">
+                {% for tag in post.tags %}
+                  <p class="tag"><span class="badge badge-secondary">{{ tag }}</span></p>
+                {% endfor %}
+              </div>
+
+              <p class="post-content">{{ post.content }}</p>
             </div>
           </article>
         {% endfor %}

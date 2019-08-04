@@ -50,12 +50,18 @@
     {{ content }}
   </div>
 
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+  <div class="sidenav">
+    <div class="sidenav-header">
+      <a href="javascript:void(0);" class="menu-toggle" id="close">
+        <i class="fas fa-times" id="close"></i>
+      </a>
+    </div>
+    <a href="{{ site.baseurl }}/">
+      Blog
+    </a>
+    <a href="{{ site.baseurl }}/projects">
+      Projects
+    </a>
   </div>
 
   {% include footer.html %}

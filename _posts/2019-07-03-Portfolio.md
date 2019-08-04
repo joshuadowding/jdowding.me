@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Esperus Website
+title: Internal Price Changing Utility
 subtitle: Esperus Systems
 image: /img/portfolio/bombjour-1.jpg
 categories: portfolio
 hidden: true
 tags:
- - Web Application
- - ASP.NET MVC
- - Visual Basic .NET
+ - Desktop Application
+ - Windows Forms
+ - C# .NET
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).

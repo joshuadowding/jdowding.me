@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Esperus Website
+title: ASOS Integration Utility
 subtitle: Esperus Systems
 image: /img/portfolio/bombjour-1.jpg
 categories: portfolio
 hidden: true
 tags:
- - Web Application
- - ASP.NET MVC
+ - Desktop Application
+ - Windows Forms
  - Visual Basic .NET
 ---
 

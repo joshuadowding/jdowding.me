@@ -1,8 +1,14 @@
 ---
 layout: post
-title: Esperus Website
-tags: test
+title: Internal Call Logging System
+subtitle: Esperus Systems
+image: /img/portfolio/bombjour-1.jpg
 categories: portfolio
+hidden: true
+tags:
+ - Desktop Application
+ - Windows Forms
+ - C# .NET
 ---
 
 Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
