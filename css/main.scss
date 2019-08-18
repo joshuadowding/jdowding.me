@@ -132,6 +132,7 @@ html {
       font-size: 1.4rem;
       font-weight: 300;
       color: var(--colour-text);
+
       //@include transition-colour-text-highlight(0.1s);
       &:hover {
         color: $colour-text-highlight;
@@ -177,6 +178,7 @@ html {
       font-weight: 300;
       color: var(--colour-text);
       //@include transition-colour-text-highlight(0.1s);
+
       &:hover {
         color: $colour-text-highlight;
         //@include transition-colour-text-highlight(0.1s);
@@ -240,6 +242,7 @@ html {
             margin: 0 8px 0 0;
             height: 32px;
             width: 32px;
+
             //@include transition-colour-text-highlight(0.1s);
             &:hover {
               color: $colour-text-highlight;
@@ -376,6 +379,7 @@ html {
             margin: 0 8px 0 0;
             height: 32px;
             width: 32px;
+
             //@include transition-colour-text-highlight(0.1s);
             &:hover {
               color: $colour-text-highlight;
@@ -397,62 +401,11 @@ html {
 
       .posts {
         .post {
+          display: flex;
+          flex-direction: row;
           border-left: 2px solid var(--colour-background-invert);
           padding: 16px 0 16px 24px;
           margin: 24px 0;
-
-          &.portfolio {
-            display: flex;
-            flex-direction: row;
-
-            .post-image {
-              width: 50%;
-
-              img {
-                width: 100%;
-                padding-right: 24px;
-
-                &[src=""] {
-                   display: none;
-                   margin: 0;
-                }
-              }
-            }
-
-            .post-body {
-              width: 50%;
-
-              .post-title {
-                margin: 0 0 4px 0;
-              }
-
-              .post-subtitle {
-                margin: 0 0 8px 0;
-              }
-
-              .post-tags {
-                display: flex;
-                margin: 0 0 8px 0;
-
-                .tag {
-                  font-size: 1.2rem;
-                  margin: 0 8px 0 0;
-
-                  .badge {
-                    font-size: 1.2rem;
-                    margin: 0;
-                    background-color: var(--colour-background-invert);
-                    color: var(--colour-text-invert);
-                    border-radius: 0;
-                  }
-                }
-              }
-
-              .post-content {
-                margin: 0;
-              }
-            }
-          }
 
           &:first-child {
             margin: 0 0 24px;
@@ -462,10 +415,28 @@ html {
             margin: 24px 0 0;
           }
 
-          .post-header {
-            margin: 0 0 8px 0;
+          .post-image {
+            width: 50%;
+
+            img {
+              width: 100%;
+              padding-right: 24px;
+
+              &[src=""] {
+                display: none;
+                margin: 0;
+              }
+            }
+          }
+
+          .post-body {
+            width: 50%;
 
             .post-title {
+              margin: 0 0 4px 0;
+            }
+
+            .post-subtitle {
               margin: 0 0 8px 0;
             }
 
@@ -474,25 +445,49 @@ html {
             }
 
             .post-tags {
-              margin: 0 0 4px 0;
+              display: flex;
+              margin: 0 0 8px 0;
 
               .tag {
-                margin: 0;
+                font-size: 1.2rem;
+                margin: 0 8px 0 0;
+
+                .badge {
+                  font-size: 1.2rem;
+                  margin: 0;
+                  background-color: var(--colour-background-invert);
+                  color: var(--colour-text-invert);
+                  border-radius: 0;
+                  padding: 4px 8px;
+                }
               }
             }
 
             .post-catagories {
-              margin: 0 0 4px 0;
+              display: flex;
+              margin: 0 0 8px 0;
 
               .category {
-                margin: 0;
+                font-size: 1.2rem;
+                margin: 0 8px 0 0;
+
+                .badge {
+                  font-size: 1.2rem;
+                  margin: 0;
+                  background-color: var(--colour-background-invert);
+                  color: var(--colour-text-invert);
+                  border-radius: 0;
+                  padding: 4px 8px;
+                }
               }
             }
-          }
 
-          .post-body {
             .post-excerpt {
               margin: 8px 0;
+            }
+
+            .post-content {
+              margin: 0;
             }
           }
         }
@@ -576,8 +571,13 @@ html {
     }
 
     @media screen and (max-height: 450px) {
-      .sidenav {padding-top: 15px;}
-      .sidenav a {font-size: 18px;}
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
     }
   }
 }

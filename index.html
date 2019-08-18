@@ -8,40 +8,43 @@ layout: default
     <div class="col">
       <div class="posts">
         {% for post in paginator.posts limit:5 %}
-          <article class="post">
-            <div class="post-header">
-              <h3 class="post-title">{{ post.title }}</h3>
-              <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <article class="post">
+          <div class="post-image">
+            <img src="{{ post.image }}" />
+          </div>
+          <div class="post-body">
+            <h3 class="post-title">{{ post.title }}</h3>
+            <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
 
-              <div class="post-tags">
-                {% for tags in post.tags %}
-                  <p class="tag">{{ tags }}</p>
-                {% endfor %}
-              </div>
-              <div class="post-catagories">
-                {% for category in post.categories %}
-                  <p class="category">{{ category }}</p>
-                {% endfor %}
-              </div>
+            <div class="post-tags">
+              {% for tag in post.tags %}
+              <p class="tag"><span class="badge badge-secondary">{{ tag }}</span></p>
+              {% endfor %}
             </div>
-            <div class="post-body">
-              <div class="post-excerpt">
-                {{ post.excerpt | strip_html | truncatewords:128 }}
-              </div>
-              <a class="button read-more" href="{{ site.baseurl }}{{ post.url }}">
-                Read More
-              </a>
+
+            <div class="post-catagories">
+              {% for category in post.categories %}
+              <p class="category"><span class="badge badge-secondary">{{ category }}</span></p>
+              {% endfor %}
             </div>
-          </article>
+
+            <div class="post-excerpt">
+              {{ post.excerpt | strip_html | truncatewords:128 }}
+            </div>
+            <a class="button read-more" href="{{ site.baseurl }}{{ post.url }}">
+              Read More
+            </a>
+          </div>
+        </article>
         {% endfor %}
 
         <div class="pagination">
           {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="button previous">
-              Previous
-            </a>
+          <a href="{{ paginator.previous_page_path }}" class="button previous">
+            Previous
+          </a>
           {% else %}
-            <span class="button button-disabled previous">Previous</span>
+          <span class="button button-disabled previous">Previous</span>
           {% endif %}
 
           <span class="page_number">
@@ -49,9 +52,9 @@ layout: default
           </span>
 
           {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="button next">Next</a>
+          <a href="{{ paginator.next_page_path }}" class="button next">Next</a>
           {% else %}
-            <span class="button button-disabled next">Next</span>
+          <span class="button button-disabled next">Next</span>
           {% endif %}
         </div>
       </div>
