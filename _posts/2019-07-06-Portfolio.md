@@ -11,6 +11,4 @@ tags:
  - Visual Basic .NET
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
-
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque viverra mauris in aliquam. Vitae tempus quam pellentesque nec nam aliquam. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Integer feugiat scelerisque varius morbi enim nunc faucibus. Tempus quam pellentesque nec nam aliquam sem et tortor. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam. Senectus et netus et malesuada fames ac turpis egestas. Ut aliquam purus sit amet luctus venenatis. Tincidunt ornare massa eget egestas purus viverra accumsan. In hac habitasse platea dictumst quisque sagittis purus sit. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ut etiam sit amet nisl purus in mollis. In est ante in nibh mauris cursus mattis.

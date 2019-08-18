@@ -14,7 +14,7 @@ layout: default
           </div>
           <div class="post-body">
             <h3 class="post-title">{{ post.title }}</h3>
-            <p class="post-date">{{ post.date | date: "%B %-d, %Y" }}</p>
+            <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h6>
 
             <div class="post-tags">
               {% for tag in post.tags %}
@@ -29,10 +29,10 @@ layout: default
             </div>
 
             <div class="post-excerpt">
-              {{ post.excerpt | strip_html | truncatewords:128 }}
+              {{ post.excerpt | strip_html | truncatewords:64 }}
             </div>
             <a class="button read-more" href="{{ site.baseurl }}{{ post.url }}">
-              Read More
+              Read
             </a>
           </div>
         </article>
