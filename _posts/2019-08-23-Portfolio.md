@@ -4,6 +4,7 @@ title: Ubuntu Kernel Update Utility
 image: /img/portfolio/bombjour-1.jpg
 categories: portfolio
 hidden: true
+link: https://github.com/joshuadowding/ukuu
 tags:
  - Desktop Application
  - GTK3
@@ -11,4 +12,6 @@ tags:
  - Ubuntu
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque viverra mauris in aliquam. Vitae tempus quam pellentesque nec nam aliquam. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Integer feugiat scelerisque varius morbi enim nunc faucibus. Tempus quam pellentesque nec nam aliquam sem et tortor. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam. Senectus et netus et malesuada fames ac turpis egestas. Ut aliquam purus sit amet luctus venenatis. Tincidunt ornare massa eget egestas purus viverra accumsan. In hac habitasse platea dictumst quisque sagittis purus sit. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ut etiam sit amet nisl purus in mollis. In est ante in nibh mauris cursus mattis.
+Forked from an abandoned open-source project of the same name, the Ubuntu Kernel Update Utility ('ukuu') manages kernel updates for Ubuntu-based distributions; including both supported and un-supported kernel releases from directly from Canonical. 
+
+My contributions to the project so far include: bug fixes, code refactoring, and a partialy refreshed user interface. Other features include: a modern GTK3-based graphical user interface, a convinient command-line interface, desktop notifications for new kernel releases, filtering of released based on type, and the ability to view release changelogs from within the application.
