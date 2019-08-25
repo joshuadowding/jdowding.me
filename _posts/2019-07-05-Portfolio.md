@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Internal Content Management System
+title: Esperus Content Management System
 subtitle: Esperus Systems
 image: /img/portfolio/bombjour-1.jpg
 categories: portfolio
@@ -11,4 +11,6 @@ tags:
  - Visual Basic .NET
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque viverra mauris in aliquam. Vitae tempus quam pellentesque nec nam aliquam. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Integer feugiat scelerisque varius morbi enim nunc faucibus. Tempus quam pellentesque nec nam aliquam sem et tortor. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam. Senectus et netus et malesuada fames ac turpis egestas. Ut aliquam purus sit amet luctus venenatis. Tincidunt ornare massa eget egestas purus viverra accumsan. In hac habitasse platea dictumst quisque sagittis purus sit. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ut etiam sit amet nisl purus in mollis. In est ante in nibh mauris cursus mattis.
+Esperus CMS provides basic content management for websites built with ASP.NET. It includes editors for text, images and links (external, internal and downloads), with dedicated editors for carousel slides and quote blocks provided as standard. Users can also upload assets to the asset bank which will make those assets available to their appropriate editors.
+
+Esperus CMS works on the principle of "hotspots" within the HTML markup of a page. An injector would parse the current page, scan each hotspot tagged with a unique content ID, and then inject the appropriate content into that hotspot element at runtime.
