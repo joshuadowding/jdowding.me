@@ -11,4 +11,4 @@ tags:
  - Java EE
 ---
 
-While working for MSX, I developed a total of six web portal products for our various different automotive clients to use as business intelligence tools in-the-field. Each web portal would have a means of viewing customer data including purchasing habits, previous purchases, current plans and more. They would also provide a means for management to share documents to the field agents.
+I built a total of **six different web portals**, built on-top of our Kaleidoscope product, for a number of their automotive clients around the world. These web portals would consist of **embedded, customizable Tableau reports** pre-configured against different datasets relevant to the particular client. These web portals would make use of Kaleidoscope's **built-in security tree** for user access management, and they would often host documents with our **embedded document viewer**. Each portal was designed bespoke for the client, and I would maintain these portals with fixes and new features long after their initial deployments.
