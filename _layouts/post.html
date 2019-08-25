@@ -13,17 +13,21 @@ layout: default
             <h6>{{ page.date | date: "%B %e, %Y" }}</h6>
           </div>
 
+          {% if page.tags != empty %}
           <div class="post-tags">
             {% for tag in page.tags %}
             <p class="tag"><span class="badge badge-secondary">{{ tag }}</span></p>
             {% endfor %}
           </div>
+          {% endif %}
 
+          {% if page.categories != empty %}
           <div class="post-catagories">
             {% for category in page.categories %}
             <p class="category"><span class="badge badge-secondary">{{ category }}</span></p>
             {% endfor %}
           </div>
+          {% endif %}
 
           <div class="post-content">
             {{ content }}

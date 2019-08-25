@@ -425,6 +425,12 @@ html {
         align-items: center;
         min-height: 256px;
 
+        &.full-spread {
+          .post-body {
+            width: 100%;
+          }
+        }
+
         &:first-child {
           margin: 0 0 24px;
         }
@@ -480,6 +486,10 @@ html {
               font-size: 1.2rem;
               margin: 0 8px 0 0;
             }
+          }
+
+          .post-content {
+            margin: 16px 0;
           }
 
           .post-excerpt {
