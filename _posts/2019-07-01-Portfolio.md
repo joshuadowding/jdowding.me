@@ -11,4 +11,6 @@ tags:
  - Java EE
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque viverra mauris in aliquam. Vitae tempus quam pellentesque nec nam aliquam. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Integer feugiat scelerisque varius morbi enim nunc faucibus. Tempus quam pellentesque nec nam aliquam sem et tortor. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam. Senectus et netus et malesuada fames ac turpis egestas. Ut aliquam purus sit amet luctus venenatis. Tincidunt ornare massa eget egestas purus viverra accumsan. In hac habitasse platea dictumst quisque sagittis purus sit. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ut etiam sit amet nisl purus in mollis. In est ante in nibh mauris cursus mattis.
+Built to allow field agents to view up-to-date sales information, customer details and parts information in the browser. Agents could then upload new data to the tool and have it reflected accross the business instantly. This replaced a spreadsheet-based workflow where someone would have to combine everyones up-to-date sales data into one master spreadsheet manually.
+
+Built as an extention to MSX' popular web product Kaleidoscope, my involvement with the project included designing the user interface to a specification and assisting with the backend Java code which was primarily handled by my colleague and co-creator.
