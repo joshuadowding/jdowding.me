@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Internal Call Logging System
+title: Esperus Call Logging System
 subtitle: Esperus Systems
 image: /img/portfolio/bombjour-1.jpg
 categories: portfolio
@@ -11,4 +11,4 @@ tags:
  - C# .NET
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque viverra mauris in aliquam. Vitae tempus quam pellentesque nec nam aliquam. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Integer feugiat scelerisque varius morbi enim nunc faucibus. Tempus quam pellentesque nec nam aliquam sem et tortor. Eget aliquet nibh praesent tristique magna sit amet purus gravida. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam. Senectus et netus et malesuada fames ac turpis egestas. Ut aliquam purus sit amet luctus venenatis. Tincidunt ornare massa eget egestas purus viverra accumsan. In hac habitasse platea dictumst quisque sagittis purus sit. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Ut etiam sit amet nisl purus in mollis. In est ante in nibh mauris cursus mattis.
+Esperus CLS evolved over-time from a simple suppot tracker into a fully-fledged business intelligence application. With the ability to run reports on development tickets, support tickets and client details, and generate reports for easy consumption. It also features an expanded support tracker with the ability to track response times, average support durations, ticket origins and more. As if that wasn't enough, Esperus CLS also acts as a contact and client database with the ability to associate client profiles with particular tickets. While I didnt start this project, I developed the vast majority of it's features over-time.
