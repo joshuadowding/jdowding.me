@@ -11,6 +11,4 @@ tags:
  - Visual Basic .NET
 ---
 
-Esperus CMS provides basic content management for websites built with ASP.NET. It includes editors for text, images and links (external, internal and downloads), with dedicated editors for carousel slides and quote blocks provided as standard. Users can also upload assets to the asset bank which will make those assets available to their appropriate editors.
-
-Esperus CMS works on the principle of "hotspots" within the HTML markup of a page. An injector would parse the current page, scan each hotspot tagged with a unique content ID, and then inject the appropriate content into that hotspot element at runtime.
+Esperus CMS was the response to the need for a content management system that fit their preference for ASP.NET, and would be simple enough for a non-developer to use regularly. Esperus CMS can **edit text, images, links** (external, internal and downloads), and has **dedicated editors for carousel slides and quote blocks**. It has a **built-in asset manager** that provides components like the image gallery with a repository of assets that the user can upload to. And it also features a hierarchy that represents the structure of the website and allows for real-time content re-ordering.
