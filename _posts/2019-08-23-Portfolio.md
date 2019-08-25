@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ubuntu Kernel Update Utility
-image: /img/portfolio/bombjour-1.jpg
+image: /img/portfolio/ukuu/ukuu-1-2.jpg
 categories: portfolio
 hidden: true
 link: https://github.com/joshuadowding/ukuu

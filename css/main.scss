@@ -441,10 +441,16 @@ html {
 
         .post-image {
           width: 50%;
+          
+          .image-wrapper {
+            position: relative;
+            display: block;
+            padding-right: 24px;
+          }
 
           img {
             width: 100%;
-            padding-right: 24px;
+            border: 2px solid black;
 
             &[src=""] {
               display: none;

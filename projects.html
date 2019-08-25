@@ -11,7 +11,9 @@ permalink: /projects/
         {% for post in site.categories.portfolio %}
         <article class="post">
           <div class="post-image">
-            <img src="{{ post.image }}" />
+            <a class="image-wrapper" href="{{ site.baseurl }}{{ post.image }}">
+              <img src="{{ post.image }}" />
+            </a>
           </div>
           <div class="post-body">
             <h3 class="post-title">{{ post.title }}</h3>
