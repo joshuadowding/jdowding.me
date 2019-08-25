@@ -12,6 +12,4 @@ tags:
  - Ubuntu
 ---
 
-Forked from an abandoned open-source project of the same name, the Ubuntu Kernel Update Utility ('ukuu') manages kernel updates for Ubuntu-based distributions; including both supported and un-supported kernel releases from directly from Canonical. 
-
-My contributions to the project so far include: bug fixes, code refactoring, and a partialy refreshed user interface. Other features include: a modern GTK3-based graphical user interface, a convinient command-line interface, desktop notifications for new kernel releases, filtering of releases based on type, and the ability to view release changelogs from within the application.
+Forked from an abandoned open-source project of the same name, the Ubuntu Kernel Update Utility (or "ukuu") manages kernel updates for Ubuntu-based distributions; including both supported and un-supported kernel releases directly from Canonical. With a modern GTK3-based interface, and a convinient command-line interface, it's features include the ability to: **install newer kernels than those that come with the distribution by default**, **view kernel release changelogs**, **remove all installed kernels besides the one thats currently running**, and includes **desktop notifications for new kernel releases**.
