@@ -103,6 +103,8 @@ html {
         color: var(--colour-text);
         padding: 4px 8px;
         border: 2px solid var(--colour-background-invert);
+        min-width: 64px;
+        text-align: center;
 
         &.button-disabled {
           background-color: var(--colour-button-disabled);
@@ -165,6 +167,8 @@ html {
         color: var(--colour-text);
         padding: 4px 8px;
         border: 2px solid var(--colour-background-invert);
+        min-width: 64px;
+        text-align: center;
 
         &.button-disabled {
           background-color: var(--colour-button-disabled);
