@@ -9,8 +9,7 @@ tags:
  - Web Application
  - JavaServer Pages
  - Java EE
+ - JavaScript
 ---
 
-Built to allow field agents to view up-to-date sales information, customer details and parts information in the browser. Agents could then upload new data to the tool and have it reflected accross the business instantly. This replaced a spreadsheet-based workflow where someone would have to combine everyones up-to-date sales data into one master spreadsheet manually.
-
-Built as an extention to MSX' popular web product Kaleidoscope, my involvement with the project included designing the user interface to a specification and assisting with the backend Java code which was primarily handled by my colleague and co-creator.
+These tools allowed field agents to **view up-to-date sales numbers, product prices, and customer details from the browser**. Agents could add new entries to these datasets through the same interface and have those changes reflected across the whole business instantly. These tools where built as an extension to an existing product, Kaleidoscope, and my involvement included developing the user interface to a specification, and implementing the view layer logic. This was my first hands-on experience with JavaScript, jQuery and HTTP requests.
