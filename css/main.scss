@@ -421,15 +421,6 @@ html {
         align-items: center;
         min-height: 256px;
 
-        &.full-spread {
-          margin: 0;
-          padding: 0;
-
-          .post-body {
-            width: 100%;
-          }
-        }
-
         &:first-child {
           margin: 0 0 24px;
         }
@@ -487,7 +478,6 @@ html {
             }
           }
 
-          .post-content,
           .post-excerpt {
             margin: 16px 0;
           }

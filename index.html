@@ -16,21 +16,26 @@ layout: default
             <h3 class="post-title">{{ post.title }}</h3>
             <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h6>
 
+            {% if post.tags != empty %}
             <div class="post-tags">
               {% for tag in post.tags %}
               <p class="tag"><span class="badge badge-secondary">{{ tag }}</span></p>
               {% endfor %}
             </div>
+            {% endif %}
 
+            {% if post.categories != empty %}
             <div class="post-catagories">
               {% for category in post.categories %}
               <p class="category"><span class="badge badge-secondary">{{ category }}</span></p>
               {% endfor %}
             </div>
+            {% endif %}
 
             <div class="post-excerpt">
-              {{ post.excerpt | strip_html | truncatewords:64 }}
+              {{ post.excerpt | truncatewords:64 }}
             </div>
+
             <a class="button read-more" href="{{ site.baseurl }}{{ post.url }}">
               Read
             </a>
