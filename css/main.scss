@@ -446,15 +446,14 @@ html {
             position: relative;
             display: block;
             padding-right: 24px;
-          }
 
-          img {
-            width: 100%;
-            border: 2px solid black;
-
-            &[src=""] {
-              display: none;
-              margin: 0;
+            .image {
+              width: 100%;
+              border: 2px solid var(--colour-text);
+              height: 336px;
+              background-size: cover;
+              background-repeat: no-repeat;
+              background-position: center;
             }
           }
         }
