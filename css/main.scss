@@ -451,6 +451,12 @@ html {
               border: 0;
               background: transparent;
 
+              &:hover {
+                i {
+                  color: $colour-text-highlight;
+                }
+              }
+
               &.slick-prev {
                 top: 136px;
                 left: 0;
