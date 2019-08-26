@@ -2,7 +2,10 @@
 layout: post
 title: Esperus Content Management System
 subtitle: Esperus Systems
-image: /img/portfolio/bombjour-1.jpg
+images: 
+ - /img/portfolio/cms/cms-1.jpg
+ - /img/portfolio/cms/cms-2.jpg
+ - /img/portfolio/cms/cms-3.jpg
 categories: portfolio
 hidden: true
 tags:
