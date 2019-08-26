@@ -12,9 +12,15 @@ permalink: /projects/
         <article class="post">
           {% if post.image != null %}
           <div class="post-image">
+            {% if post.image-link != null %}
+            <a class="image-wrapper" href="{{ post.image-link }}" target="_blank">
+              <div class="image" style="background-image: url('{{ post.image }}')"></div>
+            </a>
+            {% else %}
             <a class="image-wrapper" href="{{ site.baseurl }}{{ post.image }}">
               <div class="image" style="background-image: url('{{ post.image }}')"></div>
             </a>
+            {% endif %}
           </div>
           {% elsif post.images != empty %}
           <div class="post-image post-carousel">
