@@ -10,11 +10,21 @@ permalink: /projects/
       <div class="posts">
         {% for post in site.categories.portfolio %}
         <article class="post">
+          {% if post.image != null %}
           <div class="post-image">
             <a class="image-wrapper" href="{{ site.baseurl }}{{ post.image }}">
               <div class="image" style="background-image: url('{{ post.image }}')"></div>
             </a>
           </div>
+          {% elsif post.images != empty %}
+          <div class="post-image post-carousel">
+            {% for image in post.images %}
+            <a class="image-wrapper" href="{{ site.baseurl }}{{ image }}">
+              <div class="image" style="background-image: url('{{ image }}')"></div>
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
           <div class="post-body">
             <h3 class="post-title">{{ post.title }}</h3>
             <h6 class="post-subtitle">{{ post.subtitle }}</h6>
@@ -43,3 +53,15 @@ permalink: /projects/
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.post-carousel').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      prevArrow: '<button class="slick-prev"><i class="fas fa-arrow-alt-circle-left"></i></button>',
+      nextArrow: '<button class="slick-next"><i class="fas fa-arrow-alt-circle-right"></i></button>'
+    });
+  });
+</script>

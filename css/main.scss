@@ -441,11 +441,32 @@ html {
 
         .post-image {
           width: 50%;
+          padding-right: 24px;
+
+          &.post-carousel {
+            .slick-arrow {
+              position: absolute;
+              width: 64px;
+              height: 64px;
+              border: 0;
+              background: transparent;
+
+              &.slick-prev {
+                top: 136px;
+                left: 0;
+                z-index: 1;
+              }
+
+              &.slick-next {
+                top: 136px;
+                right: 24px;
+              }
+            }
+          }
           
           .image-wrapper {
             position: relative;
             display: block;
-            padding-right: 24px;
 
             .image {
               width: 100%;
@@ -569,10 +590,15 @@ html {
 
             .post-image {
               width: 100%;
+              padding-right: 0;
+              margin-bottom: 24px;
 
-              img {
-                padding-right: 0;
-                margin-bottom: 24px;
+              &.post-carousel {
+                .slick-arrow {
+                  &.slick-next {
+                    right: 0;
+                  }
+                }
               }
             }
 

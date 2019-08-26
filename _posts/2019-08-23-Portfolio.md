@@ -1,7 +1,12 @@
 ---
 layout: post
 title: Ubuntu Kernel Update Utility
-image: /img/portfolio/ukuu/ukuu-1.jpg
+images: 
+ - /img/portfolio/ukuu/ukuu-1.jpg
+ - /img/portfolio/ukuu/ukuu-2.jpg
+ - /img/portfolio/ukuu/ukuu-3.jpg
+ - /img/portfolio/ukuu/ukuu-4.jpg
+ - /img/portfolio/ukuu/ukuu-5.jpg
 categories: portfolio
 hidden: true
 link: https://github.com/joshuadowding/ukuu
