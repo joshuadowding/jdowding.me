@@ -439,9 +439,31 @@ html {
           margin: 24px 0 0;
         }
 
+        &:not(.project) {
+          .post-image {
+            width: 50%;
+            height: unset;
+            margin-right: unset;
+            padding-right: 24px;
+
+            .image-wrapper {
+              .image {
+                height: 336px;
+                width: 100%;
+              }
+            }
+          }
+
+          .post-body {
+            width: 50%;
+            height: unset;
+          }
+        }
+
         .post-image {
-          width: 50%;
-          padding-right: 24px;
+          height: 360px;
+          width: 640px;
+          margin-right: 24px;
 
           &.post-carousel {
             .slick-arrow {
@@ -465,7 +487,8 @@ html {
 
               &.slick-next {
                 top: 136px;
-                right: 24px;
+                right: 0;
+                z-index: 1;
               }
             }
           }
@@ -475,9 +498,9 @@ html {
             display: block;
 
             .image {
-              width: 100%;
               border: 2px solid var(--colour-text);
-              height: 336px;
+              height: 360px;
+              width: 640px;
               background-size: cover;
               background-repeat: no-repeat;
               background-position: center;
@@ -486,8 +509,6 @@ html {
         }
 
         .post-body {
-          width: 50%;
-
           .post-title {
             margin: 0 0 4px 0;
           }
@@ -598,12 +619,19 @@ html {
               width: 100%;
               padding-right: 0;
               margin-bottom: 24px;
+              margin-right: 0;
 
               &.post-carousel {
                 .slick-arrow {
                   &.slick-next {
                     right: 0;
                   }
+                }
+              }
+
+              .image-wrapper {
+                .image {
+                  width: 100%;
                 }
               }
             }

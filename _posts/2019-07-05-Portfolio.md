@@ -3,9 +3,13 @@ layout: post
 title: Esperus Content Management System
 subtitle: Esperus Systems
 images: 
- - /img/portfolio/cms/cms-1.jpg
- - /img/portfolio/cms/cms-2.jpg
- - /img/portfolio/cms/cms-3.jpg
+ - /img/portfolio/cms/cms-1-1.jpg
+ - /img/portfolio/cms/cms-2-1.jpg
+ - /img/portfolio/cms/cms-3-1.jpg
+ - /img/portfolio/cms/cms-4-1.jpg
+ - /img/portfolio/cms/cms-5-1.jpg
+ - /img/portfolio/cms/cms-6-1.jpg
+ - /img/portfolio/cms/cms-7-1.jpg
 categories: portfolio
 hidden: true
 tags:

@@ -2,7 +2,7 @@
 layout: post
 title: Esperus Website
 subtitle: Esperus Systems
-image: /img/portfolio/website/website-1.jpg
+image: /img/portfolio/website/website-1-1.jpg
 image-link: https://esperus.com/
 categories: portfolio
 hidden: true

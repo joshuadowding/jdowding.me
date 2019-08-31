@@ -2,7 +2,7 @@
 layout: post
 title: CNHI Data Upload Tools
 subtitle: MSX International
-image: /img/portfolio/bombjour-1.jpg
+image: /img/portfolio/cnhi/cnhi-1-1.jpg
 categories: portfolio
 hidden: true
 tags:

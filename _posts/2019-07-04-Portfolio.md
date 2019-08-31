@@ -2,7 +2,7 @@
 layout: post
 title: Esperus Call Logging System
 subtitle: Esperus Systems
-image: /img/portfolio/bombjour-1.jpg
+image: /img/portfolio/cls/cls-1-1.jpg
 categories: portfolio
 hidden: true
 tags:

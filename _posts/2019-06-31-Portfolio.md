@@ -2,7 +2,11 @@
 layout: post
 title: Kaleidoscope Web Portals
 subtitle: MSX International
-image: /img/portfolio/bombjour-1.jpg
+images: 
+ - /img/portfolio/portals/portals-1-1.jpg
+ - /img/portfolio/portals/portals-2-1.jpg
+ - /img/portfolio/portals/portals-3-1.jpg
+ - /img/portfolio/portals/portals-4-1.jpg
 categories: portfolio
 hidden: true
 tags:
