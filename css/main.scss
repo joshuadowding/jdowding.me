@@ -465,34 +465,6 @@ html {
           width: 640px;
           margin-right: 24px;
 
-          &.post-carousel {
-            .slick-arrow {
-              position: absolute;
-              width: 64px;
-              height: 64px;
-              border: 0;
-              background: transparent;
-
-              &:hover {
-                i {
-                  color: $colour-text-highlight;
-                }
-              }
-
-              &.slick-prev {
-                top: 136px;
-                left: 0;
-                z-index: 1;
-              }
-
-              &.slick-next {
-                top: 136px;
-                right: 0;
-                z-index: 1;
-              }
-            }
-          }
-          
           .image-wrapper {
             position: relative;
             display: block;
@@ -557,6 +529,92 @@ html {
           justify-content: center;
           align-items: center;
           padding: 0 8px;
+        }
+      }
+    }
+
+    .carousel-wrapper {
+      display: none;
+
+      &.show {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 999;
+      }
+
+      .carousel-close-wrapper {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 64px;
+        height: 64px;
+        z-index: 1000;
+
+        .carousel.close {
+          font-size: 1.4rem;
+        }
+      }
+
+      .post-carousel {
+        display: none;
+        height: 100%;
+
+        .slick-list,
+        .slick-track {
+          height: 100%;
+        }
+
+        .slick-arrow {
+          position: absolute;
+          width: 64px;
+          height: 64px;
+          border: 0;
+          background: transparent;
+
+          &:hover {
+            i {
+              color: $colour-text-highlight;
+            }
+          }
+
+          &.slick-prev {
+            top: 50%;
+            left: 0;
+            z-index: 1;
+          }
+
+          &.slick-next {
+            top: 50%;
+            right: 0;
+            z-index: 1;
+          }
+        }
+
+        .image-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          position: relative;
+          height: 100%;
+          width: 100%;
+
+          .image {
+            border: 2px solid var(--colour-text);
+            height: 360px;
+            width: 640px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
         }
       }
     }

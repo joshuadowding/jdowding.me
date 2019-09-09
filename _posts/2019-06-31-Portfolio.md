@@ -1,8 +1,10 @@
 ---
+post-id: MSX-1
 layout: post
 title: Kaleidoscope Web Portals
 subtitle: MSX International
-images: 
+thumbnail: /img/portfolio/portals/portals-1-1.jpg
+slide-images:
  - /img/portfolio/portals/portals-1-1.jpg
  - /img/portfolio/portals/portals-2-1.jpg
  - /img/portfolio/portals/portals-3-1.jpg

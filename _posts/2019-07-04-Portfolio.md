@@ -1,8 +1,10 @@
 ---
+post-id: ESPERUS-3
 layout: post
 title: Esperus Call Logging System
 subtitle: Esperus Systems
-images: 
+thumbnail: /img/portfolio/cls/cls-1-1.jpg
+slide-images:
  - /img/portfolio/cls/cls-1-1.jpg
  - /img/portfolio/cls/cls-2-1.jpg
  - /img/portfolio/cls/cls-3-1.jpg

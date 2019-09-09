@@ -1,7 +1,9 @@
 ---
+post-id: UKUU-1
 layout: post
 title: Ubuntu Kernel Update Utility
-images: 
+thumbnail: /img/portfolio/ukuu/ukuu-1.jpg
+slide-images:
  - /img/portfolio/ukuu/ukuu-1.jpg
  - /img/portfolio/ukuu/ukuu-2.jpg
  - /img/portfolio/ukuu/ukuu-3.jpg

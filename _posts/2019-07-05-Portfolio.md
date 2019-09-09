@@ -1,8 +1,10 @@
 ---
+post-id: ESPERUS-2
 layout: post
 title: Esperus Content Management System
 subtitle: Esperus Systems
-images: 
+thumbnail: /img/portfolio/cms/cms-1-1.jpg
+slide-images:
  - /img/portfolio/cms/cms-1-1.jpg
  - /img/portfolio/cms/cms-2-1.jpg
  - /img/portfolio/cms/cms-3-1.jpg
