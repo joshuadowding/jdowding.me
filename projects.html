@@ -75,16 +75,6 @@ permalink: /projects/
 
 <script type="text/javascript">
   $(document).ready(function () {
-    $('.post-carousel').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      prevArrow: '<button class="slick-prev"><i class="fas fa-arrow-alt-circle-left"></i></button>',
-      nextArrow: '<button class="slick-next"><i class="fas fa-arrow-alt-circle-right"></i></button>',
-      fade: true,
-      cssEase: 'linear'
-    });
-
     $('.carousel-toggle').click(function () {
       var postID = $(this).data('post-id');
 
@@ -92,11 +82,22 @@ permalink: /projects/
         $('body').css('overflow-y', 'hidden');
         $('.carousel-wrapper').css('display', 'block').addClass('show');
         $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'block');
+
+        $('.post-carousel[data-post-id="' + postID + '"]').slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          prevArrow: '<button class="slick-prev"><i class="fas fa-arrow-alt-circle-left"></i></button>',
+          nextArrow: '<button class="slick-next"><i class="fas fa-arrow-alt-circle-right"></i></button>',
+          fade: true,
+          cssEase: 'linear'
+        });
       }
       else {
         $('body').css('overflow-y', 'auto');
         $('.carousel-wrapper').css('display', 'none').removeClass('show');
         $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'none');
+        $('.post-carousel[data-post-id="' + postID + '"]').slick('unslick');
       }
     });
 
@@ -104,6 +105,7 @@ permalink: /projects/
       $('body').css('overflow-y', 'auto');
       $('.carousel-wrapper').css('display', 'none').removeClass('show');
       $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'none');
+      $('.post-carousel[data-post-id="' + postID + '"]').slick('unslick');
     });
   });
 </script>

@@ -565,7 +565,7 @@ html {
         }
 
         i {
-          color: var(--colour-text-invert);
+          color: $colour-text-white;
         }
 
         .carousel.close {
@@ -580,6 +580,8 @@ html {
         .slick-list,
         .slick-track {
           height: 100%;
+          width: 100%;
+          position: relative;
         }
 
         .slick-arrow {
@@ -608,7 +610,7 @@ html {
           }
 
           i {
-            color: var(--colour-text-invert);
+            color: $colour-text-white;
           }
         }
 
