@@ -625,11 +625,9 @@ html {
 
           .image {
             border: 2px solid var(--colour-text);
-            height: 360px;
-            width: 640px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
+            max-width: 1024px;
+            margin-left: 64px;
+            margin-right: 64px;
           }
         }
       }

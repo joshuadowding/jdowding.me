@@ -65,7 +65,7 @@ permalink: /projects/
   <div class="post-carousel" data-post-id="{{ post.post-id }}">
     {% for image in post.slide-images %}
     <div class="image-wrapper" href="#">
-      <div class="image" style="background-image: url('{{ image }}')"></div>
+      <img class="image" src="{{ image }}" />
     </div>
     {% endfor %}
   </div>
