@@ -75,8 +75,10 @@ permalink: /projects/
 
 <script type="text/javascript">
   $(document).ready(function () {
+    var postID;
+
     $('.carousel-toggle').click(function () {
-      var postID = $(this).data('post-id');
+      postID = $(this).data('post-id');
 
       if ($('.carousel-wrapper').css('display') == 'none') {
         $('body').css('overflow-y', 'hidden');
