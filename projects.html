@@ -37,7 +37,7 @@ permalink: /projects/
             {% endif %}
 
             <p class="post-excerpt">
-              {{ post.content | truncatewords:96 }}
+              {{ post.content | truncatewords:96 | markdownify }}
             </p>
 
             {% if post.link != null %}
@@ -82,32 +82,40 @@ permalink: /projects/
 
       if ($('.carousel-wrapper').css('display') == 'none') {
         $('body').css('overflow-y', 'hidden');
-        $('.carousel-wrapper').css('display', 'block').addClass('show');
-        $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'block');
+        $('.carousel-wrapper').fadeIn(500, function() {
+          $(this).addClass('show');
 
-        $('.post-carousel[data-post-id="' + postID + '"]').slick({
-          dots: false,
-          infinite: true,
-          speed: 300,
-          prevArrow: '<button class="slick-prev"><i class="fas fa-arrow-alt-circle-left"></i></button>',
-          nextArrow: '<button class="slick-next"><i class="fas fa-arrow-alt-circle-right"></i></button>',
-          fade: true,
-          cssEase: 'linear'
+          $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'block');
+          $('.post-carousel[data-post-id="' + postID + '"]').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            prevArrow: '<button class="slick-prev"><i class="fas fa-arrow-alt-circle-left"></i></button>',
+            nextArrow: '<button class="slick-next"><i class="fas fa-arrow-alt-circle-right"></i></button>',
+            fade: true,
+            cssEase: 'linear'
+          });
         });
       }
       else {
         $('body').css('overflow-y', 'auto');
-        $('.carousel-wrapper').css('display', 'none').removeClass('show');
-        $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'none');
-        $('.post-carousel[data-post-id="' + postID + '"]').slick('unslick');
+        $('.carousel-wrapper').fadeOut(500, function() {
+          $(this).removeClass('show');
+
+          $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'none');
+          $('.post-carousel[data-post-id="' + postID + '"]').slick('unslick');
+        });
       }
     });
 
     $('.carousel-close').click(function () {
       $('body').css('overflow-y', 'auto');
-      $('.carousel-wrapper').css('display', 'none').removeClass('show');
-      $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'none');
-      $('.post-carousel[data-post-id="' + postID + '"]').slick('unslick');
+      $('.carousel-wrapper').fadeOut(500, function() {
+          $(this).removeClass('show');
+
+          $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'none');
+          $('.post-carousel[data-post-id="' + postID + '"]').slick('unslick');
+        });
     });
   });
 </script>
