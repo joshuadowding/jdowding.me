@@ -369,7 +369,13 @@ html {
         .footer-title {
           .footer-copyright {
             font-size: 1.4rem;
+            font-weight: 500;
             margin: 0;
+
+            #copyright-year {
+              font-size: 1.4rem;
+              font-weight: 500;
+            }
           }
         }
 
@@ -427,7 +433,7 @@ html {
 
         &.full-spread {
           .post-body {
-            width: 100%;
+            width: 100% !important;
           }
         }
 

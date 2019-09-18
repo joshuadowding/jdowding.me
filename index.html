@@ -35,7 +35,7 @@ layout: default
             {% endif %}
 
             <div class="post-excerpt">
-              {{ post.excerpt | truncatewords:64 }}
+              {{ post.excerpt | truncatewords:96 | markdownify }}
             </div>
 
             <a class="button read-more" href="{{ site.baseurl }}{{ post.url }}">

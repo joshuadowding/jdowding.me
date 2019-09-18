@@ -30,7 +30,7 @@ layout: default
           {% endif %}
 
           <div class="post-content">
-            {{ content }}
+            {{ content | markdownify }}
           </div>
         </div>
       </article>

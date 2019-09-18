@@ -1,7 +1,7 @@
 <footer class="container">
   <div class="footer-inner">
     <div class="footer-title">
-      <p class="footer-copyright">&#169; 2019 Joshua Dowding</p>
+      <p class="footer-copyright">&#169; <span id="copyright-year"></span> Joshua Dowding</p>
     </div>
     <div class="footer-separator">
       <div class="separator"></div>
@@ -14,3 +14,10 @@
     </div>
   </div>
 </footer>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    var currentDate = new Date();
+    $('#copyright-year').append(currentDate.getFullYear());
+  });
+</script>
