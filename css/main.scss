@@ -4,6 +4,7 @@
 $colour-text-white: #FEFCFF; // 'Milk White'
 $colour-text-black: #0C090A; // 'Night Black'
 $colour-text-highlight: #4EE2EC; // 'Deep Sky Blue'
+$colour-disabled: #C0C0C0; // 'Silver'
 
 @mixin transition-colour-text-highlight($duration) {
   -webkit-transition: color $duration ease-in-out;
@@ -14,17 +15,29 @@ $colour-text-highlight: #4EE2EC; // 'Deep Sky Blue'
 :root {
   --colour-background: #FEFCFF;
   --colour-background-invert: #0C090A;
-  --colour-button-disabled: grey;
+  --colour-button-disabled: #C0C0C0;
   --colour-text: #0C090A;
   --colour-text-invert: #FEFCFF;
+
+  ul {
+    li {
+      list-style: square outside url('../img/bullet.png');
+    }
+  }
 }
 
 :root.theme-dark {
   --colour-background: #0C090A;
   --colour-background-invert: #FEFCFF;
-  --colour-button-disabled: grey;
+  --colour-button-disabled: #C0C0C0;
   --colour-text: #FEFCFF;
   --colour-text-invert: #0C090A;
+
+  ul {
+    li {
+      list-style: square outside url('../img/bullet-w.png');
+    }
+  }
 }
 
 html {
@@ -41,10 +54,14 @@ html {
       font-size: 2.4rem;
       font-weight: 700;
       color: var(--colour-text);
+      margin: 24px 0 12px;
+
+      &.post-title {
+        font-size: 2.8rem;
+      }
 
       &.title {
         &.title-name {
-          font-size: 2.8rem;
           font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
         }
       }
@@ -55,6 +72,7 @@ html {
       font-size: 2.2rem;
       font-weight: 700;
       color: var(--colour-text);
+      margin: 24px 0 12px;
     }
 
     h3 {
@@ -62,6 +80,7 @@ html {
       font-size: 2rem;
       font-weight: 700;
       color: var(--colour-text);
+      margin: 24px 0 12px;
     }
 
     h4 {
@@ -69,6 +88,7 @@ html {
       font-size: 1.8rem;
       font-weight: 500;
       color: var(--colour-text);
+      margin: 24px 0 12px;
     }
 
     h5 {
@@ -76,6 +96,7 @@ html {
       font-size: 1.6rem;
       font-weight: 500;
       color: var(--colour-text);
+      margin: 24px 0 12px;
     }
 
     h6 {
@@ -83,6 +104,7 @@ html {
       font-size: 1.4rem;
       font-weight: 500;
       color: var(--colour-text);
+      margin: 24px 0 12px;
     }
 
     div,
@@ -93,6 +115,7 @@ html {
       font-size: 1.4rem;
       font-weight: 400;
       color: var(--colour-text);
+      line-height: 2.4rem;
     }
 
     span {
@@ -136,6 +159,12 @@ html {
       font-size: 1.4rem;
       font-weight: 400;
       color: var(--colour-text);
+      line-height: 2.4rem;
+      margin: 0 0 12px 0;
+
+      &:last-child {
+        margin: 0;
+      }
     }
 
     a {
@@ -204,6 +233,7 @@ html {
         font-size: 1.4rem;
         font-weight: 400;
         color: var(--colour-text);
+        margin: 0 0 6px 0;
       }
 
       &.nav {
@@ -256,10 +286,8 @@ html {
             height: 32px;
             width: 32px;
 
-            //@include transition-colour-text-highlight(0.1s);
             &:hover {
               color: $colour-text-highlight;
-              //@include transition-colour-text-highlight(0.1s);
             }
 
             &:last-child {
@@ -283,6 +311,7 @@ html {
 
             .nav-item {
               margin: 0 8px 0 0;
+              list-style: none;
 
               &:last-child {
                 margin: 0;
@@ -432,6 +461,9 @@ html {
         min-height: 256px;
 
         &.full-spread {
+          margin: 0 !important;
+          //padding: 24px 48px;
+
           .post-body {
             width: 100% !important;
           }
@@ -456,6 +488,7 @@ html {
               .image {
                 height: 336px;
                 width: 100%;
+                background-color: $colour-disabled;
               }
             }
           }

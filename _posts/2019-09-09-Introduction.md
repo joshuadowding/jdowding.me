@@ -1,15 +1,30 @@
 ---
 layout: post
-title: Oh no, another one!
+title: ukuu Development
 image:
 categories:
 tags:
 ---
 
-So when I went to start writing this blog post, I didn't know how to begin. I started reading other blogs to see how they started theirs; that didn't help. I watched a few videos on the subject; that didn't help. I read a number of articles on blogging and I started to feel bad about myself. Truth is I don't know how to write a blog, I don't know what I should talk about in a blog post, and I don't know how I should introduce myself. What should I share? What should I say? Who's going to read any of this? Initially, probably no-one.
+Ukuu - or the Ubuntu Kernel Update Utility - is a small utility that I'm very fond of. I use it to keep my Ubuntu installation up-to-date with the latest kernel releases, beyond that which Canonical provide officially. However, at around the start of the year Ukuu was archived by it's maintainer and abandoned in favour of a closed-source edition. This new version had to be purchased through the maintainers new online store, and while it boasted some impressive new features, I was unwilling to do so for a variety of reasons:
 
-The prevailing adivse is: state your name and introduce yourself (it's up top), say something about your current job or situation (I'm at uni), mention what you want to write about subject-wise (nerd stuff), set expectations by describing the sorts of posts that the reader can expect down-the-line (don't know), and try to market your content by differentiating it from other similar types of blog (that's impossible).
+- The [blog post](https://teejeetech.in/2019/01/20/ukuu-v19-01/) announcing the move to a closed-source model states two different prices for the cost of a license. According to the post, a licence costs both $11, and $12, with further investigation revealing the true price being the latter. While the difference is negligable and the price relativly low, this lack of basic proof-reading initially put me off engaging with the new project.
+- The comments underneith the [blog post](https://teejeetech.in/2019/01/20/ukuu-v19-01/) gave me the impression that I would have to wait a number of days before being e-mailed my "licence" by the maintainer personally. It seems that the post neglected to mention this potential delay, resulting in his customers having to complain in the comments section (which was subsiquently closed).
+- The status of automatic updates is unknown. If a comment on this [blog post](https://teejeetech.in/2019/04/28/ukuu-v19-04/), updates require the maintainer to e-mail a package to each of his customers manually. Either that, or a private repository could be in use.
 
-I fell for a particularly sensasionalised blog post titled 'This Is Exactly What Your First Blog Post Should Be About' - which talks about "captivating your audience", "hooking your audience", "being personal" with your audience, and ultimatly making them want to come back to your blog. As I read more of this type of article, the more I didn't want this to seem like work. These articles all assume I want to make money out of this; that I want to make a - dare I say - a "personal brand" out of this (I shudder at the thought). Truth is I don't. So none of these articles helped me at all.
+I acknowledge that this isn't exactly top-notch journalisum, but I am not a journalist. 
 
-Maybe it doesn't matter. Maybe I'm over-thinking this. Maybe this qualifies; running through my thought process as I try to answer these questions.
+As a result, I - along with a number of other people - decided to fork the project and try to make my own improvements to it as a small hobby.
+
+## Canonical Livepatch Overlap
+When Canonical announced their new Livepatch service I was concerned that it's functionality overlapped that of ukuu. However Livepatch is desgined for Ubuntu LTS releases, is restricted to three machines for free users, and only focuses on installing critical kernel patches in the current stable branch. So an Ubuntu release running Linux Kernel 5.3.x would only recieve .x releases via the Livepatch service. Therefore I see no significant overlap between ukuu and Livepatch in it's current form.
+
+## Upcoming Release
+I plan to release a new version of ukuu in the coming months, continuing the lineage of the original open-source version by keeping it's original name and incrementing it's version to **18.10**. As it stands the new release features the following changes and improvements:
+
+- A refreshed user interface incorperating a modern GTK3 headerbar and popovers.
+- A complete transition to the meson build system.
+- The removal of ukuu's intrusive prompts and nagware.
+- Fixes for numerous build issues.
+
+Stay tuned for further updates on this project.
