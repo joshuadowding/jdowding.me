@@ -3,7 +3,7 @@
 
 $colour-text-white: #FEFCFF; // 'Milk White'
 $colour-text-black: #0C090A; // 'Night Black'
-$colour-text-highlight: #4EE2EC; // 'Deep Sky Blue'
+$colour-text-highlight: #1E90FF; // 'Dodger Blue'
 $colour-disabled: #C0C0C0; // 'Silver'
 
 @mixin transition-colour-text-highlight($duration) {
@@ -321,6 +321,10 @@ html {
               .nav-link {
                 color: var(--colour-text);
                 padding: 0;
+
+                &:hover {
+                  color: $colour-text-highlight;
+                }
               }
             }
           }
