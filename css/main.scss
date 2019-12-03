@@ -214,6 +214,19 @@ html {
           //@include transition-colour-text-highlight(0.1s);
         }
       }
+
+      &.title-button {
+        color: var(--colour-text);
+
+        &:hover {
+          color: $colour-text-highlight !important;
+          //@include transition-colour-text-highlight(0.1s);
+
+          .post-title {
+            color: $colour-text-highlight !important;
+          }
+        }
+      }
     }
 
     strong {

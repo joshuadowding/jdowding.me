@@ -15,7 +15,9 @@ layout: default
             </a>
           </div>
           <div class="post-body">
-            <h3 class="post-title">{{ post.title }}</h3>
+            <a class="title-button read-more" href="{{ site.baseurl }}{{ post.url }}">
+              <h3 class="post-title">{{ post.title }}</h3>
+            </a>
             <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h6>
 
             {% if post.tags != empty %}
@@ -37,10 +39,6 @@ layout: default
             <div class="post-excerpt">
               {{ post.excerpt | truncatewords:96 | markdownify }}
             </div>
-
-            <a class="button read-more" href="{{ site.baseurl }}{{ post.url }}">
-              Read
-            </a>
           </div>
         </article>
         {% endfor %}
