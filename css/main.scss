@@ -125,21 +125,21 @@ html {
         font-weight: 500;
         color: var(--colour-text);
         padding: 4px 8px;
-        border: 2px solid var(--colour-background-invert);
+        //border: 2px solid var(--colour-background-invert);
         min-width: 64px;
         text-align: center;
 
         &.button-disabled {
-          background-color: var(--colour-button-disabled);
+          color: var(--colour-button-disabled);
           cursor: default;
 
           &:hover {
-            background-color: var(--colour-button-disabled);
+            color: var(--colour-button-disabled);
           }
         }
 
         &:hover {
-          background-color: $colour-text-highlight;
+          color: $colour-text-highlight;
           //@include transition-colour-text-highlight(0.1s);
         }
       }
@@ -196,21 +196,21 @@ html {
         font-weight: 500;
         color: var(--colour-text);
         padding: 4px 8px;
-        border: 2px solid var(--colour-background-invert);
+        //border: 2px solid var(--colour-background-invert);
         min-width: 64px;
         text-align: center;
 
         &.button-disabled {
-          background-color: var(--colour-button-disabled);
+          color: var(--colour-button-disabled);
           cursor: default;
 
           &:hover {
-            background-color: var(--colour-button-disabled);
+            color: var(--colour-button-disabled);
           }
         }
 
         &:hover {
-          background-color: $colour-text-highlight;
+          color: $colour-text-highlight;
           //@include transition-colour-text-highlight(0.1s);
         }
       }
