@@ -705,6 +705,10 @@ html {
       overflow-x: hidden;
       transition: 0.5s;
 
+      &.show {
+        width: 256px;
+      }
+
       .sidenav-header {
         display: flex;
         align-items: center;
@@ -773,6 +777,14 @@ html {
               width: 100%;
             }
           }
+        }
+      }
+    }
+
+    @media screen and (max-width: 443px) {
+      .sidenav {
+        &.show {
+          width: 100%;
         }
       }
     }

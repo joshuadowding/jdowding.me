@@ -19,15 +19,24 @@ $(document).ready(function () {
 
   $(".menu-toggle").click(function () {
     if ($(".menu-toggle #close").is(":hidden")) {
-      $(".sidenav").css("width", "256px");
+      $(".sidenav").addClass("show");
       //$("#main").css("margin-right", "256px");
 
       $(".menu-toggle #close").show();
       $(".menu-toggle #open").hide();
     }
     else {
-      $(".sidenav").css("width", "0");
+      $(".sidenav").removeClass("show");
       //$("#main").css("margin-right", "0");
+
+      $(".menu-toggle #close").hide();
+      $(".menu-toggle #open").show();
+    }
+  });
+
+  $(window).resize(function() {
+    if($(window).width() > 768 && $(".sidenav").hasClass("show")) {
+      $(".sidenav").removeClass("show");
 
       $(".menu-toggle #close").hide();
       $(".menu-toggle #open").show();
