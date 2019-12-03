@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ukuu Development
+title: ukuu Development Update
 image: /img/portfolio/ukuu/ukuu-1.jpg
 categories:
 tags: ukuu

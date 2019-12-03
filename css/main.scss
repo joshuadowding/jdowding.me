@@ -1,10 +1,10 @@
 ---
 ---
 
-$colour-text-white: #FEFCFF; // 'Milk White'
-$colour-text-black: #0C090A; // 'Night Black'
-$colour-text-highlight: #1E90FF; // 'Dodger Blue'
-$colour-disabled: #C0C0C0; // 'Silver'
+$colour-text-white: #FEFCFF;
+$colour-text-black: #272727;
+$colour-text-highlight: #3095E5;
+$colour-disabled: #696969;
 
 @mixin transition-colour-text-highlight($duration) {
   -webkit-transition: color $duration ease-in-out;
@@ -14,9 +14,9 @@ $colour-disabled: #C0C0C0; // 'Silver'
 
 :root {
   --colour-background: #FEFCFF;
-  --colour-background-invert: #0C090A;
-  --colour-button-disabled: #C0C0C0;
-  --colour-text: #0C090A;
+  --colour-background-invert: #272727;
+  --colour-button-disabled: #696969;
+  --colour-text: #272727;
   --colour-text-invert: #FEFCFF;
 
   ul {
@@ -27,11 +27,11 @@ $colour-disabled: #C0C0C0; // 'Silver'
 }
 
 :root.theme-dark {
-  --colour-background: #0C090A;
+  --colour-background: #272727;
   --colour-background-invert: #FEFCFF;
-  --colour-button-disabled: #C0C0C0;
+  --colour-button-disabled: #696969;
   --colour-text: #FEFCFF;
-  --colour-text-invert: #0C090A;
+  --colour-text-invert: #272727;
 
   ul {
     li {
@@ -43,10 +43,10 @@ $colour-disabled: #C0C0C0; // 'Silver'
 html {
   font-size: 62.5%;
   max-width: 1920px;
-  min-width: 340px;
+  min-width: 320px;
 
   body {
-    min-width: 340px;
+    min-width: 320px;
     background-color: var(--colour-background);
 
     h1 {
@@ -346,11 +346,6 @@ html {
           width: auto;
           flex-grow: 1;
           margin: 0 0 0 16px;
-
-          .separator {
-            height: 2px;
-            background-color: var(--colour-text);
-          }
         }
 
         .header-menu {
@@ -428,11 +423,6 @@ html {
           width: auto;
           flex-grow: 1;
           margin: 0 0 0 16px;
-
-          .separator {
-            height: 2px;
-            background-color: var(--colour-text);
-          }
         }
 
         .footer-menu {
