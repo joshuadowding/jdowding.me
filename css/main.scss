@@ -149,7 +149,7 @@ html {
         margin: 0;
         background-color: var(--colour-background-invert);
         color: var(--colour-text-invert);
-        border-radius: 0;
+        border-radius: .35rem;
         padding: 4px 8px;
       }
     }
@@ -530,13 +530,16 @@ html {
             display: block;
 
             .image {
-              border: 2px solid var(--colour-text);
               height: 360px;
               width: 640px;
               background-size: cover;
               background-repeat: no-repeat;
               background-position: center;
               background-color: $colour-disabled;
+              border-radius: .35rem;
+              -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+              -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+              box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
             }
           }
         }
@@ -781,7 +784,7 @@ html {
       }
     }
 
-    @media screen and (max-width: 443px) {
+    @media screen and (max-width: 442px) {
       .sidenav {
         &.show {
           width: 100%;
