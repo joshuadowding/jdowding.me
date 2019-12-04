@@ -195,6 +195,10 @@ html {
         }
       }
 
+      &.inline-link {
+        color: var(--colour-text);
+      }
+
       &.button {
         position: relative;
         display: inline-block;
@@ -632,6 +636,16 @@ html {
 
           &.sub-item {
             padding: 8px 16px;
+
+            .item-header {
+              .header-wrapper {
+                width: 80%;
+              }
+
+              .attribute-wrapper {
+                width: 20%;
+              }
+            }
           }
 
           .item-header {
@@ -652,6 +666,14 @@ html {
 
             .header-wrapper {
               width: 60%;
+
+              .inline-link {
+                color: var(--colour-text-invert);
+
+                &:hover {
+                  color: $colour-text-highlight;
+                }
+              }
 
               .header-link {
                 .header {
