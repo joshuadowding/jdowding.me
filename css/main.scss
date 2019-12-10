@@ -197,6 +197,7 @@ html {
 
       &.inline-link {
         color: var(--colour-text);
+        font-size: 1.2rem;
       }
 
       &.button {
@@ -669,6 +670,7 @@ html {
 
               .inline-link {
                 color: var(--colour-text-invert);
+                font-size: 1.2rem;
 
                 &:hover {
                   color: $colour-text-highlight;
