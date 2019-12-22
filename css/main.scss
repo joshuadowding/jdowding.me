@@ -209,7 +209,11 @@ html {
 
       &.inline-link {
         color: var(--colour-text);
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+
+        &.small {
+          font-size: 1.2rem;
+        }
       }
 
       &.button {
@@ -707,10 +711,14 @@ html {
 
               .inline-link {
                 color: var(--colour-text-invert);
-                font-size: 1.2rem;
+                font-size: 1.4rem;
 
                 &:hover {
                   color: $colour-text-highlight;
+                }
+
+                &.small {
+                  font-size: 1.2rem;
                 }
               }
 

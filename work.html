@@ -1,7 +1,7 @@
 ---
 title: Projects
 layout: default
-permalink: /projects/
+permalink: /work/
 ---
 
 <div class="container">
@@ -27,10 +27,10 @@ permalink: /projects/
           <div class="post-body">
             {% if post.link != null %}
             <a class="title-button read-more" href="{{ post.link }}" target="_blank">
-              <h3 class="post-title">{{ post.title }}</h3>
+              <h3 class="post-title" id="{{ post.post-id }}">{{ post.title }}</h3>
             </a>
             {% else %}
-              <h3 class="post-title">{{ post.title }}</h3>
+              <h3 class="post-title" id="{{ post.post-id }}">{{ post.title }}</h3>
             {% endif %}
             <h6 class="post-subtitle">{{ post.subtitle }}</h6>
 
