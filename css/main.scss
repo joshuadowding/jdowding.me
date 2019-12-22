@@ -661,6 +661,19 @@ html {
         -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
         box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
 
+        &.dark-group {
+          .list-group-item {
+            background-color: black;
+
+            .item-body {
+              p {
+                color: var(--color-text);
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+
         .list-group-item {
           background-color: var(--colour-background-invert);
           padding: 16px;
