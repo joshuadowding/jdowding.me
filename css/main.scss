@@ -698,6 +698,36 @@ html {
           &.sub-item {
             padding: 12px 16px;
 
+            &.expand-item {
+              display: none;
+              flex-direction: row;
+
+              .item-body {
+                &:not(:first-child) {
+                  padding-left: 12px;
+                }
+              }
+
+              ul {
+                padding-left: 16px;
+                color: var(--colour-text-invert);
+
+                li {
+                  color: var(--colour-text-invert);
+                  list-style: square outside url("../img/bullet.png");
+
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+
+                  p {
+                    color: var(--colour-text-invert);
+                    font-size: 1.2rem;
+                  }
+                }
+              }
+            }
+
             .item-header {
               .header-wrapper {
                 width: 80%;
@@ -706,6 +736,13 @@ html {
               .attribute-wrapper {
                 width: 20%;
               }
+            }
+          }
+
+          .expand-item-toggle {
+            p {
+              font-size: 1.2rem;
+              color: $colour-text-highlight !important;
             }
           }
 
@@ -775,6 +812,7 @@ html {
 
             .attribute {
               font-size: 1.2rem;
+              line-height: 1.8rem;
               margin: 0;
               color: var(--colour-text-invert);
             }

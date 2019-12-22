@@ -36,7 +36,44 @@ permalink: /resume/
             <div class="attribute-wrapper">
               <p class="attribute">Sep. 2018 - Sep. 2019</p>
               <p class="attribute">London, Greater London, UK</p>
+              <a class="expand-item-toggle" href="javascript:void(0);" data-id="ESPERUS-1">
+                <p class="attribute">Expand</p>
+              </a>
             </div>
+          </div>
+        </li>
+        <li class="list-group-item sub-item expand-item" id="ESPERUS-1">
+          <div class="item-body">
+            <ul>
+              <li>
+                <p>Made-up half of a two-person core development team.</p>
+              </li>
+              <li>
+                <p>Spearheaded development on several different projects.</p>
+              </li>
+              <li>
+                <p>Engaged in research and development for future projects.</p>
+              </li>
+              <li>
+                <p>Provided both first and second-line support.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="item-body">
+            <ul>
+              <li>
+                <p>C#</p>
+              </li>
+              <li>
+                <p>VB.NET</p>
+              </li>
+              <li>
+                <p>ASP.NET</p>
+              </li>
+              <li>
+                <p>MS SQL Server (T-SQL)</p>
+              </li>
+            </ul>
           </div>
         </li>
         <li class="list-group-item sub-item">
@@ -88,7 +125,44 @@ permalink: /resume/
             <div class="attribute-wrapper">
               <p class="attribute">Aug. 2016 - Jan. 2018</p>
               <p class="attribute">Colchester, Essex, UK</p>
+              <a class="expand-item-toggle" href="javascript:void(0);" data-id="MSX-1">
+                <p class="attribute">Expand</p>
+              </a>
             </div>
+          </div>
+        </li>
+        <li class="list-group-item sub-item expand-item" id="MSX-1">
+          <div class="item-body">
+            <ul>
+              <li>
+                <p>Contributed to the development of their proprietary CMS.</p>
+              </li>
+              <li>
+                <p>Developed a number of web portals using their CMS.</p>
+              </li>
+              <li>
+                <p>Developed an application for simple data transformation.</p>
+              </li>
+              <li>
+                <p>Developed a web application for viewing simple data sheets.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="item-body">
+            <ul>
+              <li>
+                <p>Java EE</p>
+              </li>
+              <li>
+                <p>JavaServer Pages</p>
+              </li>
+              <li>
+                <p>Tableau BI</p>
+              </li>
+              <li>
+                <p>Oracle DB (PL/SQL)</p>
+              </li>
+            </ul>
           </div>
         </li>
         <li class="list-group-item sub-item">
@@ -126,7 +200,34 @@ permalink: /resume/
             <div class="attribute-wrapper">
               <p class="attribute">Oct. 2019 - Aug. 2020</p>
               <p class="attribute">Cambridge, Cambridgeshire, UK</p>
+              <a class="expand-item-toggle" href="javascript:void(0);" data-id="ANGLIA-1">
+                <p class="attribute">Expand</p>
+              </a>
             </div>
+          </div>
+        </li>
+        <li class="list-group-item sub-item expand-item" id="ANGLIA-1">
+          <div class="item-body">
+            <ul>
+              <li>
+                <p>Spearheaded the student society responsible for the magazine.</p>
+              </li>
+              <li>
+                <p>Secured content deals with Team ARU and several other local companies.</p>
+              </li>
+              <li>
+                <p>Refreshed the magazine's branding and activly promoted it throughout the university.</p>
+              </li>
+              <li>
+                <p>Managed the magazine's social media profiles and handled corperate outreach.</p>
+              </li>
+              <li>
+                <p>Edited and reviewed student-written article submissions.</p>
+              </li>
+              <li>
+                <p>Represented the society within the Students' Union.</p>
+              </li>
+            </ul>
           </div>
         </li>
         <li class="list-group-item sub-item">
@@ -252,3 +353,18 @@ permalink: /resume/
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".expand-item-toggle").click(function() {
+      var data_id = $(this).attr("data-id");
+
+      if($("#" + data_id).css('display') == 'none') {
+        $("#" + data_id).css('display', 'flex');
+      }
+      else {
+        $("#" + data_id).css('display', 'none');
+      }
+    });
+  });
+</script>
