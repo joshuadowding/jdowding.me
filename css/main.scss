@@ -650,6 +650,12 @@ html {
           padding: 0 12px;
         }
       }
+
+      @media screen and (max-width: 767px) {
+        .pagination {
+          justify-content: center;
+        }
+      }
     }
 
     .list-group {
@@ -881,6 +887,9 @@ html {
             -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
             -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
             box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
           }
         }
       }
@@ -896,6 +905,9 @@ html {
       background-color: var(--colour-background-invert);
       overflow-x: hidden;
       transition: 0.5s;
+      -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
+      -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
+      box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
 
       &.show {
         width: 256px;
@@ -941,6 +953,26 @@ html {
       .body-content {
         .posts {
           .post {
+            .post-image {
+              width: 540px;
+
+              .image-wrapper {
+                width: 540px;
+
+                .image {
+                  width: 540px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      .body-content {
+        .posts {
+          .post {
             display: flex;
             flex-direction: column;
 
@@ -959,6 +991,8 @@ html {
               }
 
               .image-wrapper {
+                width: 100%;
+
                 .image {
                   width: 100%;
                 }
@@ -975,6 +1009,26 @@ html {
       .list-group {
         &.experience-group {
           margin: 16px auto;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .body-content {
+        .posts {
+          .post {
+            .post-image {
+              height: 256px;
+
+              .image-wrapper {
+                height: 256px;
+
+                .image {
+                  height: 256px;
+                }
+              }
+            }
+          }
         }
       }
     }
