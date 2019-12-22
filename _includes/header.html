@@ -1,6 +1,7 @@
 <header class="container">
   <nav class="header-inner">
     <div class="header-title">
+      <!--<div class="header-logo"></div>-->
       <a href="{{ site.baseurl }}/">
         <h1 class="title title-name">Joshua Dowding</h1>
       </a>
@@ -46,3 +47,17 @@
     </div>
   </nav>
 </header>
+
+<!-- Modified from: https://stackoverflow.com/questions/3186688/drop-shadow-for-png-image-in-css -->
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="drop-shadow">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+        <feOffset dx="0" dy="3" result="offsetblur"/>
+        <feFlood flood-color="rgba(0, 0, 0, 0.35)"/>
+        <feComposite in2="offsetblur" operator="in"/>
+        <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+</svg>
