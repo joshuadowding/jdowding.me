@@ -69,10 +69,10 @@ $colour-disabled: #696969;
 html {
   font-size: 62.5%;
   max-width: 1920px;
-  min-width: 320px;
+  min-width: 350px;
 
   body {
-    min-width: 320px;
+    min-width: 350px;
     background-color: var(--colour-background);
 
     h1 {
@@ -150,6 +150,13 @@ html {
     }
 
     span {
+      font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--colour-text);
+      line-height: 2.4rem;
+      //margin: 0 0 12px 0;
+
       &.button {
         position: relative;
         display: inline-block;
@@ -214,10 +221,8 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 400;
-      //color: var(--colour-text);
       color: $colour-text-highlight;
 
-      //@include transition-colour-text-highlight(0.1s);
       &:hover {
         color: $colour-text-highlight;
         text-decoration: none;
@@ -1005,108 +1010,6 @@ html {
         i {
           color: var(--colour-text-invert);
         }
-      }
-    }
-
-    @media screen and (max-width: 1199px) {
-      .body-content {
-        .posts {
-          .post {
-            .post-image {
-              width: 540px;
-
-              .image-wrapper {
-                width: 540px;
-
-                .image {
-                  width: 540px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 991px) {
-      .body-content {
-        .posts {
-          .post {
-            display: flex;
-            flex-direction: column;
-
-            .post-image {
-              width: 100%;
-              padding-right: 0;
-              margin-bottom: 24px;
-              margin-right: 0;
-
-              &.post-carousel {
-                .slick-arrow {
-                  &.slick-next {
-                    right: 0;
-                  }
-                }
-              }
-
-              .image-wrapper {
-                width: 100%;
-
-                .image {
-                  width: 100%;
-                }
-              }
-            }
-
-            .post-body {
-              width: 100%;
-            }
-          }
-        }
-      }
-
-      .list-group {
-        &.experience-group {
-          margin: 16px auto;
-        }
-      }
-    }
-
-    @media screen and (max-width: 767px) {
-      .body-content {
-        .posts {
-          .post {
-            .post-image {
-              height: 256px;
-
-              .image-wrapper {
-                height: 256px;
-
-                .image {
-                  height: 256px;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 442px) {
-      .sidenav {
-        &.show {
-          width: 100%;
-        }
-      }
-    }
-
-    @media screen and (max-height: 450px) {
-      .sidenav {
-        padding-top: 15px;
-      }
-
-      .sidenav a {
-        font-size: 18px;
       }
     }
   }

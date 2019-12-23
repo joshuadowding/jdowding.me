@@ -17,7 +17,7 @@ baseurl: ""
 destination: ./_site/
 
 username: joshuadowding
-repo: joshuadowding.io
+repo: joshuadowding.github.io
 branch: master
 
 sudo: false

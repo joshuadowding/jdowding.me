@@ -1,0 +1,112 @@
+---
+---
+
+html {
+  body {
+    @media screen and (max-width: 1199px) {
+      .body-content {
+        .posts {
+          .post {
+            .post-image {
+              width: 540px;
+
+              .image-wrapper {
+                width: 540px;
+
+                .image {
+                  width: 540px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      .body-content {
+        .posts {
+          .post {
+            display: flex;
+            flex-direction: column;
+
+            .post-image {
+              width: 100%;
+              padding-right: 0;
+              margin-bottom: 24px;
+              margin-right: 0;
+
+              &.post-carousel {
+                .slick-arrow {
+                  &.slick-next {
+                    right: 0;
+                  }
+                }
+              }
+
+              .image-wrapper {
+                width: 100%;
+
+                .image {
+                  width: 100%;
+                }
+              }
+            }
+
+            .post-body {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .list-group {
+        &.experience-group {
+          margin: 16px auto;
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .body-content {
+        .posts {
+          .post {
+            .post-image {
+              height: 256px;
+
+              .image-wrapper {
+                height: 256px;
+
+                .image {
+                  height: 256px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 442px) {
+      .sidenav {
+        &.show {
+          width: 100%;
+        }
+
+        a {
+          padding: 8px 32px 8px 32px;
+        }
+      }
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+  }
+}
