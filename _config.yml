@@ -50,3 +50,5 @@ exclude:
 sass:
   sass_dir: css
   style: compressed
+
+include: ['_pages']
