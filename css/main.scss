@@ -20,6 +20,19 @@ $colour-disabled: #696969;
   --colour-text-invert: #FEFCFF;
 
   ul {
+    &.invert {
+      color: var(--colour-text-invert);
+
+      li {
+        color: var(--colour-text-invert);
+        list-style: square outside url('../img/bullet-w.png');
+
+        p {
+          color: var(--colour-text-invert);
+        }
+      }
+    }
+
     li {
       list-style: square outside url('../img/bullet.png');
     }
@@ -34,6 +47,19 @@ $colour-disabled: #696969;
   --colour-text-invert: #272727;
 
   ul {
+    &.invert {
+      color: var(--colour-text-invert);
+
+      li {
+        color: var(--colour-text-invert);
+        list-style: square outside url('../img/bullet.png');
+
+        p {
+          color: var(--colour-text-invert);
+        }
+      }
+    }
+
     li {
       list-style: square outside url('../img/bullet-w.png');
     }
@@ -710,18 +736,13 @@ html {
 
               ul {
                 padding-left: 16px;
-                color: var(--colour-text-invert);
 
                 li {
-                  color: var(--colour-text-invert);
-                  list-style: square outside url("../img/bullet.png");
-
                   &:last-child {
                     margin-bottom: 0;
                   }
 
                   p {
-                    color: var(--colour-text-invert);
                     font-size: 1.2rem;
                   }
                 }
