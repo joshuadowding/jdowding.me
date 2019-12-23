@@ -1,0 +1,74 @@
+$colour-text-white: #FEFCFF;
+$colour-text-black: #272727;
+$colour-text-highlight: #3095E5;
+$colour-disabled: #696969;
+$colour-overlay: rgba(0, 0, 0, 0.85);
+$box-shadow-default: rgba(0, 0, 0, 0.35);
+
+@mixin transition-colour-text-highlight($duration) {
+  -webkit-transition: color $duration ease-in-out;
+  -ms-transition: color $duration ease-in-out;
+  transition: color $duration ease-in-out;
+}
+
+@mixin box-shadow-default() {
+  -webkit-box-shadow: 0px 5px 10px 0px $box-shadow-default;
+  -moz-box-shadow: 0px 5px 10px 0px $box-shadow-default;
+  box-shadow: 0px 5px 10px 0px $box-shadow-default;
+}
+
+:root {
+  --colour-background: #FEFCFF;
+  --colour-background-invert: #272727;
+  --colour-button-background-disabled: #696969;
+  --colour-button-disabled: black;
+  --colour-text: #272727;
+  --colour-text-invert: #FEFCFF;
+
+  ul {
+    &.invert {
+      color: var(--colour-text-invert);
+
+      li {
+        color: var(--colour-text-invert);
+        list-style: square outside url('../img/bullet-w.png');
+
+        p {
+          color: var(--colour-text-invert);
+        }
+      }
+    }
+
+    li {
+      list-style: square outside url('../img/bullet.png');
+    }
+  }
+}
+
+:root.theme-dark {
+  --colour-background: #272727;
+  --colour-background-invert: #FEFCFF;
+  --colour-button-background-disabled: #696969;
+  --colour-button-disabled: black;
+  --colour-text: #FEFCFF;
+  --colour-text-invert: #272727;
+
+  ul {
+    &.invert {
+      color: var(--colour-text-invert);
+
+      li {
+        color: var(--colour-text-invert);
+        list-style: square outside url('../img/bullet.png');
+
+        p {
+          color: var(--colour-text-invert);
+        }
+      }
+    }
+
+    li {
+      list-style: square outside url('../img/bullet-w.png');
+    }
+  }
+}

@@ -1,70 +1,7 @@
 ---
 ---
 
-$colour-text-white: #FEFCFF;
-$colour-text-black: #272727;
-$colour-text-highlight: #3095E5;
-$colour-disabled: #696969;
-
-@mixin transition-colour-text-highlight($duration) {
-  -webkit-transition: color $duration ease-in-out;
-  -ms-transition: color $duration ease-in-out;
-  transition: color $duration ease-in-out;
-}
-
-:root {
-  --colour-background: #FEFCFF;
-  --colour-background-invert: #272727;
-  --colour-button-disabled: #696969;
-  --colour-text: #272727;
-  --colour-text-invert: #FEFCFF;
-
-  ul {
-    &.invert {
-      color: var(--colour-text-invert);
-
-      li {
-        color: var(--colour-text-invert);
-        list-style: square outside url('../img/bullet-w.png');
-
-        p {
-          color: var(--colour-text-invert);
-        }
-      }
-    }
-
-    li {
-      list-style: square outside url('../img/bullet.png');
-    }
-  }
-}
-
-:root.theme-dark {
-  --colour-background: #272727;
-  --colour-background-invert: #FEFCFF;
-  --colour-button-disabled: #696969;
-  --colour-text: #FEFCFF;
-  --colour-text-invert: #272727;
-
-  ul {
-    &.invert {
-      color: var(--colour-text-invert);
-
-      li {
-        color: var(--colour-text-invert);
-        list-style: square outside url('../img/bullet.png');
-
-        p {
-          color: var(--colour-text-invert);
-        }
-      }
-    }
-
-    li {
-      list-style: square outside url('../img/bullet-w.png');
-    }
-  }
-}
+@import '../css/common.scss';
 
 html {
   font-size: 62.5%;
@@ -163,28 +100,24 @@ html {
         font-weight: 500;
         color: var(--colour-text);
         padding: 4px 8px;
-        //border: 2px solid var(--colour-background-invert);
         min-width: 64px;
         text-align: center;
         border-radius: .35rem;
         background-color: var(--colour-text);
-        -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
-        -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
-        box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
+        @include box-shadow-default;
 
         &.button-disabled {
-          color: var(--colour-button-disabled);
+          color: var(--colour-button-background-disabled);
+          background-color: var(--colour-button-disabled);
           cursor: default;
-          background-color: black;
 
           &:hover {
-            color: var(--colour-button-disabled);
+            color: var(--colour-button-background-disabled);
           }
         }
 
         &:hover {
           color: $colour-text-highlight;
-          //@include transition-colour-text-highlight(0.1s);
         }
       }
 
@@ -226,7 +159,6 @@ html {
       &:hover {
         color: $colour-text-highlight;
         text-decoration: none;
-        //@include transition-colour-text-highlight(0.1s);
       }
 
       &.link-icon {
@@ -253,28 +185,24 @@ html {
         font-weight: 500;
         color: var(--colour-text);
         padding: 4px 8px;
-        //border: 2px solid var(--colour-background-invert);
         min-width: 64px;
         text-align: center;
         background-color: var(--color-text);
         border-radius: .35rem;
-        -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
-        -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
-        box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
+        @include box-shadow-default;
 
         &.button-disabled {
-          background-color: black;
-          color: var(--colour-button-disabled);
+          color: var(--colour-button-background-disabled);
+          background-color: var(--colour-button-disabled);
           cursor: default;
 
           &:hover {
-            color: var(--colour-button-disabled);
+            color: var(--colour-button-background-disabled);
           }
         }
 
         &:hover {
           color: $colour-text-highlight;
-          //@include transition-colour-text-highlight(0.1s);
         }
       }
 
@@ -283,7 +211,6 @@ html {
 
         &:hover {
           color: $colour-text-highlight !important;
-          //@include transition-colour-text-highlight(0.1s);
 
           .post-title {
             color: $colour-text-highlight !important;
@@ -563,7 +490,6 @@ html {
 
         &.full-spread {
           margin: 0 !important;
-          //padding: 24px 48px;
 
           .post-body {
             width: 100% !important;
@@ -593,9 +519,7 @@ html {
                 background-position: center;
                 background-color: $colour-disabled;
                 border-radius: .35rem;
-                -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-                -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+                @include box-shadow-default;
               }
             }
           }
@@ -623,9 +547,7 @@ html {
               background-position: center;
               background-color: $colour-disabled;
               border-radius: .35rem;
-              -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-              -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-              box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+              @include box-shadow-default;
             }
           }
         }
@@ -691,12 +613,9 @@ html {
 
     .list-group {
       &.experience-group {
-        //max-width: 512px;
         margin: 16px 0;
         border-radius: .35rem;
-        -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-        -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+        @include box-shadow-default;
 
         &.dark-group {
           .list-group-item {
@@ -808,14 +727,12 @@ html {
                 p {
                   &:hover {
                     color: $colour-text-highlight;
-                    //@include transition-colour-text-highlight(0.1s);
                   }
                 }
 
                 .experience-header {
                   &:hover {
                     color: $colour-text-highlight;
-                    //@include transition-colour-text-highlight(0.1s);
                   }
                 }
               }
@@ -860,7 +777,7 @@ html {
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: $colour-overlay;
       z-index: 999;
 
       &.show {
@@ -948,9 +865,7 @@ html {
             margin-left: 64px;
             margin-right: 64px;
             border-radius: .35rem;
-            -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-            -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
-            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.35);
+            @include box-shadow-default;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -969,9 +884,7 @@ html {
       background-color: var(--colour-background-invert);
       overflow-x: hidden;
       transition: 0.5s;
-      -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
-      -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
-      box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.35);
+      @include box-shadow-default;
 
       &.show {
         width: 256px;
