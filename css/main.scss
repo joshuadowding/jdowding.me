@@ -495,8 +495,38 @@ html {
         &.full-spread {
           margin: 0 !important;
 
+          .post-header {
+            .post-title {
+              margin: 0;
+            }
+
+            .post-subtitle {
+              margin: 0;
+              margin-top: 6px;
+            }
+
+            .post-date {
+              margin: 0;
+              margin-top: 6px;
+            }
+
+            .post-tags {
+              margin: 0;
+              margin-top: 6px;
+            }
+
+            .post-catagories {
+              margin: 0;
+              margin-top: 6px;
+            }
+          }
+
           .post-body {
             width: 100% !important;
+
+            .post-content {
+              margin: 0;
+            }
           }
 
           &:not(.project) {
@@ -504,6 +534,7 @@ html {
               width: 100%;
               height: 256px;
               margin: 0;
+              margin-top: 16px;
 
               .image-wrapper {
                 width: 100%;
