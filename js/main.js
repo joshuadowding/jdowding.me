@@ -2,6 +2,8 @@ $(document).ready(function () {
   $("#theme-toggle #dark").hide();
   $(".menu-toggle #close").hide();
 
+  $(".hover-tooltip").tooltip();
+
   $("#theme-toggle").click(function () {
     if ($("#theme-toggle #dark").is(":hidden")) {
       $(":root").addClass("theme-dark");

@@ -475,6 +475,10 @@ html {
       }
     }
 
+    .tooltip {
+      //@include box-shadow-default;
+    }
+
     .body-content {
       &#main {
         transition: margin-left 0.5s;
@@ -755,7 +759,7 @@ html {
 
             .attribute {
               font-size: 1.2rem;
-              line-height: 1.8rem;
+              //line-height: 1.8rem;
               margin: 0;
               color: var(--colour-text-invert);
             }
