@@ -16,11 +16,11 @@ permalink: /resume/
               <a class="header-link" href="https://esperus.com" target="_blank">
                 <p>Esperus Systems</p>
               </a>
-              <p>Contract (Fixed-Term)</p>
             </div>
             <div class="attribute-wrapper">
               <p class="attribute">Dec. 2019 - Jan. 2020</p>
               <p class="attribute">London, Greater London, UK</p>
+              <p class="attribute">Contract (Fixed-Term)</p>
             </div>
           </div>
         </li>
@@ -29,18 +29,20 @@ permalink: /resume/
         <li class="list-group-item">
           <div class="item-header">
             <div class="header-wrapper">
-              <p class="experience-header">Junior Software Developer</p>
+              <div class="expand-wrapper">
+                <a class="expand-item-toggle" href="javascript:void(0);" data-id="ESPERUS-1">
+                  <p class="experience-header">Junior Software Developer</p>
+                  <i class="ri-menu-2-line"></i>
+                </a>
+              </div>
               <a class="header-link" href="https://esperus.com" target="_blank">
                 <p>Esperus Systems</p>
               </a>
-              <p>Permanent (Full-Time)</p>
             </div>
             <div class="attribute-wrapper">
               <p class="attribute">Sep. 2018 - Sep. 2019</p>
               <p class="attribute">London, Greater London, UK</p>
-              <a class="expand-item-toggle" href="javascript:void(0);" data-id="ESPERUS-1">
-                <p class="attribute">Expand</p>
-              </a>
+              <p class="attribute">Permanent (Full-Time)</p>
             </div>
           </div>
         </li>
@@ -78,7 +80,7 @@ permalink: /resume/
             </ul>
           </div>
         </li>
-        <li class="list-group-item sub-item">
+        <li class="list-group-item sub-item expand-item">
           <div class="item-header">
             <div class="header-wrapper">
               <a class="inline-link" href="{{ site.baseurl }}/work#ESPERUS-2" target="_blank">
@@ -119,18 +121,20 @@ permalink: /resume/
         <li class="list-group-item">
           <div class="item-header">
             <div class="header-wrapper">
-              <p class="experience-header">Trainee Software Developer</p>
+              <div class="expand-wrapper">
+                <a class="expand-item-toggle" href="javascript:void(0);" data-id="MSX-1">
+                  <p class="experience-header">Trainee Software Developer</p>
+                  <i class="ri-menu-2-line"></i>
+                </a>
+              </div>
               <a class="header-link" href="https://www.msxi.com" target="_blank">
                 <p>MSX International</p>
               </a>
-              <p>Contract (Full-Time)</p>
             </div>
             <div class="attribute-wrapper">
               <p class="attribute">Aug. 2016 - Jan. 2018</p>
               <p class="attribute">Colchester, Essex, UK</p>
-              <a class="expand-item-toggle" href="javascript:void(0);" data-id="MSX-1">
-                <p class="attribute">Expand</p>
-              </a>
+              <p class="attribute">Contract (Full-Time)</p>
             </div>
           </div>
         </li>
@@ -195,18 +199,20 @@ permalink: /resume/
         <li class="list-group-item">
           <div class="item-header">
             <div class="header-wrapper">
-              <p class="experience-header">President & Editor-in-Chief</p>
+              <div class="expand-wrapper">
+                <a class="expand-item-toggle" href="javascript:void(0);" data-id="ANGLIA-1">
+                  <p class="experience-header">President & Editor-in-Chief</p>
+                  <i class="ri-menu-2-line"></i>
+                </a>
+              </div>
               <a class="header-link" href="https://ruskinjournal.com" target="_blank">
                 <p>The Ruskin Journal</p>
               </a>
-              <p>Volunteer (Fixed-Term)</p>
             </div>
             <div class="attribute-wrapper">
               <p class="attribute">Oct. 2019 - Aug. 2020</p>
               <p class="attribute">Cambridge, Cambridgeshire, UK</p>
-              <a class="expand-item-toggle" href="javascript:void(0);" data-id="ANGLIA-1">
-                <p class="attribute">Expand</p>
-              </a>
+              <p class="attribute">Volunteer (Fixed-Term)</p>
             </div>
           </div>
         </li>
@@ -363,10 +369,9 @@ permalink: /resume/
     $(".expand-item-toggle").click(function() {
       var data_id = $(this).attr("data-id");
 
-      if($("#" + data_id).css('display') == 'none') {
+      if ($("#" + data_id).css('display') == 'none') {
         $("#" + data_id).css('display', 'flex');
-      }
-      else {
+      } else {
         $("#" + data_id).css('display', 'none');
       }
     });
