@@ -2,10 +2,17 @@
 layout: default
 ---
 
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <article class="post full-spread">
+<article class="post full-spread">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="post-image">
+          <a class="image-wrapper" href="{{ site.baseurl }}{{ page.image }}">
+            <div class="image" style="background-image: url('{{ page.image }}')"></div>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-7">
         <div class="post-body">
           <h1 class="post-title">{{ page.title }}</h1>
           <h6 class="post-date">{{ page.date | date: "%B %e, %Y" }}</h6>
@@ -30,7 +37,7 @@ layout: default
             {{ content | markdownify }}
           </div>
         </div>
-      </article>
+      </div>
     </div>
   </div>
-</div>
+</article>

@@ -243,7 +243,7 @@ html {
         font-size: 1.4rem;
         font-weight: 400;
         color: var(--colour-text);
-        margin: 0 0 6px 0;
+        margin: 0 0 2px 0;
       }
 
       &.nav {
@@ -497,6 +497,24 @@ html {
 
           .post-body {
             width: 100% !important;
+          }
+
+          &:not(.project) {
+            .post-image {
+              width: 100%;
+              height: 256px;
+              margin: 0;
+
+              .image-wrapper {
+                width: 100%;
+                height: 256px;
+
+                .image {
+                  width: 100%;
+                  height: 256px;
+                }
+              }
+            }
           }
         }
 

@@ -58,6 +58,16 @@ html {
             }
           }
         }
+
+        .post {
+          &.full-spread {
+            &:not(.project) {
+              .post-image {
+                margin-bottom: 16px;
+              }
+            }
+          }
+        }
       }
 
       .list-group {
