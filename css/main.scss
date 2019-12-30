@@ -667,14 +667,18 @@ html {
     .list-group {
       &.experience-group {
         margin: 16px 0;
-        border-radius: .35rem;
-        @include box-shadow-default;
+        border: 0;
+        padding: 0;
 
         &.dark-group {
           .list-group-item {
             background-color: black;
+            border-left: 0;
+            border-radius: .35rem;
 
             .item-body {
+              padding: 6px 12px 6px 0;
+
               p {
                 color: white;
                 font-size: 1.2rem;
@@ -684,64 +688,39 @@ html {
         }
 
         .list-group-item {
-          background-color: var(--colour-background-invert);
-          padding: 16px;
-          color: var(--colour-text-invert);
-
-          &:first-child {
-            border-top-left-radius: .35rem;
-            border-top-right-radius: .35rem;
-          }
-
-          &:last-child {
-            border-bottom-left-radius: .35rem;
-            border-bottom-right-radius: .35rem;
-          }
+          background-color: transparent;
+          color: var(--colour-text);
+          border: 0;
+          border-left: 2px solid var(--colour-text);
+          border-radius: 0;
+          padding: 0;
+          padding-left: 12px;
 
           &.sub-item {
-            padding: 12px 16px;
-
-            &.expand-item {
-              display: none;
-              flex-direction: row;
-
-              .item-body {
-                &:not(:first-child) {
-                  padding-left: 12px;
-                }
-              }
-
-              ul {
-                padding-left: 16px;
-
-                li {
-                  &:last-child {
-                    margin-bottom: 0;
-                  }
-
-                  p {
-                    font-size: 1.2rem;
-                  }
-                }
-              }
-            }
-
-            &.item-details {
-              padding: 4px 16px;
-
-              .item-header {
-                margin-bottom: 0;
-                justify-content: center;
-              }
-            }
+            padding: 8px 0 8px 12px;
+            flex-direction: row;
 
             .item-header {
-              .header-wrapper {
-                width: 80%;
-              }
+              min-height: unset;
+            }
 
-              .attribute-wrapper {
-                width: 20%;
+            .item-body {
+              &:not(:first-child) {
+                padding-left: 12px;
+              }
+            }
+
+            ul {
+              padding-left: 16px;
+
+              li {
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                p {
+                  font-size: 1.2rem;
+                }
               }
             }
           }
@@ -751,6 +730,7 @@ html {
             flex-direction: row;
             align-items: center;
             margin: 0 0 8px 0;
+            min-height: 80px;
 
             &:last-child {
               margin: 0;
@@ -765,43 +745,12 @@ html {
             .header-wrapper {
               margin-right: auto;
 
-              .expand-wrapper {
-                .expand-item-toggle {
-                  display: flex;
-                  flex-direction: row;
-                  font-size: 1.8rem;
-                  line-height: 2.4rem;
-
-                  i {
-                    font-size: 1.8rem;
-                    line-height: 2.4rem;
-                    color: var(--colour-text-invert);
-                    margin-left: 4px;
-                    //margin-top: 1px;
-                  }
-
-                  &:hover {
-                    .experience-header {
-                      color: $colour-text-highlight !important;
-                    }
-
-                    i {
-                      color: $colour-text-highlight !important;
-                    }
-                  }
-                }
-              }
-
               .inline-link {
-                color: var(--colour-text-invert);
+                color: var(--colour-text);
                 font-size: 1.4rem;
 
                 &:hover {
                   color: $colour-text-highlight;
-                }
-
-                &.small {
-                  font-size: 1.2rem;
                 }
               }
 
@@ -820,7 +769,7 @@ html {
               }
 
               p {
-                color: var(--colour-text-invert);
+                color: var(--colour-text);
               }
             }
 
@@ -831,20 +780,19 @@ html {
 
             .experience-header {
               margin: 0 auto 0 0;
-              color: var(--colour-text-invert);
+              color: var(--colour-text);
             }
 
             .attribute {
               font-size: 1.2rem;
-              //line-height: 1.8rem;
               margin: 0;
-              color: var(--colour-text-invert);
+              color: var(--colour-text);
             }
           }
 
           .item-body {
             p {
-              color: var(--colour-text-invert);
+              color: var(--colour-text);
             }
           }
         }
