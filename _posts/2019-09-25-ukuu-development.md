@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ukuu Development Update
+title: ukuu Development Update (19.10)
 image: /img/portfolio/ukuu/ukuu-1.jpg
 categories:
 tags: ukuu noyau
