@@ -13,7 +13,7 @@ Over the past few months, a ton of work has been done to make our fork of [ukuu]
 The first and most obvious change is it's name: we've gone from 'ukuu' (short for Ubuntu Kernel Update Utility) to '[Noyau](https://www.collinsdictionary.com/dictionary/french-english/noyau)' - French for "core". We did this to differentiate our work from that of the project's progenitor. An ego move - nothing more, nothing less.
 
 ### Meson
-The second, less obvious change is the transition from autotools to the [Meson](https://mesonbuild.com/) build system. While this was partially complete before the [last development update](http://127.0.0.1:4000/2019/09/25/ukuu-development/), as of this post the work as been completed.
+The second, less obvious change is the transition from autotools to the [Meson](https://mesonbuild.com/) build system. While this was partially complete before the [last development update](https://joshuadowding.github.io/2019/09/25/ukuu-development/), as of this post the work as been completed.
 
 ### Optimizations
 Previously, ukuu had two entry-points - as in two separate *void main()* functions. One was for the embedded CLI program, and the other was for the GUI (GTK) program. We've combined these two entry-points into a single entry-point that launches both the CLI and GUI programs. No more need for *ukuu-cli* and *ukuu-gtk* as separate entities.
