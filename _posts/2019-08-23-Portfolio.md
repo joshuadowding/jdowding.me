@@ -1,8 +1,8 @@
 ---
 post-id: UKUU-1
 layout: post
-title: Ubuntu Kernel Update Utility
-thumbnail: /img/portfolio/ukuu/ukuu-1.jpg
+title: Noyau
+thumbnail: /img/blog/2020-01-19-1.jpg
 slide-images:
  - /img/portfolio/ukuu/ukuu-1.jpg
  - /img/portfolio/ukuu/ukuu-2.jpg
@@ -19,4 +19,4 @@ tags:
  - Ubuntu
 ---
 
-Forked from an abandoned open-source project of the same name, the Ubuntu Kernel Update Utility (or "ukuu") manages kernel updates for Ubuntu-based distributions; including both supported and un-supported kernel releases directly from Canonical. With a modern GTK3-based interface, and a convenient command-line interface, it's features include the ability to: **install newer kernels than those that come with the distribution by default**, view kernel release changelogs, **remove all installed kernels besides the one that's currently running**, and includes desktop notifications for new kernel releases.
+Forked from an [abandoned open-source project](https://github.com/teejee2008/ukuu), Noyau manages kernel updates for Ubuntu-based distributions; including both supported and un-supported kernel releases directly from Canonical. With a modern GTK3-based interface, and a convenient command-line interface, it's features include the ability to: **install newer kernels than those that come with the distribution by default**, view kernel release changelogs, **remove all installed kernels besides the one that's currently running**, and includes desktop notifications for new kernel releases.
