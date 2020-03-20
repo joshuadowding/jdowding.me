@@ -28,19 +28,23 @@ layout: default
             </a>
             {% endif %}
 
-            <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h6>
+            <div class="post-metadata">
+                <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}
+
+                {% if post.redirect %}
+                  - <span>External Link</span>
+                {% else %}
+                  -
+                  <span class="reading-time"></span>
+                  <span>(<span class="word-count"></span> words)</span>
+                {% endif %}
+
+                </h6>
+            </div>
 
             <div class="post-excerpt">
               {{ post.excerpt | truncatewords:96 | markdownify }}
             </div>
-
-            {% if post.redirect %}
-            {% else %}
-            <div class="post-metadata">
-              <span class="reading-time"></span>
-              <span>(<span class="word-count"></span> words)</span>
-            </div>
-            {% endif %}
 
             {% if post.categories != empty %}
             <div class="post-catagories">
