@@ -528,6 +528,7 @@ html {
           height: 360px;
           width: 640px;
           margin-right: 24px;
+          position: relative;
 
           .image-wrapper {
             position: relative;
@@ -546,12 +547,35 @@ html {
           }
         }
 
+        .post-hint {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+          padding: 6px 12px 6px 6px;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.75);
+          border-radius: $border-radius-default;
+          @include box-shadow-default;
+
+          i {
+            font-size: 2rem;
+            color: white;
+            margin-right: 4px;
+          }
+        }
+
         .post-body {
           display: flex;
           flex-direction: column;
           padding: 24px 24px 0 0;
           overflow-y: scroll;
           max-height: 360px;
+          position: relative;
 
           .post-title {
             margin: 0 0 8px 0;
@@ -562,7 +586,7 @@ html {
           }
 
           .post-date {
-            margin: 0 0 8px 0;
+            margin: 0;
           }
 
           .post-tags {
