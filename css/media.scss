@@ -78,6 +78,28 @@ html {
     }
 
     @media screen and (max-width: 767px) {
+      header {
+        .header-inner {
+          .header-icons {
+            display: none;
+          }
+
+          .header-nav {
+            display: none;
+          }
+
+          .header-menu {
+            display: flex;
+
+            .link-icon {
+              &.menu-toggle {
+                display: flex;
+              }
+            }
+          }
+        }
+      }
+
       .body-content {
         .posts {
           .post {
@@ -93,6 +115,10 @@ html {
               }
             }
           }
+        }
+
+        .pagination {
+          justify-content: center;
         }
       }
     }
