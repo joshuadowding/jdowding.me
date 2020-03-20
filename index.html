@@ -43,7 +43,7 @@ layout: default
             </div>
 
             <div class="post-excerpt">
-              {{ post.excerpt | truncatewords:96 | markdownify }}
+              {{ post.excerpt | truncatewords:64 | markdownify }}
             </div>
 
             {% if post.categories != empty %}
