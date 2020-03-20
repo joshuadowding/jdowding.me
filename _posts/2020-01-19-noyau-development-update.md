@@ -4,6 +4,7 @@ title: Noyau Development Update (19.10)
 image: /img/blog/2020-01-19-1.jpg
 categories:
 tags: ukuu noyau
+location: /2020/01/19/noyau-development-update/
 ---
 
 Over the past few months, a ton of work has been done to make our fork of [ukuu](https://github.com/joshuadowding/noyau) a little less frustrating to maintain. As a result, we haven't seen much in the way of feature development over the course of this cycle, though what we *have* seen is a significant overhaul of the code base itself as well as a cacophony of smaller additions and changes.

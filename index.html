@@ -8,7 +8,7 @@ layout: default
     <div class="col">
       <div class="posts">
         {% for post in paginator.posts limit:5 %}
-        <article class="post">
+        <article class="post" data-file="{{ post.location }}" data-target="article">
           <div class="post-image">
             <a class="image-wrapper" href="{{ site.baseurl }}{{ post.image }}">
               <div class="image" style="background-image: url('{{ post.image }}')"></div>
@@ -19,12 +19,18 @@ layout: default
             <a class="title-button read-more" href="{{ post.redirect }}" target="_blank">
               <h3 class="post-title">{{ post.title }}</h3>
             </a>
+
+            <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h6>
             {% else %}
             <a class="title-button read-more" href="{{ site.baseurl }}{{ post.url }}">
               <h3 class="post-title">{{ post.title }}</h3>
             </a>
-            {% endif %}
+
             <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h6>
+
+            <span class="reading-time"></span>
+            <span>(<span class="word-count"></span> words)</span>
+            {% endif %}
 
             {% if post.tags != empty %}
             <div class="post-tags">

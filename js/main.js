@@ -46,6 +46,21 @@ $(document).ready(function () {
   });
 
   detect_theme_preference();
+
+  $('article').each(function() {
+    $(this).readingTime({
+        readingTimeTarget: $(this).find('.reading-time'),
+        wordCountTarget: $(this).find('.word-count'),
+        remotePath: $(this).data('file'),
+        remoteTarget: $(this).data('target'),
+        wordsPerMinute: 200, // NOTE: Slightly conservative (avg. 200-250).
+        round: true,
+        lang: 'en',
+        error: function() {
+            $(this).find('.reading-time').remove();
+        }
+    });
+  });
 });
 
 function toggle_theme() {
@@ -58,9 +73,6 @@ function toggle_theme() {
   }
 }
 
-/*
-  Credit: https://medium.com/@jonas_duri/enable-dark-mode-with-css-variables-and-javascript-today-66cedd3d7845
-*/
 function detect_theme_preference() {
   var isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   var isLight = window.matchMedia("(prefers-color-scheme: light)").matches;
