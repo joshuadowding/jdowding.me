@@ -22,14 +22,12 @@ $(document).ready(function () {
   $(".menu-toggle").click(function () {
     if ($(".menu-toggle #close").is(":hidden")) {
       $(".sidenav").addClass("show");
-      //$("#main").css("margin-right", "256px");
 
       $(".menu-toggle #close").show();
       $(".menu-toggle #open").hide();
     }
     else {
       $(".sidenav").removeClass("show");
-      //$("#main").css("margin-right", "0");
 
       $(".menu-toggle #close").hide();
       $(".menu-toggle #open").show();

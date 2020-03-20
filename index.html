@@ -9,48 +9,68 @@ layout: default
       <div class="posts">
         {% for post in paginator.posts limit:5 %}
         <article class="post" data-file="{{ post.location }}" data-target="article">
+          {% if post.image != null %}
           <div class="post-image">
             <a class="image-wrapper" href="{{ site.baseurl }}{{ post.image }}">
               <div class="image" style="background-image: url('{{ post.image }}')"></div>
             </a>
           </div>
+          {% endif %}
+
           <div class="post-body">
             {% if post.redirect %}
             <a class="title-button read-more" href="{{ post.redirect }}" target="_blank">
               <h3 class="post-title">{{ post.title }}</h3>
             </a>
-
-            <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h6>
             {% else %}
             <a class="title-button read-more" href="{{ site.baseurl }}{{ post.url }}">
               <h3 class="post-title">{{ post.title }}</h3>
             </a>
+            {% endif %}
 
             <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}</h6>
 
-            <span class="reading-time"></span>
-            <span>(<span class="word-count"></span> words)</span>
-            {% endif %}
+            <div class="post-excerpt">
+              {{ post.excerpt | truncatewords:96 | markdownify }}
+            </div>
 
-            {% if post.tags != empty %}
-            <div class="post-tags">
-              {% for tag in post.tags %}
-              <p class="tag"><span class="badge badge-secondary">{{ tag }}</span></p>
-              {% endfor %}
+            {% if post.redirect %}
+            {% else %}
+            <div class="post-metadata">
+              <span class="reading-time"></span>
+              <span>(<span class="word-count"></span> words)</span>
             </div>
             {% endif %}
 
             {% if post.categories != empty %}
             <div class="post-catagories">
+              <p class="categories-header">Categories:</p>
+              <p class="categories">
               {% for category in post.categories %}
-              <p class="category"><span class="badge badge-secondary">{{ category }}</span></p>
+              {% if forloop.last %}
+              {{ category }}
+              {% else %}
+              {{ category }},
+              {% endif %}
               {% endfor %}
+              </p>
             </div>
             {% endif %}
 
-            <div class="post-excerpt">
-              {{ post.excerpt | truncatewords:96 | markdownify }}
+            {% if post.tags != empty %}
+            <div class="post-tags">
+              <p class="tags-header">Tags:</p>
+              <p class="tags">
+              {% for tag in post.tags %}
+              {% if forloop.last %}
+              {{ tag }}
+              {% else %}
+              {{ tag }},
+              {% endif %}
+              {% endfor %}
+              </p>
             </div>
+            {% endif %}
           </div>
         </article>
         {% endfor %}

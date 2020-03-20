@@ -556,32 +556,6 @@ html {
           margin: 24px 0 0;
         }
 
-        &:not(.project) {
-          .post-image {
-            height: 360px;
-            width: 640px;
-            margin-right: 24px;
-
-            .image-wrapper {
-              .image {
-                height: 360px;
-                width: 640px;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: $colour-disabled;
-                border-radius: .35rem;
-                @include box-shadow-default;
-              }
-            }
-          }
-
-          .post-body {
-            width: 50%;
-            height: unset;
-          }
-        }
-
         .post-image {
           height: 360px;
           width: 640px;
@@ -606,7 +580,7 @@ html {
 
         .post-body {
           .post-title {
-            margin: 0 0 4px 0;
+            margin: 0 0 8px 0;
           }
 
           .post-subtitle {
@@ -621,8 +595,11 @@ html {
             display: flex;
             margin: 0 0 8px 0;
 
-            .tag {
-              font-size: 1.2rem;
+            .tags-header {
+                margin: 0 8px 0 0;
+            }
+
+            .tags {
               margin: 0 8px 0 0;
             }
           }
@@ -631,8 +608,11 @@ html {
             display: flex;
             margin: 0 0 8px 0;
 
-            .category {
-              font-size: 1.2rem;
+            .categories-header {
+                margin: 0 8px 0 0;
+            }
+
+            .categories {
               margin: 0 8px 0 0;
             }
           }
