@@ -561,6 +561,7 @@ html {
           color: white;
           background-color: rgba(0, 0, 0, 0.75);
           border-radius: $border-radius-default;
+          pointer-events: none;
           @include box-shadow-default;
 
           i {
@@ -849,7 +850,7 @@ html {
       height: 100%;
       width: 100%;
       background-color: $colour-overlay;
-      z-index: 999;
+      z-index: 1001;
 
       &.show {
         display: block;
@@ -864,7 +865,7 @@ html {
         left: 0;
         width: 64px;
         height: 64px;
-        z-index: 1000;
+        z-index: 1002;
 
         &:hover {
           i {
