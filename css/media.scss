@@ -1,6 +1,8 @@
 ---
 ---
 
+@import '../css/common.scss';
+
 html {
   body {
     @media screen and (max-width: 1199px) {
@@ -29,11 +31,11 @@ html {
           .post {
             display: flex;
             flex-direction: column;
+            max-height: unset;
 
             .post-image {
               width: 100%;
               padding-right: 0;
-              margin-bottom: 24px;
               margin-right: 0;
 
               &.post-carousel {
@@ -54,7 +56,9 @@ html {
             }
 
             .post-body {
-              width: 100%;
+              width: 95%;
+              border-top-right-radius: $border-radius-default;
+              border-bottom-left-radius: $border-radius-default;
             }
           }
         }
@@ -113,6 +117,10 @@ html {
                   height: 256px;
                 }
               }
+            }
+
+            .post-body {
+              width: 100%;
             }
           }
         }

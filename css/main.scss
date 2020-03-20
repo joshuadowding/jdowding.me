@@ -443,13 +443,13 @@ html {
         display: flex;
         position: relative;
         flex-direction: row;
+        align-items: center;
         margin: 24px 0;
         min-height: 256px;
         max-height: 360px;
 
         &:not(.full-spread) {
           border-radius: $border-radius-default;
-          @include box-shadow-default;
         }
 
         &.full-spread {
@@ -527,8 +527,10 @@ html {
         .post-image {
           height: 360px;
           width: 640px;
-          margin-right: 24px;
           position: relative;
+          z-index: 1000;
+          border-radius: $border-radius-default;
+          @include box-shadow-default;
 
           .image-wrapper {
             position: relative;
@@ -541,8 +543,7 @@ html {
               background-repeat: no-repeat;
               background-position: center;
               background-color: $colour-disabled;
-              border-top-left-radius: $border-radius-default;
-              border-bottom-left-radius: $border-radius-default;
+              border-radius: $border-radius-default;
             }
           }
         }
@@ -572,10 +573,14 @@ html {
         .post-body {
           display: flex;
           flex-direction: column;
-          padding: 24px 24px 0 0;
+          padding: 24px 24px 0 24px;
           overflow-y: scroll;
-          max-height: 360px;
+          max-height: 350px;
           position: relative;
+          z-index: 999;
+          border-top-right-radius: $border-radius-default;
+          border-bottom-right-radius: $border-radius-default;
+          @include box-shadow-default;
 
           .post-title {
             margin: 0 0 8px 0;
@@ -591,6 +596,7 @@ html {
 
           .post-tags {
             display: flex;
+            position: relative;
             margin: 0 0 8px 0;
 
             &:last-child {
@@ -609,6 +615,7 @@ html {
 
           .post-catagories {
             display: flex;
+            position: relative;
             margin: 0 0 8px 0;
 
             &:last-child {
@@ -627,6 +634,7 @@ html {
 
           .post-content,
           .post-excerpt {
+            position: relative;
             margin: 16px 0;
 
             &:last-child {
