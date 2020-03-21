@@ -576,7 +576,7 @@ html {
           flex-direction: column;
           padding: 24px 24px 0 24px;
           overflow-y: scroll;
-          max-height: 350px;
+          height: 350px;
           position: relative;
           z-index: 999;
           border-top-right-radius: $border-radius-default;
