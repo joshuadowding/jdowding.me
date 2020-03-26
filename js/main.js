@@ -59,6 +59,8 @@ $(document).ready(function () {
   });
 
   detect_theme_preference();
+
+  parse_current_url();
 });
 
 function toggle_theme() {
@@ -97,4 +99,21 @@ function detect_theme_preference() {
       toggle_theme();
     }
   }
+}
+
+function parse_current_url() {
+    var pathname = window.location.pathname;
+
+    if(pathname.includes("work")) {
+        $("#nav-link-work").addClass("selected");
+        $("#sidenav-link-work").addClass("selected");
+    }
+    else if (pathname.includes("resume")) {
+        $("#nav-link-resume").addClass("selected");
+        $("#sidenav-link-resume").addClass("selected");
+    }
+    else {
+        $("#nav-link-blog").addClass("selected");
+        $("#sidenav-link-blog").addClass("selected");
+    }
 }

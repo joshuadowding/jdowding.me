@@ -334,6 +334,10 @@ html {
                 &:hover {
                   color: $colour-text-highlight;
                 }
+
+                &.selected {
+                  color: $colour-text-highlight;
+                }
               }
             }
           }
@@ -979,6 +983,10 @@ html {
         transition: 0.25s;
 
         &:hover {
+          color: $colour-text-highlight;
+        }
+
+        &.selected {
           color: $colour-text-highlight;
         }
       }
