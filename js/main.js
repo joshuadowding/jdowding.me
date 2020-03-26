@@ -45,16 +45,16 @@ $(document).ready(function () {
 
   $('article').each(function() {
     $(this).readingTime({
-        readingTimeTarget: $(this).find('.reading-time'),
-        wordCountTarget: $(this).find('.word-count'),
-        remotePath: $(this).data('file'),
-        remoteTarget: $(this).data('target'),
-        wordsPerMinute: 200, // NOTE: Slightly conservative (avg. 200-250).
-        round: true,
-        lang: 'en',
-        error: function() {
-            $(this).find('.reading-time').remove();
-        }
+      readingTimeTarget: $(this).find('.reading-time'),
+      wordCountTarget: $(this).find('.word-count'),
+      remotePath: $(this).data('file'),
+      remoteTarget: $(this).data('target'),
+      wordsPerMinute: 200, // NOTE: Slightly conservative (avg. 200-250).
+      round: true,
+      lang: 'en',
+      error: function() {
+        $(this).find('.reading-time').remove();
+      }
     });
   });
 
@@ -102,18 +102,14 @@ function detect_theme_preference() {
 }
 
 function parse_current_url() {
-    var pathname = window.location.pathname;
+  var pathname = window.location.pathname;
 
-    if(pathname.includes("work")) {
-        $("#nav-link-work").addClass("selected");
-        $("#sidenav-link-work").addClass("selected");
-    }
-    else if (pathname.includes("resume")) {
-        $("#nav-link-resume").addClass("selected");
-        $("#sidenav-link-resume").addClass("selected");
-    }
-    else {
-        $("#nav-link-blog").addClass("selected");
-        $("#sidenav-link-blog").addClass("selected");
-    }
+  if(pathname.includes("portfolio")) {
+    $("#nav-link-portfolio").addClass("selected");
+    $("#sidenav-link-portfolio").addClass("selected");
+  }
+  else {
+    $("#nav-link-blog").addClass("selected");
+    $("#sidenav-link-blog").addClass("selected");
+  }
 }
