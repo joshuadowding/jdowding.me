@@ -1022,6 +1022,21 @@ html {
       .list-group {
         height: 100%;
         margin: 0 0 0 16px;
+
+        .list-group-item {
+          border: 0;
+          margin: 0 16px 0 0;
+          color: var(--colour-text);
+          border-radius: $border-radius-default;
+          background-color: var(--colour-background);
+          @include box-shadow-default;
+
+          &.active {
+            color: $colour-text-white;
+            background-color: $colour-text-highlight;
+            border-color: $colour-text-highlight;
+          }
+        }
       }
 
       .tab-content {
