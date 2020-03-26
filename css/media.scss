@@ -56,6 +56,8 @@ html {
             }
 
             .post-body {
+              max-height: 350px;
+              height: unset;
               width: 95%;
               border-top-right-radius: $border-radius-default;
               border-bottom-left-radius: $border-radius-default;

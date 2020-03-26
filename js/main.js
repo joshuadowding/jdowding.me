@@ -43,8 +43,6 @@ $(document).ready(function () {
     }
   });
 
-  detect_theme_preference();
-
   $('article').each(function() {
     $(this).readingTime({
         readingTimeTarget: $(this).find('.reading-time'),
@@ -59,6 +57,8 @@ $(document).ready(function () {
         }
     });
   });
+
+  detect_theme_preference();
 });
 
 function toggle_theme() {
