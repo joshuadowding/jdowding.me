@@ -46,7 +46,7 @@ permalink: /work/
             {% endif %}
 
             <div class="post-excerpt">
-              {{ post.content | truncatewords:96 | markdownify }}
+              {{ post.content | truncatewords:256 | markdownify }}
             </div>
 
             {% if post.tags != empty %}
