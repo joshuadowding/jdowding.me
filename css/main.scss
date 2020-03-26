@@ -1005,5 +1005,90 @@ html {
         }
       }
     }
+
+    .container {
+      &.resume-container {
+        margin: 0 auto 32px auto;
+      }
+    }
+
+    .resume-container {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+
+      .list-group {
+        height: 100%;
+        margin: 0 0 0 16px;
+      }
+
+      .tab-content {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow-x: scroll;
+        padding: 16px;
+
+        .tab-pane {
+          height: 100%;
+          
+          &.show {
+            display: table-row;
+          }
+
+          .tab-list {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+
+            .list-item {
+              width: 300px;
+              padding: 12px;
+              margin: 0 16px 0 0;
+              border-radius: $border-radius-default;
+              @include box-shadow-default;
+
+              .item-header {
+                margin: 0 0 8px;
+                font-weight: 700;
+              }
+
+              .item-body {
+                p {
+                  margin: 0 0 4px;
+                  font-size: 1.2rem;
+                  line-height: 1.2;
+
+                  &.body-header {
+                    font-weight: 500;
+                    margin: 0 0 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .scroll-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 16px;
+        z-index: 1000;
+
+        &.overlay-left {
+          background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+          left: 0;
+        }
+
+        &.overlay-right {
+          background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+          right: 0;
+        }
+      }
+    }
   }
 }
