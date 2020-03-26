@@ -16,6 +16,9 @@ layout: default
           <h2 class="post-title">{{ page.subtitle }}</h2>
           <h6 class="post-date">{{ page.date | date: "%B %e, %Y" }}</h6>
 
+          <span class="reading-time"></span>
+          <span>(<span class="word-count"></span> words)</span>
+
           {% if page.tags != empty %}
           <div class="post-tags">
             {% for tag in page.tags %}
@@ -73,9 +76,6 @@ layout: default
                     {{ page.date | date: "%B %e, %Y" }}
                   </p>
                 </div>
-                <!--<div class="post-tags">
-                  {{ commonTags }}
-                </div>-->
                 <div class="post-excerpt">
                   <p>
                     {{ post.excerpt | truncatewords:32 }}

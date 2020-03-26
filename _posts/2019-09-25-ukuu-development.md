@@ -2,8 +2,12 @@
 layout: post
 title: ukuu Development Update (19.10)
 image: /img/portfolio/ukuu/ukuu-1.jpg
+location: /2019/09/25/ukuu-development/
 categories:
-tags: ukuu noyau
+  - 'Software Development'
+tags:
+  - ukuu
+  - noyau
 ---
 
 Ukuu ("oo-koo"), or the Ubuntu Kernel Update Utility, is an [app](https://en.wikipedia.org/wiki/Application_software) that I'm very fond of. I use it to keep my operating system up-to-date with the latest kernel releases from Canonical. However earlier this year the project was archived by it's maintainer; it was replaced with a closed-source alternative requiring the purchase of a licence. This new release boasts only moderate differences to the abandoned open-source project, but I was unwilling to purchase a licence for this new product for a variety of reasons:

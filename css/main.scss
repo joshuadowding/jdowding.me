@@ -73,6 +73,11 @@ html {
       font-weight: 500;
       color: var(--colour-text);
       margin: 24px 0 12px;
+
+      span {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
     }
 
     div,
@@ -92,7 +97,6 @@ html {
       font-weight: 400;
       color: var(--colour-text);
       line-height: 2.4rem;
-      //margin: 0 0 12px 0;
 
       &.button {
         position: relative;
@@ -102,7 +106,7 @@ html {
         padding: 4px 8px;
         min-width: 64px;
         text-align: center;
-        border-radius: .35rem;
+        border-radius: $border-radius-default;
         background-color: var(--colour-text);
         @include box-shadow-default;
 
@@ -126,7 +130,7 @@ html {
         margin: 0;
         background-color: var(--colour-background-invert);
         color: var(--colour-text-invert);
-        border-radius: .35rem;
+        border-radius: $border-radius-default;
         padding: 4px 8px;
       }
     }
@@ -188,7 +192,7 @@ html {
         min-width: 64px;
         text-align: center;
         background-color: var(--color-text);
-        border-radius: .35rem;
+        border-radius: $border-radius-default;
         @include box-shadow-default;
 
         &.button-disabled {
@@ -282,21 +286,6 @@ html {
             margin: 0;
             padding: 0;
           }
-
-          .header-logo {
-            height: 64px;
-            width: 64px;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-image: url('../img/logo-coloured-export-6-1.png');
-            background-position: center;
-            margin-right: 12px;
-
-            -webkit-filter: drop-shadow(12px 12px 25px rgba(0,0,0,0.35));
-            filter: url(#drop-shadow);
-            -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=3, Color='rgba(0,0,0,0.35)')";
-            filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=0, OffY=3, Color='rgba(0,0,0,0.35)')";
-          }
         }
 
         .header-icons {
@@ -320,12 +309,6 @@ html {
             &:last-child {
               margin: 0;
             }
-          }
-        }
-
-        @media screen and (max-width: 767px) {
-          .header-icons {
-            display: none;
           }
         }
 
@@ -353,12 +336,6 @@ html {
                 }
               }
             }
-          }
-        }
-
-        @media screen and (max-width: 767px) {
-          .header-nav {
-            display: none;
           }
         }
 
@@ -392,18 +369,6 @@ html {
 
             &.menu-toggle {
               display: none;
-            }
-          }
-        }
-
-        @media screen and (max-width: 767px) {
-          .header-menu {
-            display: flex;
-
-            .link-icon {
-              &.menu-toggle {
-                display: flex;
-              }
             }
           }
         }
@@ -476,11 +441,16 @@ html {
 
       .post {
         display: flex;
+        position: relative;
         flex-direction: row;
-        padding: 16px 0;
-        margin: 24px 0;
         align-items: center;
+        margin: 24px 0;
         min-height: 256px;
+        max-height: 360px;
+
+        &:not(.full-spread) {
+          border-radius: $border-radius-default;
+        }
 
         &.full-spread {
           margin: 0 !important;
@@ -527,22 +497,20 @@ html {
             }
           }
 
-          &:not(.project) {
-            .post-image {
+          .post-image {
+            width: 100%;
+            height: 430px;
+            margin: 0;
+            margin-bottom: 16px;
+
+            .image-wrapper {
               width: 100%;
               height: 430px;
-              margin: 0;
-              margin-bottom: 16px;
 
-              .image-wrapper {
+              .image {
+                background-size: cover;
                 width: 100%;
                 height: 430px;
-
-                .image {
-                  background-size: cover;
-                  width: 100%;
-                  height: 430px;
-                }
               }
             }
           }
@@ -556,36 +524,13 @@ html {
           margin: 24px 0 0;
         }
 
-        &:not(.project) {
-          .post-image {
-            height: 360px;
-            width: 640px;
-            margin-right: 24px;
-
-            .image-wrapper {
-              .image {
-                height: 360px;
-                width: 640px;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-color: $colour-disabled;
-                border-radius: .35rem;
-                @include box-shadow-default;
-              }
-            }
-          }
-
-          .post-body {
-            width: 50%;
-            height: unset;
-          }
-        }
-
         .post-image {
           height: 360px;
           width: 640px;
-          margin-right: 24px;
+          position: relative;
+          z-index: 1000;
+          border-radius: $border-radius-default;
+          @include box-shadow-default;
 
           .image-wrapper {
             position: relative;
@@ -598,15 +543,48 @@ html {
               background-repeat: no-repeat;
               background-position: center;
               background-color: $colour-disabled;
-              border-radius: .35rem;
-              @include box-shadow-default;
+              border-radius: $border-radius-default;
             }
           }
         }
 
+        .post-hint {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+          padding: 6px 12px 6px 6px;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.75);
+          border-radius: $border-radius-default;
+          pointer-events: none;
+          @include box-shadow-default;
+
+          i {
+            font-size: 2rem;
+            color: white;
+            margin-right: 4px;
+          }
+        }
+
         .post-body {
+          display: flex;
+          flex-direction: column;
+          padding: 24px 24px 0 24px;
+          overflow-y: scroll;
+          height: 350px;
+          position: relative;
+          z-index: 999;
+          border-top-right-radius: $border-radius-default;
+          border-bottom-right-radius: $border-radius-default;
+          @include box-shadow-default;
+
           .post-title {
-            margin: 0 0 4px 0;
+            margin: 0 0 8px 0;
           }
 
           .post-subtitle {
@@ -614,35 +592,56 @@ html {
           }
 
           .post-date {
-            margin: 0 0 8px 0;
+            margin: 0;
           }
 
           .post-tags {
             display: flex;
+            position: relative;
             margin: 0 0 8px 0;
 
-            .tag {
-              font-size: 1.2rem;
+            &:last-child {
+              padding-bottom: 24px;
+              margin-bottom: 0;
+            }
+
+            .tags-header {
+                margin: 0 8px 0 0;
+            }
+
+            .tags {
               margin: 0 8px 0 0;
             }
           }
 
           .post-catagories {
             display: flex;
+            position: relative;
             margin: 0 0 8px 0;
 
-            .category {
-              font-size: 1.2rem;
+            &:last-child {
+              padding-bottom: 24px;
+              margin-bottom: 0;
+            }
+
+            .categories-header {
+                margin: 0 8px 0 0;
+            }
+
+            .categories {
               margin: 0 8px 0 0;
             }
           }
 
-          .post-content {
-            margin: 16px 0;
-          }
-
+          .post-content,
           .post-excerpt {
+            position: relative;
             margin: 16px 0;
+
+            &:last-child {
+              padding-bottom: 24px;
+              margin-bottom: 0;
+            }
           }
         }
       }
@@ -663,7 +662,7 @@ html {
 
         .related-post {
           background-color: black;
-          border-radius: .35rem;
+          border-radius: $border-radius-default;
           @include box-shadow-default;
           padding: 12px;
           margin-bottom: 16px;
@@ -706,12 +705,6 @@ html {
           }
         }
       }
-
-      @media screen and (max-width: 767px) {
-        .pagination {
-          justify-content: center;
-        }
-      }
     }
 
     .list-group {
@@ -724,7 +717,7 @@ html {
           .list-group-item {
             background-color: black;
             border-left: 0;
-            border-radius: .35rem;
+            border-radius: $border-radius-default;
 
             .item-body {
               padding: 6px 12px 6px 0;
@@ -857,7 +850,7 @@ html {
       height: 100%;
       width: 100%;
       background-color: $colour-overlay;
-      z-index: 999;
+      z-index: 1001;
 
       &.show {
         display: block;
@@ -872,7 +865,7 @@ html {
         left: 0;
         width: 64px;
         height: 64px;
-        z-index: 1000;
+        z-index: 1002;
 
         &:hover {
           i {
@@ -943,7 +936,7 @@ html {
             max-width: 1024px;
             margin-left: 64px;
             margin-right: 64px;
-            border-radius: .35rem;
+            border-radius: $border-radius-default;
             @include box-shadow-default;
             background-size: cover;
             background-repeat: no-repeat;
@@ -957,7 +950,7 @@ html {
       height: 100%;
       width: 0;
       position: fixed;
-      z-index: 1;
+      z-index: 2000;
       top: 0;
       right: 0;
       background-color: var(--colour-background-invert);

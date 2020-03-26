@@ -2,6 +2,7 @@
 post-id: UKUU-1
 layout: post
 title: Noyau
+subtitle: Personal Project
 thumbnail: /img/blog/2020-01-19-1.jpg
 slide-images:
  - /img/portfolio/ukuu/ukuu-1.jpg

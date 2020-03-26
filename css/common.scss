@@ -3,7 +3,9 @@ $colour-text-black: #272727;
 $colour-text-highlight: #3095E5;
 $colour-disabled: #696969;
 $colour-overlay: rgba(0, 0, 0, 0.85);
-$box-shadow-default: rgba(0, 0, 0, 0.35);
+
+$box-shadow-default: rgba(0, 0, 0, 0.25);
+$border-radius-default: .35rem;
 
 @mixin transition-colour-text-highlight($duration) {
   -webkit-transition: color $duration ease-in-out;
@@ -12,9 +14,9 @@ $box-shadow-default: rgba(0, 0, 0, 0.35);
 }
 
 @mixin box-shadow-default() {
-  -webkit-box-shadow: 0px 5px 10px 0px $box-shadow-default;
-  -moz-box-shadow: 0px 5px 10px 0px $box-shadow-default;
-  box-shadow: 0px 5px 10px 0px $box-shadow-default;
+  -webkit-box-shadow: 0px 5px 15px 0px $box-shadow-default;
+  -moz-box-shadow: 0px 5px 15px 0px $box-shadow-default;
+  box-shadow: 0px 5px 15px 0px $box-shadow-default;
 }
 
 :root {
