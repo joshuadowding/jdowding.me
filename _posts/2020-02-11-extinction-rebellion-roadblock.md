@@ -3,7 +3,8 @@ layout: post
 title: 'Extinction Rebellion Plan to Bring City to a Halt in Latest Protest'
 image: /img/blog/2020-02-11-1.jpg
 location: /2020/02/11/extinction-rebellion-roadblock/
-categories:
+categories: external
+source:
   - 'The Ruskin Journal'
 tags:
 redirect: 'https://ruskinjournal.com/2020/02/11/extinction-rebellion-plan-to-bring-city-to-a-halt-in-latest-protest/'

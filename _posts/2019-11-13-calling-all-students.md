@@ -3,7 +3,8 @@ layout: post
 title: 'Calling All Students: Make Your Voice Heard!'
 image: /img/blog/2019-11-13-1.jpg
 location: /2019/11/13/calling-all-students/
-categories:
+categories: external
+source:
   - 'The Ruskin Journal'
 tags:
 redirect: 'https://ruskinjournal.com/2019/11/13/calling-all-students-make-your-voice-heard/'

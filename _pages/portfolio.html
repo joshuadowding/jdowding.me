@@ -1,8 +1,10 @@
 ---
 title: Projects
 layout: default
-permalink: /work/
+permalink: /portfolio/
 ---
+
+{% include resume.html %}
 
 <div class="container">
   <div class="row">
@@ -38,7 +40,9 @@ permalink: /work/
               <h3 class="post-title" id="{{ post.post-id }}">{{ post.title }}</h3>
             </a>
             {% else %}
+            <a class="carousel-toggle" href="javascript:void(0);" data-post-id="{{ post.post-id }}">
               <h3 class="post-title" id="{{ post.post-id }}">{{ post.title }}</h3>
+            </a>
             {% endif %}
 
             {% if post.subtitle != null %}

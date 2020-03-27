@@ -43,22 +43,39 @@ $(document).ready(function () {
     }
   });
 
+  $('#commissions .list-item').each(function() {
+    $(this).readingTime({
+      readingTimeTarget: $(this).find('.reading-time'),
+      wordCountTarget: $(this).find('.word-count'),
+      remotePath: $(this).data('file'),
+      remoteTarget: $(this).data('target'),
+      wordsPerMinute: 200, // NOTE: Slightly conservative (avg. 200-250).
+      round: true,
+      lang: 'en',
+      error: function() {
+        $(this).find('.reading-time').remove();
+      }
+    });
+  });
+
   $('article').each(function() {
     $(this).readingTime({
-        readingTimeTarget: $(this).find('.reading-time'),
-        wordCountTarget: $(this).find('.word-count'),
-        remotePath: $(this).data('file'),
-        remoteTarget: $(this).data('target'),
-        wordsPerMinute: 200, // NOTE: Slightly conservative (avg. 200-250).
-        round: true,
-        lang: 'en',
-        error: function() {
-            $(this).find('.reading-time').remove();
-        }
+      readingTimeTarget: $(this).find('.reading-time'),
+      wordCountTarget: $(this).find('.word-count'),
+      remotePath: $(this).data('file'),
+      remoteTarget: $(this).data('target'),
+      wordsPerMinute: 200, // NOTE: Slightly conservative (avg. 200-250).
+      round: true,
+      lang: 'en',
+      error: function() {
+        $(this).find('.reading-time').remove();
+      }
     });
   });
 
   detect_theme_preference();
+
+  parse_current_url();
 });
 
 function toggle_theme() {
@@ -96,5 +113,18 @@ function detect_theme_preference() {
     else { // catch-all:
       toggle_theme();
     }
+  }
+}
+
+function parse_current_url() {
+  var pathname = window.location.pathname;
+
+  if(pathname.includes("portfolio")) {
+    $("#nav-link-portfolio").addClass("selected");
+    $("#sidenav-link-portfolio").addClass("selected");
+  }
+  else {
+    $("#nav-link-blog").addClass("selected");
+    $("#sidenav-link-blog").addClass("selected");
   }
 }

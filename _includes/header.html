@@ -9,19 +9,10 @@
     <div class="header-nav">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/">
-            Blog
-          </a>
+          <a class="nav-link" id="nav-link-blog" href="{{ site.baseurl }}/">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/work">
-            Work
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ site.baseurl }}/resume">
-            Resume
-          </a>
+          <a class="nav-link" id="nav-link-portfolio" href="{{ site.baseurl }}/portfolio">Portfolio</a>
         </li>
       </ul>
     </div>
@@ -50,17 +41,3 @@
     </div>
   </nav>
 </header>
-
-<!-- Modified from: https://stackoverflow.com/questions/3186688/drop-shadow-for-png-image-in-css -->
-<svg height="0" xmlns="http://www.w3.org/2000/svg">
-    <filter id="drop-shadow">
-        <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
-        <feOffset dx="0" dy="3" result="offsetblur"/>
-        <feFlood flood-color="rgba(0, 0, 0, 0.35)"/>
-        <feComposite in2="offsetblur" operator="in"/>
-        <feMerge>
-            <feMergeNode/>
-            <feMergeNode in="SourceGraphic"/>
-        </feMerge>
-    </filter>
-</svg>

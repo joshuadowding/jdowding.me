@@ -117,11 +117,14 @@ html {
 
           &:hover {
             color: var(--colour-button-background-disabled);
+            background-color: var(--colour-button-disabled);
           }
         }
 
         &:hover {
-          color: $colour-text-highlight;
+          color: $colour-text-white;
+          background-color: $colour-text-highlight;
+          border-color: $colour-text-highlight;
         }
       }
 
@@ -202,11 +205,14 @@ html {
 
           &:hover {
             color: var(--colour-button-background-disabled);
+            background-color: var(--colour-button-disabled);
           }
         }
 
         &:hover {
-          color: $colour-text-highlight;
+          color: $colour-text-white;
+          background-color: $colour-text-highlight;
+          border-color: $colour-text-highlight;
         }
       }
 
@@ -334,6 +340,10 @@ html {
                 &:hover {
                   color: $colour-text-highlight;
                 }
+
+                &.selected {
+                  color: $colour-text-highlight;
+                }
               }
             }
           }
@@ -453,6 +463,9 @@ html {
         }
 
         &.full-spread {
+          display: block;
+          max-height: unset;
+          min-height: unset;
           margin: 0 !important;
 
           .post-header {
@@ -490,7 +503,11 @@ html {
           }
 
           .post-body {
+            height: unset;
             width: 100% !important;
+            box-shadow: none;
+            padding: 0;
+            overflow: hidden;
 
             .post-content {
               margin: 0;
@@ -585,6 +602,10 @@ html {
 
           .post-title {
             margin: 0 0 8px 0;
+
+            &:hover {
+              color: $colour-text-highlight;
+            }
           }
 
           .post-subtitle {
@@ -981,6 +1002,10 @@ html {
         &:hover {
           color: $colour-text-highlight;
         }
+
+        &.selected {
+          color: $colour-text-highlight;
+        }
       }
 
       .menu-toggle {
@@ -994,6 +1019,118 @@ html {
 
         i {
           color: var(--colour-text-invert);
+        }
+      }
+    }
+
+    .container {
+      &.header-container {
+        margin: 0 auto 32px auto;
+      }
+    }
+
+    .header-container {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+
+      .list-group {
+        height: 100%;
+        margin: 0 0 0 16px;
+
+        .list-group-item {
+          border: 0;
+          margin: 0 16px 0 0;
+          color: var(--colour-text);
+          border-radius: $border-radius-default;
+          background-color: var(--colour-background);
+          @include box-shadow-default;
+
+          &.active {
+            color: $colour-text-white;
+            background-color: $colour-text-highlight;
+            border-color: $colour-text-highlight;
+          }
+
+          &:hover {
+            color: $colour-text-white;
+            background-color: $colour-text-highlight;
+            border-color: $colour-text-highlight;
+          }
+        }
+      }
+
+      .tab-content {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow-x: scroll;
+        padding: 16px;
+
+        .tab-pane {
+          height: 100%;
+          
+          &.show {
+            display: table-row;
+          }
+
+          .tab-list {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+
+            .list-item {
+              width: 300px;
+              padding: 12px;
+              margin: 0 16px 0 0;
+              border-radius: $border-radius-default;
+              @include box-shadow-default;
+
+              .item-header {
+                margin: 0 0 8px;
+                font-weight: 700;
+
+                &.external-link {
+                  &:hover {
+                    color: $colour-text-highlight;
+                  }
+                }
+              }
+
+              .item-body {
+                p {
+                  margin: 0 0 4px;
+                  font-size: 1.2rem;
+                  line-height: 1.2;
+
+                  &.body-header {
+                    font-weight: 500;
+                    margin: 0 0 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .scroll-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 16px;
+        z-index: 1000;
+
+        &.overlay-left {
+          background: linear-gradient(to right, var(--colour-background) 0%, rgba(255, 255, 255, 0) 100%);
+          left: 0;
+        }
+
+        &.overlay-right {
+          background: linear-gradient(to left, var(--colour-background) 0%, rgba(255, 255, 255, 0) 100%);
+          right: 0;
         }
       }
     }

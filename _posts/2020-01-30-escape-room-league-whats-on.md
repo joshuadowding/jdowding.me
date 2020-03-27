@@ -3,7 +3,8 @@ layout: post
 title: 'What’s On: Cambridge – Competitive Escape Room League'
 image: /img/blog/2020-01-30-1.jpg
 location: /2020/01/30/escape-room-league-whats-on/
-categories:
+categories: external
+source:
   - 'The Ruskin Journal'
 tags:
 redirect: 'https://ruskinjournal.com/2020/01/30/whats-on-cambridge-competitive-escape-room-league/'
