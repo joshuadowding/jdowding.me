@@ -463,6 +463,9 @@ html {
         }
 
         &.full-spread {
+          display: block;
+          max-height: unset;
+          min-height: unset;
           margin: 0 !important;
 
           .post-header {
@@ -500,7 +503,11 @@ html {
           }
 
           .post-body {
+            height: unset;
             width: 100% !important;
+            box-shadow: none;
+            padding: 0;
+            overflow: hidden;
 
             .post-content {
               margin: 0;
