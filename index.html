@@ -3,11 +3,13 @@ title: Blog
 layout: default
 ---
 
+{% include commissions.html %}
+
 <div class="container">
   <div class="row">
     <div class="col">
       <div class="posts">
-        {% for post in paginator.posts limit:5 %}
+        {% for post in site.categories.blog limit:5 %}
         <article class="post" data-file="{{ post.location }}" data-target="article">
           {% if post.image != null %}
           <div class="post-image">

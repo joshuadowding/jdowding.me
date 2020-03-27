@@ -117,11 +117,14 @@ html {
 
           &:hover {
             color: var(--colour-button-background-disabled);
+            background-color: var(--colour-button-disabled);
           }
         }
 
         &:hover {
-          color: $colour-text-highlight;
+          color: $colour-text-white;
+          background-color: $colour-text-highlight;
+          border-color: $colour-text-highlight;
         }
       }
 
@@ -202,11 +205,14 @@ html {
 
           &:hover {
             color: var(--colour-button-background-disabled);
+            background-color: var(--colour-button-disabled);
           }
         }
 
         &:hover {
-          color: $colour-text-highlight;
+          color: $colour-text-white;
+          background-color: $colour-text-highlight;
+          border-color: $colour-text-highlight;
         }
       }
 
@@ -589,6 +595,10 @@ html {
 
           .post-title {
             margin: 0 0 8px 0;
+
+            &:hover {
+              color: $colour-text-highlight;
+            }
           }
 
           .post-subtitle {
@@ -1007,12 +1017,12 @@ html {
     }
 
     .container {
-      &.resume-container {
+      &.header-container {
         margin: 0 auto 32px auto;
       }
     }
 
-    .resume-container {
+    .header-container {
       display: flex;
       position: relative;
       flex-direction: column;
@@ -1032,6 +1042,12 @@ html {
           @include box-shadow-default;
 
           &.active {
+            color: $colour-text-white;
+            background-color: $colour-text-highlight;
+            border-color: $colour-text-highlight;
+          }
+
+          &:hover {
             color: $colour-text-white;
             background-color: $colour-text-highlight;
             border-color: $colour-text-highlight;
@@ -1068,6 +1084,12 @@ html {
               .item-header {
                 margin: 0 0 8px;
                 font-weight: 700;
+
+                &.external-link {
+                  &:hover {
+                    color: $colour-text-highlight;
+                  }
+                }
               }
 
               .item-body {

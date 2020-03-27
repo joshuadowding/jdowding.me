@@ -43,6 +43,21 @@ $(document).ready(function () {
     }
   });
 
+  $('#commissions .list-item').each(function() {
+    $(this).readingTime({
+      readingTimeTarget: $(this).find('.reading-time'),
+      wordCountTarget: $(this).find('.word-count'),
+      remotePath: $(this).data('file'),
+      remoteTarget: $(this).data('target'),
+      wordsPerMinute: 200, // NOTE: Slightly conservative (avg. 200-250).
+      round: true,
+      lang: 'en',
+      error: function() {
+        $(this).find('.reading-time').remove();
+      }
+    });
+  });
+
   $('article').each(function() {
     $(this).readingTime({
       readingTimeTarget: $(this).find('.reading-time'),
