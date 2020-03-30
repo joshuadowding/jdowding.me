@@ -12,7 +12,7 @@ slide-images:
  - /img/portfolio/cms/cms-5-1.jpg
  - /img/portfolio/cms/cms-6-1.jpg
  - /img/portfolio/cms/cms-7-1.jpg
-categories: portfolio
+categories: software
 hidden: true
 tags:
  - Web Application

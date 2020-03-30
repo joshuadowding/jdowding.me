@@ -9,7 +9,7 @@ slide-images:
  - /img/portfolio/cls/cls-2-1.jpg
  - /img/portfolio/cls/cls-3-1.jpg
  - /img/portfolio/cls/cls-5-1.jpg
-categories: portfolio
+categories: software
 hidden: true
 tags:
  - Desktop Application

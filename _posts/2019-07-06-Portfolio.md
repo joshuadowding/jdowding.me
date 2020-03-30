@@ -5,7 +5,7 @@ title: Esperus Website
 subtitle: Esperus Systems
 thumbnail: /img/portfolio/website/website-1-1.jpg
 thumbnail-link: https://esperus.com/
-categories: portfolio
+categories: software
 hidden: true
 link: https://esperus.com/
 tags:

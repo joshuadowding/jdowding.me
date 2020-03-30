@@ -10,7 +10,7 @@ slide-images:
  - /img/portfolio/ukuu/ukuu-3.jpg
  - /img/portfolio/ukuu/ukuu-4.jpg
  - /img/portfolio/ukuu/ukuu-5.jpg
-categories: portfolio
+categories: software
 hidden: true
 link: https://github.com/joshuadowding/noyau
 tags:
