@@ -2,7 +2,7 @@
 layout: post
 title: 'Match Report: Team ARU versus Loughborough – Ultimate Frisbee'
 image: /img/blog/2019-12-06-1.jpg
-location: /2019/12/06/team-aru-ultimate-frisbee/
+location: /2019/12/06/team-aru-ultimate-frisbee
 categories: external
 source:
   - 'The Ruskin Journal'

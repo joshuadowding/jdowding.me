@@ -2,7 +2,7 @@
 layout: post
 title: ukuu Development Update (19.10)
 image: /img/portfolio/ukuu/ukuu-1.jpg
-location: /2019/09/25/ukuu-development/
+location: /2019/09/25/ukuu-development
 categories: blog
 tags:
   - ukuu

@@ -2,7 +2,7 @@
 layout: post
 title: 'The Ruskin Journal ft. Creative Writing Society Open Mic Night'
 image: /img/blog/2020-02-28-1.jpg
-location: /2020/02/28/open-mic-night/
+location: /2020/02/28/open-mic-night
 categories: external
 source:
   - 'The Ruskin Journal'

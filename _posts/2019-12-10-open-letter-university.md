@@ -2,7 +2,7 @@
 layout: post
 title: 'Students, Alumni & Staff Pen Open Letter to University Governors'
 image: /img/blog/2019-12-10-1.jpg
-location: /2019/12/10/open-letter-university/
+location: /2019/12/10/open-letter-university
 categories: external
 source:
   - 'The Ruskin Journal'

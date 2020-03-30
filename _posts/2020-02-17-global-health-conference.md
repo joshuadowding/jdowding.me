@@ -2,7 +2,7 @@
 layout: post
 title: 'Cambridge to Host Upcoming Global Health Conference'
 image: /img/blog/2020-02-17-1.jpg
-location: /2020/02/17/global-health-conference/
+location: /2020/02/17/global-health-conference
 categories: external
 source:
   - 'The Ruskin Journal'
