@@ -9,7 +9,7 @@ slide-images:
  - /img/portfolio/portals/portals-2-1.jpg
  - /img/portfolio/portals/portals-3-1.jpg
  - /img/portfolio/portals/portals-4-1.jpg
-categories: software
+categories: portfolio
 hidden: true
 tags:
  - Web Application

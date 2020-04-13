@@ -5,7 +5,7 @@ title: The Ruskin Journal
 subtitle: Volunteer Project
 thumbnail: /img/portfolio/journal/ruskin-journal-website-1.jpg
 thumbnail-link: https://ruskinjournal.com/
-categories: literature
+categories: portfolio
 hidden: true
 link: https://ruskinjournal.com/
 tags:
