@@ -603,8 +603,15 @@ html {
           @include box-shadow-default;
 
           &::-webkit-scrollbar {
-            background-color: var(--colour-background);
+            background-color: var(--colour-background-darker);
             width: 8px;
+            border-top-right-radius: .35rem;
+            border-bottom-right-radius: .35rem;
+          }
+
+          &::-webkit-scrollbar-track {
+            border-top-right-radius: .35rem;
+            border-bottom-right-radius: .35rem;
           }
 
           &::-webkit-scrollbar-thumb {
@@ -617,12 +624,16 @@ html {
 
           &:hover {
             &::-webkit-scrollbar {
-              background-color: var(--colour-background);
+              background-color: var(--colour-background-darker);
               width: 8px;
+              border-top-right-radius: .35rem;
+              border-bottom-right-radius: .35rem;
             }
 
             &::-webkit-scrollbar-track {
-              background-color: var(--colour-background);
+              background-color: var(--colour-background-darker);
+              border-top-right-radius: .35rem;
+              border-bottom-right-radius: .35rem;
             }
 
             &::-webkit-scrollbar-thumb {
