@@ -600,6 +600,38 @@ html {
           border-bottom-right-radius: $border-radius-default;
           @include box-shadow-default;
 
+          &::-webkit-scrollbar {
+            background-color: var(--colour-background);
+            width: 8px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: var(--colour-button-background-disabled);
+            border-radius: .35rem;
+            transition: all .35s ease-in-out;
+            -moz-transition: all .35s ease-in-out;
+            -webkit-transition: all .35s ease-in-out;
+          }
+
+          &:hover {
+            &::-webkit-scrollbar {
+              background-color: var(--colour-background);
+              width: 8px;
+            }
+
+            &::-webkit-scrollbar-track {
+              background-color: var(--colour-background);
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: var(--colour-text);
+              border-radius: .35rem;
+              transition: all .35s ease-in-out;
+              -moz-transition: all .35s ease-in-out;
+              -webkit-transition: all .35s ease-in-out;
+            }
+          }
+
           .post-title {
             margin: 0 0 8px 0;
 
@@ -1068,6 +1100,38 @@ html {
         width: 100%;
         overflow-x: scroll;
         padding: 16px;
+
+        &::-webkit-scrollbar {
+          background-color: var(--colour-background);
+          height: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: var(--colour-button-background-disabled);
+          border-radius: .35rem;
+          transition: all .35s ease-in-out;
+          -moz-transition: all .35s ease-in-out;
+          -webkit-transition: all .35s ease-in-out;
+        }
+
+        &:hover {
+          &::-webkit-scrollbar {
+            background-color: var(--colour-background);
+            height: 8px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: var(--colour-background);
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: var(--colour-text);
+            border-radius: .35rem;
+            transition: all .35s ease-in-out;
+            -moz-transition: all .35s ease-in-out;
+            -webkit-transition: all .35s ease-in-out;
+          }
+        }
 
         .tab-pane {
           height: 100%;
