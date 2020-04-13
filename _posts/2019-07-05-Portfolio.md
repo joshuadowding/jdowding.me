@@ -11,7 +11,6 @@ slide-images:
  - /img/portfolio/cms/cms-4-1.jpg
  - /img/portfolio/cms/cms-5-1.jpg
  - /img/portfolio/cms/cms-6-1.jpg
- - /img/portfolio/cms/cms-7-1.jpg
 categories: portfolio
 hidden: true
 tags:
