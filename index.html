@@ -3,7 +3,34 @@ title: Blog
 layout: default
 ---
 
-{% include commissions.html %}
+<div class="container header-container" id="commissions">
+  <div class="list-group list-group-horizontal" id="list-tab" role="tablist">
+    <a class="list-group-item list-group-item-action active" id="list-journal-list" data-toggle="list" href="#list-journal" role="tab" aria-controls="experience">The Ruskin Journal</a>
+  </div>
+  <div class="scroll-overlay overlay-left"></div>
+  <div class="tab-content" id="nav-tab-content">
+    <div class="tab-pane fade show active" id="list-journal" role="tabpanel" aria-labelledby="list-journal-list">
+      <div class="tab-list">
+        {% for post in site.categories.external %}
+        <div class="list-item" data-file="{{ post.location }}" data-target="article">
+          <a href="{{ post.redirect }}" target="_blank">
+            <h6 class="item-header external-link">{{ post.title }}</h6>
+          </a>
+          <div class="item-body">
+            <p class="body-header">{{ post.source }}</p>
+            <p>{{ post.date | date: "%B %-d, %Y" }}
+              -
+              <span class="reading-time"></span>
+              <span>(<span class="word-count"></span> words)</span>
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="scroll-overlay overlay-right"></div>
+</div>
 
 <div class="container">
   <div class="row">
@@ -35,15 +62,15 @@ layout: default
             {% endif %}
 
             <div class="post-metadata">
-                <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}
-                  -
-                  <span class="reading-time"></span>
-                  <span>(<span class="word-count"></span> words)</span>
+              <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}
+                -
+                <span class="reading-time"></span>
+                <span>(<span class="word-count"></span> words)</span>
 
-                  {% if post.redirect %}
-                  - <span>External Link</span>
-                  {% endif %}
-                </h6>
+                {% if post.redirect %}
+                - <span>External Link</span>
+                {% endif %}
+              </h6>
             </div>
 
             <div class="post-excerpt">
@@ -54,13 +81,13 @@ layout: default
             <div class="post-catagories">
               <p class="categories-header">Categories:</p>
               <p class="categories">
-              {% for category in post.categories %}
+                {% for category in post.categories %}
                 {% if forloop.last %}
-                  {{ category }}
+                {{ category }}
                 {% else %}
-                  {{ category }},
+                {{ category }},
                 {% endif %}
-              {% endfor %}
+                {% endfor %}
               </p>
             </div>
             {% endif %}
@@ -69,13 +96,13 @@ layout: default
             <div class="post-tags">
               <p class="tags-header">Tags:</p>
               <p class="tags">
-              {% for tag in post.tags %}
+                {% for tag in post.tags %}
                 {% if forloop.last %}
-                  {{ tag }}
+                {{ tag }}
                 {% else %}
-                  {{ tag }},
+                {{ tag }},
                 {% endif %}
-              {% endfor %}
+                {% endfor %}
               </p>
             </div>
             {% endif %}
