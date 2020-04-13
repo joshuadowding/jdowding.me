@@ -5,11 +5,7 @@ title: Noyau
 subtitle: Personal Project
 thumbnail: /img/blog/2020-01-19-1.jpg
 slide-images:
- - /img/portfolio/ukuu/ukuu-1.jpg
- - /img/portfolio/ukuu/ukuu-2.jpg
- - /img/portfolio/ukuu/ukuu-3.jpg
- - /img/portfolio/ukuu/ukuu-4.jpg
- - /img/portfolio/ukuu/ukuu-5.jpg
+ - /img/blog/2020-01-19-1.jpg
 categories: portfolio
 hidden: true
 link: https://github.com/joshuadowding/noyau
