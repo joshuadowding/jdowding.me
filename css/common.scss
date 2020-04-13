@@ -21,6 +21,7 @@ $border-radius-default: .35rem;
 
 :root {
   --colour-background: #FEFCFF;
+  --colour-background-darker: #FEFCFF;
   --colour-background-invert: #272727;
   --colour-button-background-disabled: #696969;
   --colour-button-disabled: #272727;
@@ -49,6 +50,7 @@ $border-radius-default: .35rem;
 
 :root.theme-dark {
   --colour-background: #272727;
+  --colour-background-darker: #191919;
   --colour-background-invert: #FEFCFF;
   --colour-button-background-disabled: #696969;
   --colour-button-disabled: #FEFCFF;

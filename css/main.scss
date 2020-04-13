@@ -508,6 +508,7 @@ html {
             box-shadow: none;
             padding: 0;
             overflow: hidden;
+            background-color: unset;
 
             .post-content {
               margin: 0;
@@ -598,6 +599,7 @@ html {
           z-index: 999;
           border-top-right-radius: $border-radius-default;
           border-bottom-right-radius: $border-radius-default;
+          background-color: var(--colour-background-darker);
           @include box-shadow-default;
 
           &::-webkit-scrollbar {
@@ -714,7 +716,7 @@ html {
         }
 
         .related-post {
-          background-color: black;
+          background-color: #191919;
           border-radius: $border-radius-default;
           @include box-shadow-default;
           padding: 12px;
@@ -755,141 +757,6 @@ html {
         &:first-child {
           h4 {
             margin-top: 0;
-          }
-        }
-      }
-    }
-
-    .list-group {
-      &.experience-group {
-        margin: 16px 0;
-        border: 0;
-        padding: 0;
-
-        &.dark-group {
-          .list-group-item {
-            background-color: black;
-            border-left: 0;
-            border-radius: $border-radius-default;
-
-            .item-body {
-              padding: 6px 12px 6px 0;
-
-              p {
-                color: white;
-                font-size: 1.2rem;
-              }
-            }
-          }
-        }
-
-        .list-group-item {
-          background-color: transparent;
-          color: var(--colour-text);
-          border: 0;
-          border-left: 2px solid var(--colour-text);
-          border-radius: 0;
-          padding: 0;
-          padding-left: 12px;
-
-          &.sub-item {
-            padding: 8px 0 8px 12px;
-            flex-direction: row;
-
-            .item-header {
-              min-height: unset;
-            }
-
-            .item-body {
-              &:not(:first-child) {
-                padding-left: 12px;
-              }
-            }
-
-            ul {
-              padding-left: 16px;
-
-              li {
-                &:last-child {
-                  margin-bottom: 0;
-                }
-
-                p {
-                  font-size: 1.2rem;
-                }
-              }
-            }
-          }
-
-          .item-header {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin: 0 0 8px 0;
-            min-height: 80px;
-
-            &:last-child {
-              margin: 0;
-            }
-
-            .header-wrapper,
-            .attribute-wrapper {
-              display: flex;
-              flex-direction: column;
-            }
-
-            .header-wrapper {
-              margin-right: auto;
-
-              .inline-link {
-                color: var(--colour-text);
-                font-size: 1.4rem;
-
-                &:hover {
-                  color: $colour-text-highlight;
-                }
-              }
-
-              .header-link {
-                p {
-                  &:hover {
-                    color: $colour-text-highlight;
-                  }
-                }
-
-                .experience-header {
-                  &:hover {
-                    color: $colour-text-highlight;
-                  }
-                }
-              }
-
-              p {
-                color: var(--colour-text);
-              }
-            }
-
-            .attribute-wrapper {
-              margin-left: auto;
-              text-align: right;
-            }
-
-            .experience-header {
-              margin: 0 auto 0 0;
-              color: var(--colour-text);
-            }
-
-            .attribute {
-              font-size: 1.2rem;
-              margin: 0;
-              color: var(--colour-text);
-            }
-          }
-
-          .item-body {
-            p {
-              color: var(--colour-text);
-            }
           }
         }
       }
@@ -1075,9 +942,10 @@ html {
         .list-group-item {
           border: 0;
           margin: 0 16px 0 0;
+          font-weight: 600;
           color: var(--colour-text);
           border-radius: $border-radius-default;
-          background-color: var(--colour-background);
+          background-color: var(--colour-background-darker);
           @include box-shadow-default;
 
           &.active {
@@ -1150,11 +1018,12 @@ html {
               padding: 12px;
               margin: 0 16px 0 0;
               border-radius: $border-radius-default;
+              background-color: var(--colour-background-darker);
               @include box-shadow-default;
 
               .item-header {
                 margin: 0 0 8px;
-                font-weight: 700;
+                font-weight: 600;
 
                 &.external-link {
                   &:hover {
