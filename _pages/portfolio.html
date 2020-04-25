@@ -151,7 +151,9 @@ permalink: /portfolio/
             {% endif %}
 
             {% if post.subtitle != null %}
-            <h6 class="post-subtitle">{{ post.subtitle }}</h6>
+            <div class="post-metadata">
+              <h6 class="post-subtitle">{{ post.subtitle }}</h6>
+            </div>
             {% endif %}
 
             <div class="post-excerpt">

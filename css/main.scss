@@ -646,19 +646,25 @@ html {
           }
 
           .post-title {
-            margin: 0 0 8px 0;
+            margin: 0 0 4px 0;
 
             &:hover {
               color: $colour-text-highlight;
             }
           }
 
-          .post-subtitle {
-            margin: 0 0 8px 0;
-          }
+          .post-metadata {
+            span {
+              line-height: 1.2rem;
+            }
 
-          .post-date {
-            margin: 0;
+            .post-subtitle {
+              margin: 0;
+            }
+
+            .post-date {
+              margin: 0;
+            }
           }
 
           .post-tags {

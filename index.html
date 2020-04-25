@@ -68,8 +68,8 @@ layout: default
             <div class="post-metadata">
               <h6 class="post-date">{{ post.date | date: "%B %-d, %Y" }}
                 -
-                <span class="reading-time"></span>
-                <span>(<span class="word-count"></span> words)</span>
+                <span class="reading-time"></span>,
+                <span class="word-count"></span> words
 
                 {% if post.redirect %}
                 - <span>External Link</span>
@@ -78,23 +78,8 @@ layout: default
             </div>
 
             <div class="post-excerpt">
-              {{ post.excerpt | truncatewords:64 | markdownify }}
+              {{ post.excerpt | truncatewords:96 | markdownify }}
             </div>
-
-            {% if post.categories != empty %}
-            <div class="post-catagories">
-              <p class="categories-header">Categories:</p>
-              <p class="categories">
-                {% for category in post.categories %}
-                {% if forloop.last %}
-                {{ category }}
-                {% else %}
-                {{ category }},
-                {% endif %}
-                {% endfor %}
-              </p>
-            </div>
-            {% endif %}
 
             {% if post.tags != empty %}
             <div class="post-tags">
