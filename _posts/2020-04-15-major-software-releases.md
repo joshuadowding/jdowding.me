@@ -10,8 +10,6 @@ tags:
 redirect: 'https://ruskinjournal.com/2020/04/15/major-upcoming-software-releases/'
 ---
 
-By Joshua Dowding
-
 2020 will be a hectic year for some of the world’s largest software companies. Each of the three top operating systems, including Windows, macOS, and Ubuntu Linux, will see significant new releases either within the next few weeks, or within the next five months in Apple’s case. In this article, I’d like to go over some of the more impactful features and changes for each release and discuss when to expect these new versions to land.
 Windows 10 20H1 ‘2004’
 
@@ -71,4 +69,3 @@ Final Thoughts
 2020 is already shaping up to be an important year for the software industry. I look forward to taking each of these new releases for a test-drive closer to their respective release dates, and I’d encourage the adventurous to do the same. Fire-up a virtual machine, or load-up a release candidate on an old compute; it’ll be something mildly interesting to do during the lockdown!
 
 Images: Joshua Dowding, Wikipedia, Geekrar, Digital Trends, and Brett Jordan on Unsplash
-

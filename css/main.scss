@@ -577,7 +577,7 @@ html {
           left: 16px;
           padding: 6px 12px 6px 6px;
           color: white;
-          background-color: rgba(0, 0, 0, 0.75);
+          background-color: rgba(39, 39, 39, 0.75);
           border-radius: $border-radius-default;
           pointer-events: none;
           @include box-shadow-default;
@@ -978,7 +978,7 @@ html {
         height: 100%;
         width: 100%;
         overflow-x: scroll;
-        padding: 16px;
+        padding: 16px 16px 24px 16px;
 
         &::-webkit-scrollbar {
           background-color: var(--colour-background);
@@ -1014,8 +1014,8 @@ html {
 
         .tab-pane {
           height: 100%;
-          
-          &.show {
+
+          &.active {
             display: table-row;
           }
 
@@ -1025,6 +1025,7 @@ html {
             flex-direction: row;
 
             .list-item {
+              min-height: 124px;
               width: 300px;
               padding: 12px;
               margin: 0 16px 0 0;
@@ -1032,13 +1033,48 @@ html {
               background-color: var(--colour-background-darker);
               @include box-shadow-default;
 
-              .item-header {
-                margin: 0 0 8px;
-                font-weight: 600;
+              &.is-present {
+                border-left: 4px solid $colour-text-highlight;
+              }
 
-                &.external-link {
-                  &:hover {
-                    color: $colour-text-highlight;
+              &.has-thumbnail {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 0;
+
+                .item-inner {
+                  background: rgba(39, 39, 39, 0.85);
+                  border-bottom-left-radius: .35rem;
+                  border-bottom-right-radius: .35rem;
+                  padding: 12px;
+
+                  .item-header {
+                    h6 {
+                      color: $colour-text-white;
+                    }
+                  }
+
+                  .item-body {
+                    p, span {
+                      color: $colour-text-white;
+                    }
+                  }
+                }
+              }
+
+              .item-header {
+                h6 {
+                  margin: 0 0 4px;
+                  font-weight: 600;
+
+                  &.external-link {
+                    &:hover {
+                      color: $colour-text-highlight;
+                    }
                   }
                 }
               }
@@ -1051,8 +1087,17 @@ html {
 
                   &.body-header {
                     font-weight: 500;
-                    margin: 0 0 8px;
+                    margin: 0 0 16px;
                   }
+
+                  &:last-child {
+                    margin: 0;
+                  }
+                }
+
+                span {
+                  font-size: 1.2rem;
+                  line-height: 1.2;
                 }
               }
             }

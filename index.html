@@ -12,17 +12,21 @@ layout: default
     <div class="tab-pane fade show active" id="list-journal" role="tabpanel" aria-labelledby="list-journal-list">
       <div class="tab-list">
         {% for post in site.categories.external %}
-        <div class="list-item" data-file="{{ post.location }}" data-target="article">
-          <a href="{{ post.redirect }}" target="_blank">
-            <h6 class="item-header external-link">{{ post.title }}</h6>
-          </a>
-          <div class="item-body">
-            <p class="body-header">{{ post.source }}</p>
-            <p>{{ post.date | date: "%B %-d, %Y" }}
-              -
-              <span class="reading-time"></span>
-              <span>(<span class="word-count"></span> words)</span>
-            </p>
+        <div class="list-item has-thumbnail" data-file="{{ post.location }}" data-target="article" style="background-image: url('{{ post.image }}')">
+          <div class="item-inner">
+            <div class="item-header">
+              <a href="{{ post.redirect }}" target="_blank">
+                <h6 class="external-link">{{ post.title }}</h6>
+              </a>
+            </div>
+            <div class="item-body">
+              <p class="body-header">
+                {{ post.date | date: "%B %-d, %Y" }}
+                -
+                <span class="reading-time"></span>,
+                <span class="word-count"></span> words
+              </p>
+            </div>
           </div>
         </div>
         {% endfor %}
