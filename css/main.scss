@@ -646,7 +646,8 @@ html {
           }
 
           .post-title {
-            margin: 0 0 4px 0;
+            font-size: 2.2rem;
+            margin: 0 0 8px 0;
 
             &:hover {
               color: $colour-text-highlight;
@@ -892,7 +893,7 @@ html {
       right: 0;
       background-color: var(--colour-background-invert);
       overflow-x: hidden;
-      transition: 0.5s;
+      transition: 0.25s;
       @include box-shadow-default;
 
       &.show {
@@ -903,38 +904,41 @@ html {
         display: flex;
         align-items: center;
         height: 90px;
-      }
 
-      a {
-        font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--colour-text-invert);
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        display: block;
-        transition: 0.25s;
-
-        &:hover {
-          color: $colour-text-highlight;
-        }
-
-        &.selected {
-          color: $colour-text-highlight;
-        }
-      }
-
-      .menu-toggle {
-        color: var(--colour-text-invert);
-
-        &#close {
-          position: relative;
-          display: inline-block;
-          font-size: 36px;
-        }
-
-        i {
+        .menu-toggle {
+          padding: 8px 8px 8px 32px;
           color: var(--colour-text-invert);
+
+          &#close {
+            position: relative;
+            display: inline-block;
+            font-size: 36px;
+          }
+
+          i {
+            color: var(--colour-text-invert);
+          }
+        }
+      }
+
+      .sidenav-nav {
+        .nav-item {
+          font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: var(--colour-text-invert);
+          padding: 8px 8px 8px 32px;
+          text-decoration: none;
+          display: block;
+          transition: 0.25s;
+
+          &:hover {
+            color: $colour-text-highlight;
+          }
+
+          &.selected {
+            color: $colour-text-highlight;
+          }
         }
       }
     }
