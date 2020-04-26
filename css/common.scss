@@ -1,8 +1,15 @@
-$colour-text-white: #FEFCFF;
-$colour-text-black: #272727;
-$colour-text-highlight: #3095E5;
-$colour-disabled: #696969;
-$colour-overlay: rgba(0, 0, 0, 0.85);
+/*!
+ * joshuadowding.github.io
+ * Copyright 2019-2020 Joshua Dowding
+ */
+
+$colour-white: #FEFCFF;
+$colour-d-black: #191919;
+$colour-l-black: #272727;
+$colour-grey: #696969;
+$colour-blue: #3095E5;
+
+@mixin colour-d-black($alpha){ background: rgba(25, 25, 25, $alpha); }
 
 $box-shadow-default: rgba(0, 0, 0, 0.25);
 $border-radius-default: .35rem;

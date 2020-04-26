@@ -1,6 +1,11 @@
 ---
 ---
 
+/*!
+ * joshuadowding.github.io
+ * Copyright 2019-2020 Joshua Dowding
+ */
+
 @import '../css/common.scss';
 
 html {
@@ -141,8 +146,20 @@ html {
           width: 100%;
         }
 
-        a {
-          padding: 8px 32px 8px 32px;
+        .sidenav-header {
+          justify-content: flex-end;
+
+          .menu-toggle {
+            padding: 8px 32px 8px 32px;
+            text-align: center;
+          }
+        }
+
+        .sidenav-nav {
+          .nav-item {
+            padding: 8px 32px 8px 32px;
+            text-align: right;
+          }
         }
       }
     }

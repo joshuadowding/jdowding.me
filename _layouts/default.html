@@ -18,20 +18,25 @@
 
   <link rel="manifest" href="{{ site.baseurl }}/manifest.json">
 
-  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.css">
-
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/inter-ui@3.12.1/inter.min.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/lib/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/lib/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/inter-ui@3.13.0/inter.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.min.css">
 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/media.css">
+</head>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/reading-time/2.0.0/readingTime.min.js"></script>
+<body>
+  {% include header.html %}
+  <div class="body-content" id="main">{{ content }}</div>
+  {% include sidebar.html %}
+  {% include footer.html %}
+
+  <script type="text/javascript" src="{{ site.baseurl }}/js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/lib/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/lib/slick.min.js"></script>
+  <script type="text/javascript" src="{{ site.baseurl }}/js/lib/reading-time.min.js"></script>
 
   <script type="text/javascript" src="{{ site.baseurl }}/js/main.js"></script>
 
@@ -42,18 +47,6 @@
     gtag('js', new Date());
     gtag('config', 'UA-148181092-1');
   </script>
-</head>
-
-<body>
-  {% include header.html %}
-
-  <div class="body-content" id="main">
-    {{ content }}
-  </div>
-
-  {% include sidenav.html %}
-
-  {% include footer.html %}
 </body>
 
 </html>
