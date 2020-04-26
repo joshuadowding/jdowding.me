@@ -73,9 +73,62 @@ $(document).ready(function () {
     });
   });
 
-  detect_theme_preference();
+  var currentDate = new Date();
+  $('#copyright-year').append(currentDate.getFullYear());
 
+  detect_theme_preference();
   parse_current_url();
+
+  var currentPage = parse_current_url();
+  if(currentPage.includes("portfolio")) {
+    $("#nav-link-portfolio").addClass("selected");
+    $("#sidenav-link-portfolio").addClass("selected");
+
+    var postID;
+
+    $('.carousel-toggle').click(function () {
+      postID = $(this).data('post-id');
+
+      if ($('.carousel-wrapper').css('display') == 'none') {
+        $('body').css('overflow-y', 'hidden');
+        $('.carousel-wrapper').fadeIn(500, function () {
+          $(this).addClass('show');
+
+          $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'block');
+          $('.post-carousel[data-post-id="' + postID + '"]').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            prevArrow: '<button class="slick-prev"><i class="ri-arrow-left-circle-fill"></i></button>',
+            nextArrow: '<button class="slick-next"><i class="ri-arrow-right-circle-fill"></i></button>',
+            fade: true,
+            cssEase: 'linear'
+          });
+        });
+      } else {
+        $('body').css('overflow-y', 'auto');
+        $('.carousel-wrapper').fadeOut(500, function () {
+          $(this).removeClass('show');
+
+          $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'none');
+          $('.post-carousel[data-post-id="' + postID + '"]').slick('unslick');
+        });
+      }
+    });
+
+    $('.carousel-close').click(function () {
+      $('body').css('overflow-y', 'auto');
+      $('.carousel-wrapper').fadeOut(500, function () {
+        $(this).removeClass('show');
+
+        $('.post-carousel[data-post-id="' + postID + '"]').css('display', 'none');
+        $('.post-carousel[data-post-id="' + postID + '"]').slick('unslick');
+      });
+    });
+  } else {
+    $("#nav-link-blog").addClass("selected");
+    $("#sidenav-link-blog").addClass("selected");
+  }
 });
 
 function toggle_theme() {
@@ -117,14 +170,5 @@ function detect_theme_preference() {
 }
 
 function parse_current_url() {
-  var pathname = window.location.pathname;
-
-  if(pathname.includes("portfolio")) {
-    $("#nav-link-portfolio").addClass("selected");
-    $("#sidenav-link-portfolio").addClass("selected");
-  }
-  else {
-    $("#nav-link-blog").addClass("selected");
-    $("#sidenav-link-blog").addClass("selected");
-  }
+  return window.location.pathname;
 }
