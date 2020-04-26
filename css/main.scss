@@ -1,6 +1,11 @@
 ---
 ---
 
+/*!
+ * joshuadowding.github.io
+ * Copyright 2019-2020 Joshua Dowding
+ */
+
 @import '../css/common.scss';
 
 html {
@@ -122,9 +127,9 @@ html {
         }
 
         &:hover {
-          color: $colour-text-white;
-          background-color: $colour-text-highlight;
-          border-color: $colour-text-highlight;
+          color: $colour-white;
+          background-color: $colour-blue;
+          border-color: $colour-blue;
         }
       }
 
@@ -161,10 +166,10 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 400;
-      color: $colour-text-highlight;
+      color: $colour-blue;
 
       &:hover {
-        color: $colour-text-highlight;
+        color: $colour-blue;
         text-decoration: none;
       }
 
@@ -194,7 +199,7 @@ html {
         padding: 4px 8px;
         min-width: 64px;
         text-align: center;
-        background-color: var(--color-text);
+        background-color: var(--colour-background-darker);
         border-radius: $border-radius-default;
         @include box-shadow-default;
 
@@ -210,9 +215,9 @@ html {
         }
 
         &:hover {
-          color: $colour-text-white;
-          background-color: $colour-text-highlight;
-          border-color: $colour-text-highlight;
+          color: $colour-white;
+          background-color: $colour-blue;
+          border-color: $colour-blue;
         }
       }
 
@@ -220,10 +225,10 @@ html {
         color: var(--colour-text);
 
         &:hover {
-          color: $colour-text-highlight !important;
+          color: $colour-blue !important;
 
           .post-title {
-            color: $colour-text-highlight !important;
+            color: $colour-blue !important;
           }
         }
       }
@@ -241,7 +246,7 @@ html {
       color: var(--colour-text);
 
       &:hover {
-        color: $colour-text-highlight;
+        color: $colour-blue;
       }
     }
 
@@ -309,7 +314,7 @@ html {
             width: 32px;
 
             &:hover {
-              color: $colour-text-highlight;
+              color: $colour-blue;
             }
 
             &:last-child {
@@ -338,11 +343,11 @@ html {
                 padding: 0;
 
                 &:hover {
-                  color: $colour-text-highlight;
+                  color: $colour-blue;
                 }
 
                 &.selected {
-                  color: $colour-text-highlight;
+                  color: $colour-blue;
                 }
               }
             }
@@ -370,7 +375,7 @@ html {
             width: 32px;
 
             &:hover {
-              color: $colour-text-highlight;
+              color: $colour-blue;
             }
 
             &:last-child {
@@ -433,7 +438,7 @@ html {
             width: 32px;
 
             &:hover {
-              color: $colour-text-highlight;
+              color: $colour-blue;
             }
 
             &:last-child {
@@ -560,7 +565,7 @@ html {
               background-size: cover;
               background-repeat: no-repeat;
               background-position: center;
-              background-color: $colour-disabled;
+              background-color: $colour-grey;
               border-radius: $border-radius-default;
             }
           }
@@ -577,7 +582,7 @@ html {
           left: 16px;
           padding: 6px 12px 6px 6px;
           color: white;
-          background-color: rgba(39, 39, 39, 0.75);
+          @include colour-d-black(0.90);
           border-radius: $border-radius-default;
           pointer-events: none;
           @include box-shadow-default;
@@ -605,18 +610,18 @@ html {
           &::-webkit-scrollbar {
             background-color: var(--colour-background-darker);
             width: 8px;
-            border-top-right-radius: .35rem;
-            border-bottom-right-radius: .35rem;
+            border-top-right-radius: $border-radius-default;
+            border-bottom-right-radius: $border-radius-default;
           }
 
           &::-webkit-scrollbar-track {
-            border-top-right-radius: .35rem;
-            border-bottom-right-radius: .35rem;
+            border-top-right-radius: $border-radius-default;
+            border-bottom-right-radius: $border-radius-default;
           }
 
           &::-webkit-scrollbar-thumb {
             background-color: var(--colour-button-background-disabled);
-            border-radius: .35rem;
+            border-radius: $border-radius-default;
             transition: all .35s ease-in-out;
             -moz-transition: all .35s ease-in-out;
             -webkit-transition: all .35s ease-in-out;
@@ -626,19 +631,19 @@ html {
             &::-webkit-scrollbar {
               background-color: var(--colour-background-darker);
               width: 8px;
-              border-top-right-radius: .35rem;
-              border-bottom-right-radius: .35rem;
+              border-top-right-radius: $border-radius-default;
+              border-bottom-right-radius: $border-radius-default;
             }
 
             &::-webkit-scrollbar-track {
               background-color: var(--colour-background-darker);
-              border-top-right-radius: .35rem;
-              border-bottom-right-radius: .35rem;
+              border-top-right-radius: $border-radius-default;
+              border-bottom-right-radius: $border-radius-default;
             }
 
             &::-webkit-scrollbar-thumb {
               background-color: var(--colour-text);
-              border-radius: .35rem;
+              border-radius: $border-radius-default;
               transition: all .35s ease-in-out;
               -moz-transition: all .35s ease-in-out;
               -webkit-transition: all .35s ease-in-out;
@@ -650,7 +655,7 @@ html {
             margin: 0 0 8px 0;
 
             &:hover {
-              color: $colour-text-highlight;
+              color: $colour-blue;
             }
           }
 
@@ -787,7 +792,7 @@ html {
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: $colour-overlay;
+      background-color: $colour-d-black;
       z-index: 1001;
 
       &.show {
@@ -807,12 +812,12 @@ html {
 
         &:hover {
           i {
-            color: $colour-text-highlight;
+            color: $colour-blue;
           }
         }
 
         i {
-          color: $colour-text-white;
+          color: $colour-white;
         }
 
         .carousel.close {
@@ -840,7 +845,7 @@ html {
 
           &:hover {
             i {
-              color: $colour-text-highlight;
+              color: $colour-blue;
             }
           }
 
@@ -857,7 +862,7 @@ html {
           }
 
           i {
-            color: $colour-text-white;
+            color: $colour-white;
           }
         }
 
@@ -933,11 +938,11 @@ html {
           transition: 0.25s;
 
           &:hover {
-            color: $colour-text-highlight;
+            color: $colour-blue;
           }
 
           &.selected {
-            color: $colour-text-highlight;
+            color: $colour-blue;
           }
         }
       }
@@ -970,15 +975,15 @@ html {
           @include box-shadow-default;
 
           &.active {
-            color: $colour-text-white;
-            background-color: $colour-text-highlight;
-            border-color: $colour-text-highlight;
+            color: $colour-white;
+            background-color: $colour-blue;
+            border-color: $colour-blue;
           }
 
           &:hover {
-            color: $colour-text-white;
-            background-color: $colour-text-highlight;
-            border-color: $colour-text-highlight;
+            color: $colour-white;
+            background-color: $colour-blue;
+            border-color: $colour-blue;
           }
         }
       }
@@ -997,7 +1002,7 @@ html {
 
         &::-webkit-scrollbar-thumb {
           background-color: var(--colour-button-background-disabled);
-          border-radius: .35rem;
+          border-radius: $border-radius-default;
           transition: all .35s ease-in-out;
           -moz-transition: all .35s ease-in-out;
           -webkit-transition: all .35s ease-in-out;
@@ -1015,7 +1020,7 @@ html {
 
           &::-webkit-scrollbar-thumb {
             background-color: var(--colour-text);
-            border-radius: .35rem;
+            border-radius: $border-radius-default;
             transition: all .35s ease-in-out;
             -moz-transition: all .35s ease-in-out;
             -webkit-transition: all .35s ease-in-out;
@@ -1035,7 +1040,7 @@ html {
             flex-direction: row;
 
             .list-item {
-              min-height: 124px;
+              min-height: 128px;
               width: 300px;
               padding: 12px;
               margin: 0 16px 0 0;
@@ -1044,7 +1049,7 @@ html {
               @include box-shadow-default;
 
               &.is-present {
-                border-left: 4px solid $colour-text-highlight;
+                border-left: 4px solid $colour-blue;
               }
 
               &.has-thumbnail {
@@ -1057,20 +1062,20 @@ html {
                 padding: 0;
 
                 .item-inner {
-                  background: rgba(39, 39, 39, 0.85);
-                  border-bottom-left-radius: .35rem;
-                  border-bottom-right-radius: .35rem;
+                  @include colour-d-black(0.90);
+                  border-bottom-left-radius: $border-radius-default;
+                  border-bottom-right-radius: $border-radius-default;
                   padding: 12px;
 
                   .item-header {
                     h6 {
-                      color: $colour-text-white;
+                      color: $colour-white;
                     }
                   }
 
                   .item-body {
                     p, span {
-                      color: $colour-text-white;
+                      color: $colour-white;
                     }
                   }
                 }
@@ -1083,7 +1088,7 @@ html {
 
                   &.external-link {
                     &:hover {
-                      color: $colour-text-highlight;
+                      color: $colour-blue;
                     }
                   }
                 }
@@ -1123,12 +1128,12 @@ html {
         z-index: 1000;
 
         &.overlay-left {
-          background: linear-gradient(to right, var(--colour-background) 0%, rgba(255, 255, 255, 0) 100%);
+          background: linear-gradient(to right, var(--colour-background) 0%, transparent 100%);
           left: 0;
         }
 
         &.overlay-right {
-          background: linear-gradient(to left, var(--colour-background) 0%, rgba(255, 255, 255, 0) 100%);
+          background: linear-gradient(to left, var(--colour-background) 0%, transparent 100%);
           right: 0;
         }
       }
