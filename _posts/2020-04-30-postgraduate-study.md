@@ -5,9 +5,9 @@ image: /img/blog/2020-04-30-1.jpg
 location: /2020/04/30/postgraduate-study
 categories: anglia
 source:
-  - 'Anglia Ruskin University'
+  - 'Contributions'
 tags:
-redirect: 'https://aru.ac.uk/blogs/considering-postgraduate-study/'
+redirect: 'https://aru.ac.uk/blogs/considering-postgraduate-study'
 ---
 
 In these uncertain times, we may be reluctant to make plans for the future that might need to change at the drop of a hat. For some of you, who are concerned that the job market is unpredictable, thoughts may turn to postgraduate study as a possible next step.
