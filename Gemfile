@@ -1,13 +1,15 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+gem "github-pages", "~> 204", group: :jekyll_plugins
 
-gem 'rake', '~> 12.3', '>= 12.3.2'
-gem 'tzinfo-data', '~> 1.2019', '>= 1.2019.1', platforms: [:mingw, :mswin, :x64_mingw]
-gem 'github-pages', '~> 198', group: :jekyll_plugins
+group :jekyll_plugins do
+  gem 'jekyll-paginate'
+  gem 'jekyll-sitemap'
+  gem 'jekyll-seo-tag'
+end
 
-gem 'jekyll-paginate', '~> 1.1'
-gem 'jekyll-sass-converter', '~> 1.5', '>= 1.5.2'
-gem 'jekyll-sitemap', '~> 1.2'
-gem 'jekyll-seo-tag', '~> 2.5'
-gem 'jekyll-feed', '~> 0.11.0'
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem.
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Performance-booster for watching directories on Windows.
+gem "wdm", "~> 0.1.0" if Gem.win_platform?

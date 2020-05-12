@@ -1,54 +1,25 @@
-safe: false
-lsi: false
-
-rvm:
-  - 2.4.1
-
-name: Joshua Dowding
-title: Joshua Dowding
+title: Joshua Dowding's Portfolio
+author: Joshua Dowding
 description: Joshua Dowding's personal website, portfolio and blog.
-
-author:
-  twitter: Mordaval
+lang: en_GB
 
 url: https://joshdowding.github.io
-baseurl: ""
-
 destination: ./_site/
-
-username: joshuadowding
-repo: joshuadowding.github.io
-branch: master
-
-sudo: false
-
-cache: bundler
-
 permalink: /:year/:month/:day/:title.html
+include: ['_pages']
+
+markdown: kramdown
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 paginate: 5
 paginate_path: /page:num/
 
-plugins:
-  - jekyll-paginate
-  - jekyll-sass-converter
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-feed
-
-exclude:
-  - Rakefile
-  - changelog.md
-  - "*.Rmd"
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - README.md
-  - CNAME
+sitemap: true
 
 sass:
   sass_dir: css
   style: compressed
-
-include: ['_pages']
