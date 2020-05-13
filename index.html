@@ -6,7 +6,6 @@ layout: default
 <div class="container header-container" id="commissions">
   <div class="list-group list-group-horizontal" id="list-tab" role="tablist">
     <a class="list-group-item list-group-item-action active" id="list-journal-list" data-toggle="list" href="#list-journal" role="tab" aria-controls="experience">The Ruskin Journal</a>
-    <a class="list-group-item list-group-item-action" id="list-anglia-list" data-toggle="list" href="#list-anglia" role="tab" aria-controls="experience">Contributions</a>
   </div>
   <div class="scroll-overlay overlay-left"></div>
   <div class="tab-content" id="nav-tab-content">
@@ -33,29 +32,6 @@ layout: default
         {% endfor %}
       </div>
     </div>
-    <div class="tab-pane fade" id="list-anglia" role="tabpanel" aria-labelledby="list-anglia-list">
-        <div class="tab-list">
-          {% for post in site.categories.anglia %}
-          <div class="list-item has-thumbnail" data-file="{{ post.location }}" data-target="article" style="background-image: url('{{ post.image }}')">
-            <div class="item-inner">
-              <div class="item-header">
-                <a href="{{ post.redirect }}" target="_blank">
-                  <h6 class="external-link">{{ post.title }}</h6>
-                </a>
-              </div>
-              <div class="item-body">
-                <p class="body-header">
-                  {{ post.date | date: "%B %-d, %Y" }}
-                  -
-                  <span class="reading-time"></span>,
-                  <span class="word-count"></span> words
-                </p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
   </div>
   <div class="scroll-overlay overlay-right"></div>
 </div>
