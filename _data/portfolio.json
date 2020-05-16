@@ -1,0 +1,88 @@
+[
+  {
+    "name": "main",
+    "items": [
+      {
+        "id": "item-1",
+        "title": "The Ruskin Journal",
+        "image": "/img/portfolio/journal/ruskin-journal-website-1.jpg",
+        "link": "https://ruskinjournal.com/",
+        "body": "After I'd returned to Anglia Ruskin University, I took on the role of Editor-in-Chief for the university's *only* student news outlet, The Ruskin Journal. Over the following trimesters, our [committee](https://www.angliastudent.com/socs/ruskinjournal/) grew the Journal by introducing it to the university's other campuses in London, Chelmsford and Peterborough. I oversaw the rebranding of both the website and the [student society](https://www.angliastudent.com/socs/ruskinjournal/), as well as the production of new promotional materials to help spread the word about the Journal. As a result, the Journal saw the highest number of readers in its short history, the team got to interview members of the local county council, and the website saw a regular swathe of content published every week. I'm incredibly proud of the work we've done to accomplish all of this and more this year."
+      },
+      {
+        "id": "item-2",
+        "title": "Esperus Website",
+        "image": "/img/portfolio/website/website-1-1.jpg",
+        "link": "https://esperus.com/",
+        "body": "When Esperus undertook it's company-wide re-branding, they wanted to bring their website in-house. I developed their new website as one of my earliest projects since joining the company, and it's biggest feature is it's **integration with their in-house content management system**: non-developers can make non-destructive edits it's content, without disrupting it's static structure. It also features several forms for readers to get in contact with us, request a product demo, join our mailing list, or remove themselves from our mailing list. These feed in to a remote database which we monitor internally."
+      },
+      {
+        "id": "item-3",
+        "title": "Esperus Content Management System",
+        "image": "/img/portfolio/cms/cms-1-1.jpg",
+        "slide-images": [
+          {
+            "image": "/img/portfolio/cms/cms-1-1.jpg"
+          },
+          {
+            "image": "/img/portfolio/cms/cms-2-1.jpg"
+          },
+          {
+            "image": "/img/portfolio/cms/cms-3-1.jpg"
+          },
+          {
+            "image": "/img/portfolio/cms/cms-4-1.jpg"
+          },
+          {
+            "image": "/img/portfolio/cms/cms-5-1.jpg"
+          },
+          {
+            "image": "/img/portfolio/cms/cms-6-1.jpg"
+          }
+        ],
+        "body": "Esperus CMS was the response to the need for a content management system that fit their preference for ASP.NET, and would be simple enough for a non-developer to use regularly. Esperus CMS can **edit text, images, links** (external, internal and downloads), and has **dedicated editors for carousel slides and quote blocks**. It has a **built-in asset manager** that provides components like the image gallery with a repository of assets that the user can upload to. And it also features a hierarchy that represents the structure of the website and allows for real-time content re-ordering."
+      },
+      {
+        "id": "item-4",
+        "title": "Kaleidoscope Web Portals",
+        "image": "/img/portfolio/portals/portals-1-1.jpg",
+        "slide-images": [
+          {
+            "image": "/img/portfolio/portals/portals-1-1.jpg"
+          },
+          {
+            "image": "/img/portfolio/portals/portals-2-1.jpg"
+          },
+          {
+            "image": "/img/portfolio/portals/portals-3-1.jpg"
+          },
+          {
+            "image": "/img/portfolio/portals/portals-4-1.jpg"
+          }
+        ],
+        "body": "I built a total of **six different web portals**, built on-top of our Kaleidoscope product, for a number of their automotive clients around the world. These web portals would consist of **embedded, customizable Tableau reports** pre-configured against different datasets relevant to the particular client. These web portals would make use of Kaleidoscope's **built-in security tree** for user access management, and they would often host documents with our **embedded document viewer**. Each portal was designed bespoke for the client, and I would maintain these portals with fixes and new features long after their initial deployments."
+      }
+    ]
+  },
+  {
+    "name": "other",
+    "items": [
+      {
+        "id": "item-5",
+        "title": "Scribe",
+        "body": "Test"
+      },
+      {
+        "id": "item-6",
+        "title": "Noyau",
+        "link": "https://github.com/joshuadowding/noyau",
+        "body": "Forked from an [abandoned open-source project](https://github.com/teejee2008/ukuu), Noyau manages kernel updates for Ubuntu-based distributions; including both supported and un-supported kernel releases directly from Canonical. With a modern GTK3-based interface, and a convenient command-line interface, it's features include the ability to: **install newer kernels than those that come with the distribution by default**, view kernel release changelogs, **remove all installed kernels besides the one that's currently running**, and includes desktop notifications for new kernel releases."
+      },
+      {
+        "id": "item-7",
+        "title": "Esperus Call Logging System",
+        "body": "Esperus CLS evolved from a simple call tracker into a fully-fledged collection of business intelligence tools. It still serves the support team as their primary logging tool, but it also features a **contact and client database**, **integration with [esperus.com](https://esperus.com)**, and the ability to **run reports against various different datasets** like development requests, support tickets and bug reports. These can be exported, printed and shared across the company quickly and easily. Esperus CLS also tracks support response times, open ticket durations, call durations, ticket origins and much more."
+      }
+    ]
+  }
+]

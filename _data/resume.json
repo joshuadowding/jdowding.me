@@ -1,0 +1,66 @@
+[
+  {
+    "position": "President & Editor-in-Chief",
+    "company": "The Ruskin Journal",
+    "date": "Sep. 2019 - Present",
+    "location": "Cambridge, Cambridgeshire, UK",
+    "term": "Volunteer (Fixed-Term, Part-Time)",
+    "type": "present"
+  },
+  {
+    "position": "Contract Software Developer",
+    "company": "Esperus Systems",
+    "date": "Dec. 2019 - Jan. 2020",
+    "location": "London, Greater London, UK",
+    "term": "Contract (Fixed-Term, Full-Time)",
+    "type": "past"
+  },
+  {
+    "position": "MSc Computer Science",
+    "company": "Anglia Ruskin University",
+    "date": "2019 - 2020 (Present)",
+    "location": "Cambridge, Cambridgeshire, UK",
+    "term": "Student (Full-Time)",
+    "type": "present"
+  },
+  {
+    "position": "Junior Software Developer",
+    "company": "Esperus Systems",
+    "date": "Sep. 2018 - Sep. 2019",
+    "location": "London, Greater London, UK",
+    "term": "Permanent (Full-Time)",
+    "type": "past"
+  },
+  {
+    "position": "Video Systems Operator",
+    "company": "StageClip",
+    "date": "June 2018 - July 2018",
+    "location": "Colchester, Essex, UK",
+    "term": "Contract (Fixed-Term, Full-Time)",
+    "type": "past"
+  },
+  {
+    "position": "Contract Copywriter",
+    "company": "Allweathers",
+    "date": "Jan. 2018 - Apr. 2018",
+    "location": "Billericay, Essex, UK",
+    "term": "Contract (Fixed-Term, Full-Time)",
+    "type": "past"
+  },
+  {
+    "position": "Trainee Software Developer",
+    "company": "MSX International",
+    "date": "Aug. 2016 - Jan. 2018",
+    "location": "Colchester, Essex, UK",
+    "term": "Contract (Fixed-Term, Full-Time)",
+    "type": "past"
+  },
+  {
+    "position": "BSc (Hons) Computer Gaming - First",
+    "company": "Anglia Ruskin University",
+    "date": "2013 - 2016",
+    "location": "Cambridge, Cambridgeshire, UK",
+    "term": "Student (Full-Time)",
+    "type": "past"
+  }
+]
