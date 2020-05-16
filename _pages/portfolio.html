@@ -7,7 +7,9 @@ permalink: /portfolio/
 <div class="container">
   <div class="row">
     <div class="col">
-      <div class="posts">
+
+      <!-- Portfolio -->
+      <div class="post-wrapper">
         {% for group in site.data.portfolio %}
           {% if group.name == "main" %}
             {% for item in group.items %}
@@ -71,62 +73,69 @@ permalink: /portfolio/
           {% endif %}
         {% endfor %}
       </div>
-    </div>
-  </div>
-</div>
 
-<div class="container header-container" id="resume">
-  <div class="scroll-overlay overlay-left"></div>
-  <div class="tab-content" id="nav-tab-content">
-    <div class="tab-pane fade show active" id="list-experience" role="tabpanel" aria-labelledby="list-experience-list">
-      <div class="tab-list">
-        {% for member in site.data.resume %}
-          {% if member.type == "present" %}
-            <div class="list-item is-present">
-          {% else %}
-            <div class="list-item">
-          {% endif %}
-            <div class="item-header">
-              <h6>{{ member.position }}</h6>
-            </div>
-            <div class="item-body">
-              <p class="body-header">{{ member.company }}</p>
-              <p>{{ member.date }}</p>
-              <p>{{ member.location }}</p>
-              <p>{{ member.term }}</p>
+      <!-- 'Other Projects' Feature -->
+      <div class="feature-wrapper">
+        <div class="feature">
+          <div class="scroll-overlay overlay-left"></div>
+          <div class="feature-list-wrapper">
+            <div class="feature-inner">
+              <div class="feature-list">
+                {% for group in site.data.portfolio %}
+                  {% if group.name == "other" %}
+                    {% for item in group.items %}
+                      <div class="feature-item">
+                        <div class="item-header">
+                          <h6>{{ item.title }}</h6>
+                        </div>
+                        <div class="item-body">
+                          <p class="body-header">{{ item.company }}</p>
+                          <p>{{ item.body | markdownify }}</p>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              </div>
             </div>
           </div>
-        {% endfor %}
+          <div class="scroll-overlay overlay-right"></div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="scroll-overlay overlay-right"></div>
-</div>
 
-<div class="container header-container">
-  <div class="scroll-overlay overlay-left"></div>
-  <div class="tab-content" id="nav-tab-content">
-    <div class="tab-pane fade show active" id="list-experience" role="tabpanel" aria-labelledby="list-experience-list">
-      <div class="tab-list">
-        {% for group in site.data.portfolio %}
-          {% if group.name == "other" %}
-            {% for item in group.items %}
-              <div class="list-item">
-                <div class="item-header">
-                  <h6>{{ item.title }}</h6>
-                </div>
-                <div class="item-body">
-                  <p class="body-header">{{ item.company }}</p>
-                  <p>{{ item.body | markdownify }}</p>
-                </div>
+      <!-- 'Resume' Feature -->
+      <div class="feature-wrapper">
+        <div class="feature">
+          <div class="scroll-overlay overlay-left"></div>
+          <div class="feature-list-wrapper">
+            <div class="feature-inner">
+              <div class="feature-list">
+                {% for member in site.data.resume %}
+                  {% if member.type == "present" %}
+                    
+                  {% endif %}
+
+                  <div class="feature-item">
+                    <div class="item-header">
+                      <h6>{{ member.position }}</h6>
+                    </div>
+                    <div class="item-body">
+                      <p class="body-header">{{ member.company }}</p>
+                      <p>{{ member.date }}</p>
+                      <p>{{ member.location }}</p>
+                      <p>{{ member.term }}</p>
+                    </div>
+                  </div>
+                {% endfor %}
               </div>
-            {% endfor %}
-          {% endif %}
-        {% endfor %}
+            <div>
+          </div>
+          <div class="scroll-overlay overlay-right"></div>
+        </div>
       </div>
+
     </div>
   </div>
-  <div class="scroll-overlay overlay-right"></div>
 </div>
 
 <div class="carousel-wrapper">
