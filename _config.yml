@@ -1,9 +1,9 @@
 title: Joshua Dowding's Portfolio
 author: Joshua Dowding
-description: Joshua Dowding's personal website, portfolio and blog.
+description: Joshua Dowding's personal blog and portfolio.
 lang: en_GB
 
-url: https://joshdowding.github.io
+url: https://jdowding.me
 destination: ./_site/
 permalink: /:year/:month/:day/:title.html
 include: ['_pages']
@@ -13,7 +13,6 @@ markdown: kramdown
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-seo-tag
 
 paginate: 5
 paginate_path: /page:num/
