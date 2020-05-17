@@ -1,8 +1,3 @@
-/*!
- * joshuadowding.github.io
- * Copyright 2019-2020 Joshua Dowding
- */
-
 $colour-white: #FEFCFF;
 $colour-d-black: #191919;
 $colour-l-black: #272727;
@@ -27,13 +22,13 @@ $border-radius-default: .35rem;
 }
 
 :root {
-  --colour-background: #FEFCFF;
-  --colour-background-darker: #FEFCFF;
-  --colour-background-invert: #272727;
-  --colour-button-background-disabled: #696969;
-  --colour-button-disabled: #272727;
-  --colour-text: #272727;
-  --colour-text-invert: #FEFCFF;
+  --colour-background: #{$colour-white};
+  --colour-background-darker: #{$colour-white};
+  --colour-background-invert: #{$colour-l-black};
+  --colour-button-background-disabled: #{$colour-grey};
+  --colour-button-disabled: #{$colour-l-black};
+  --colour-text: #{$colour-l-black};
+  --colour-text-invert: #{$colour-white};
 
   ul {
     &.invert {
@@ -56,13 +51,13 @@ $border-radius-default: .35rem;
 }
 
 :root.theme-dark {
-  --colour-background: #272727;
-  --colour-background-darker: #191919;
-  --colour-background-invert: #FEFCFF;
-  --colour-button-background-disabled: #696969;
-  --colour-button-disabled: #FEFCFF;
-  --colour-text: #FEFCFF;
-  --colour-text-invert: #272727;
+  --colour-background: #{$colour-l-black};
+  --colour-background-darker: #{$colour-d-black};
+  --colour-background-invert: #{$colour-white};
+  --colour-button-background-disabled: #{$colour-grey};
+  --colour-button-disabled: #{$colour-white};
+  --colour-text: #{$colour-white};
+  --colour-text-invert: #{$colour-l-black};
 
   ul {
     &.invert {

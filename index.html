@@ -82,31 +82,27 @@ layout: default
       </div>
 
       <!-- 'External Posts' Feature -->
-      <div class="feature-wrapper">
-        <div class="feature">
-          <div class="scroll-overlay overlay-left"></div>
+      <div class="scroll-wrapper">
+        <div class="feature-wrapper">
           <div class="feature-list-wrapper">
-            <div class="feature-inner">
-              <div class="feature-list">
-                {% for post in site.data.posts %}
-                  <div class="feature-item" data-file="{{ post.image }}" data-target="article">
-                    <div class="item-header">
-                      <p class="header-content">{{ post.date }} - {{ post.source }}</p>
-                      <h6 class="header-title">{{ post.title }}</h6>
-                    </div>
-
-                    <div class="item-body">
-                      <p class="body-content">{{ post.excerpt }}</p>
-                      <a class="body-link" href="{{ post.link }}" target="_blank">
-                        Read More ->
-                      </a>
-                    </div>
+            <div class="feature-list">
+              {% for post in site.data.posts %}
+                <div class="feature-item" data-file="{{ post.image }}" data-target="article">
+                  <div class="item-header">
+                    <p class="header-content">{{ post.date }} <i class="ri-checkbox-blank-circle-fill"></i> {{ post.source }}</p>
+                    <h6 class="header-title">{{ post.title }}</h6>
                   </div>
-                {% endfor %}
-              </div>
+
+                  <div class="item-body">
+                    <p class="body-content">{{ post.excerpt | truncatewords:16 | markdownify }}</p>
+                    <a class="body-link" href="{{ post.link }}" target="_blank">
+                      Read More ->
+                    </a>
+                  </div>
+                </div>
+              {% endfor %}
             </div>
           </div>
-          <div class="scroll-overlay overlay-right"></div>
         </div>
       </div>
 
