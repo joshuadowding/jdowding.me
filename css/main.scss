@@ -784,35 +784,6 @@ html {
               border-left: 4px solid $colour-blue;
             }
 
-            &.has-thumbnail {
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: center;
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-end;
-              padding: 0;
-
-              .item-inner {
-                @include colour-d-black(0.90);
-                border-bottom-left-radius: $border-radius-default;
-                border-bottom-right-radius: $border-radius-default;
-                padding: 12px;
-
-                .item-header {
-                  h6 {
-                    color: $colour-white;
-                   }
-                }
-
-                .item-body {
-                  p, span {
-                    color: $colour-white;
-                  }
-                }
-              }
-            }
-
             .item-header {
               h6 {
                 margin: 0 0 4px;

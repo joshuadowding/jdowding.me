@@ -89,16 +89,17 @@ layout: default
             <div class="feature-inner">
               <div class="feature-list">
                 {% for post in site.data.posts %}
-                  <div class="feature-item has-thumbnail" data-file="{{ post.image }}" data-target="article">
-                    <div class="item-inner">
-                      <div class="item-header">
-                        <a href="{{ post.link }}" target="_blank">
-                          <h6 class="external-link">{{ post.title }}</h6>
-                        </a>
-                      </div>
-                      <div class="item-body">
-                        <p class="body-header">{{ post.date }} - {{ post.source }}</p>
-                      </div>
+                  <div class="feature-item" data-file="{{ post.image }}" data-target="article">
+                    <div class="item-header">
+                      <p class="header-content">{{ post.date }} - {{ post.source }}</p>
+                      <h6 class="header-title">{{ post.title }}</h6>
+                    </div>
+
+                    <div class="item-body">
+                      <p class="body-content">{{ post.excerpt }}</p>
+                      <a class="body-link" href="{{ post.link }}" target="_blank">
+                        Read More ->
+                      </a>
                     </div>
                   </div>
                 {% endfor %}
