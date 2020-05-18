@@ -80,9 +80,9 @@ $(document).ready(function () {
   parse_current_url();
 
   var currentPage = parse_current_url();
-  if(currentPage.includes("portfolio")) {
-    $("#nav-link-portfolio").addClass("selected");
-    $("#sidenav-link-portfolio").addClass("selected");
+  if(currentPage.includes("projects")) {
+    $("#nav-link-projects").addClass("selected");
+    $("#sidenav-link-projects").addClass("selected");
 
     var postID;
 
@@ -126,8 +126,8 @@ $(document).ready(function () {
       });
     });
   } else {
-    $("#nav-link-blog").addClass("selected");
-    $("#sidenav-link-blog").addClass("selected");
+    $("#nav-link-scribbles").addClass("selected");
+    $("#sidenav-link-scribbles").addClass("selected");
   }
 });
 
