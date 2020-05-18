@@ -52,21 +52,6 @@ permalink: /portfolio/
                   <div class="post-excerpt">
                     {{ item.body | truncatewords:256 | markdownify }}
                   </div>
-
-                  {% if item.tags != empty %}
-                    <div class="post-tags">
-                      <p class="tags-header">Tags:</p>
-                      <p class="tags">
-                        {% for tag in item.tags %}
-                          {% if forloop.last %}
-                            {{ tag }}
-                          {% else %}
-                            {{ tag }},
-                          {% endif %}
-                        {% endfor %}
-                      </p>
-                    </div>
-                  {% endif %}
                 </div>
               </article>
             {% endfor %}
@@ -74,54 +59,80 @@ permalink: /portfolio/
         {% endfor %}
       </div>
 
-      <!-- 'Other Projects' Feature -->
-      <div class="scroll-wrapper">
-        <div class="feature-wrapper">
-          <div class="feature-list-wrapper">
-            <div class="feature-list">
-              {% for group in site.data.portfolio %}
-                {% if group.name == "other" %}
-                  {% for item in group.items %}
-                    <div class="feature-item">
-                      <div class="item-header">
-                        <p class="header-content">{{ item.type }} <i class="ri-checkbox-blank-circle-fill"></i> {{ item.company }}</p>
-                        <h6 class="header-title">{{ item.title }}</h6>
-                      </div>
-                      <div class="item-body">
-                        <p>{{ item.body | markdownify }}</p>
-                      </div>
-                    </div>
+      <div class="row-wrapper">
+        <div class="row-header">
+          <h1 class="header">Other Projects.</h1>
+        </div>
+        <div class="row-content">
+
+          <!-- 'Other Projects' Feature -->
+          <div class="scroll-wrapper">
+            <div class="feature-wrapper">
+              <div class="feature-list-wrapper">
+                <div class="feature-list">
+                  {% for group in site.data.portfolio %}
+                    {% if group.name == "other" %}
+                      {% for item in group.items %}
+                        <div class="feature-item">
+                          <div class="item-header">
+                            <p class="header-content">{{ item.type }} <i class="ri-checkbox-blank-circle-fill"></i> {{ item.company }}</p>
+                            <h6 class="header-title">{{ item.title }}</h6>
+                          </div>
+                          <div class="item-body">
+                            <p class="body-content">
+                              {{ item.body | markdownify }}
+                            </p>
+
+                            {% if item.link != null %}
+                              <a class="body-link" href="{{ item.link }}" target="_blank">
+                                Learn More ->
+                              </a>
+                            {% endif %}
+                          </div>
+                        </div>
+                      {% endfor %}
+                    {% endif %}
                   {% endfor %}
-                {% endif %}
-              {% endfor %}
+                </div>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
 
-      <!-- 'Resume' Feature -->
-      <div class="scroll-wrapper">
-        <div class="feature-wrapper">
-          <div class="feature-list-wrapper">
-            <div class="feature-list">
-              {% for member in site.data.resume %}
-                {% if member.type == "present" %}
-                {% endif %}
+      <div class="row-wrapper">
+        <div class="row-header">
+          <h1 class="header">Resume.</h1>
+        </div>
+        <div class="row-content">
 
-                <div class="feature-item">
-                  <div class="item-header">
-                    <h6 class="header-title">{{ member.position }}</h6>
-                    <p class="header-subtitle">{{ member.company }}</p>
-                  </div>
-                  <div class="item-body">
-                    <p>{{ member.date }}</p>
-                    <p>{{ member.location }}</p>
-                    <p>{{ member.term }}</p>
-                  </div>
+          <!-- 'Resume' Feature -->
+          <div class="scroll-wrapper">
+            <div class="feature-wrapper">
+              <div class="feature-list-wrapper">
+                <div class="feature-list">
+                  {% for member in site.data.resume %}
+                    {% if member.type == "present" %}
+                    {% endif %}
+
+                    <div class="feature-item">
+                      <div class="item-header">
+                        <h6 class="header-title">{{ member.position }}</h6>
+                        <p class="header-subtitle">{{ member.company }}</p>
+                      </div>
+                      <div class="item-body">
+                        <p>{{ member.date }}</p>
+                        <p>{{ member.location }}</p>
+                        <p>{{ member.term }}</p>
+                      </div>
+                    </div>
+                  {% endfor %}
                 </div>
-              {% endfor %}
+              </div>
             </div>
           </div>
+
         </div>
       </div>
 

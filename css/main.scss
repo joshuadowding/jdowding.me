@@ -756,6 +756,28 @@ html {
       }
     }
 
+    .row-wrapper {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin: 0 0 32px 0;
+      }
+
+      .row-header {
+        width: 15%;
+
+        .header {
+          font-size: 2.8rem;
+        }
+      }
+
+      .row-content {
+        width: 85%;
+      }
+    }
+
     .feature-wrapper {
       position: relative;
       height: 100%;
@@ -776,7 +798,7 @@ html {
           height: 100%;
 
           .feature-item {
-            min-height: 128px;
+            max-height: 192px;
             width: 300px;
             padding: 16px;
             margin: 0 16px 0 0;
@@ -828,17 +850,29 @@ html {
             }
 
             .item-body {
-              .body-content, p, a {
+              display: -webkit-box;
+              -webkit-line-clamp: 4;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+
+              .body-content, p {
                 margin: 0;
                 font-size: 1.2rem;
                 line-height: 1.8rem;
+                overflow: hidden;
 
                 &:last-child {
                   margin: 0;
                 }
+
+                a, span {
+                  font-size: 1.2rem;
+                }
               }
 
               .body-link {
+                display: block;
+                margin: 8px 0 0 0;
                 font-size: 1.2rem;
                 line-height: 1.2rem;
               }
