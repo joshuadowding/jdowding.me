@@ -103,7 +103,7 @@ permalink: /projects/
 
       <div class="row-wrapper">
         <div class="row-header">
-          <h1 class="header">Resume.</h1>
+          <h1 class="header">Condensed Resume.</h1>
         </div>
         <div class="row-content">
 
@@ -113,10 +113,11 @@ permalink: /projects/
               <div class="feature-list-wrapper">
                 <div class="feature-list">
                   {% for member in site.data.resume %}
-                    {% if member.type == "present" %}
-                    {% endif %}
-
                     <div class="feature-item">
+                      {% if member.type == "present" %}
+                        <div class="item-present"><p class="label">Current</p></div>
+                      {% endif %}
+
                       <div class="item-header">
                         <h6 class="header-title">{{ member.position }}</h6>
                         <p class="header-subtitle">{{ member.company }}</p>
