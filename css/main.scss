@@ -647,8 +647,25 @@ html {
           .post-header {
             padding: 24px 24px 0 24px;
 
+            a {
+              &:hover {
+                .header-title {
+                  color: $colour-blue;
+                }
+              }
+            }
+
             .header-title {
               font-size: 2.2rem;
+              margin: 0;
+            }
+          }
+
+          .post-metadata {
+            padding: 12px 24px 0 24px;
+
+            .post-date {
+              font-size: 1.4rem;
               margin: 0;
             }
           }
