@@ -577,7 +577,7 @@ html {
           left: 16px;
           padding: 6px 12px 6px 6px;
           color: white;
-          @include colour-d-black(0.90);
+          @include colour-d-black(0.95);
           border-radius: $border-radius-default;
           pointer-events: none;
           @include box-shadow-default;
@@ -592,7 +592,6 @@ html {
         .post-body {
           display: flex;
           flex-direction: column;
-          padding: 24px 24px 0 24px;
           overflow-y: scroll;
           height: 350px;
           position: relative;
@@ -644,76 +643,58 @@ html {
               -webkit-transition: all .35s ease-in-out;
             }
           }
-  
-          .post-title {
-            font-size: 2.2rem;
-            margin: 0 0 8px 0;
-  
-            &:hover {
-              color: $colour-blue;
-            }
-          }
-  
-          .post-metadata {
-            span {
-              line-height: 1.2rem;
-            }
-  
-            .post-subtitle {
-              margin: 0;
-            }
-  
-            .post-date {
+
+          .post-header {
+            padding: 24px 24px 0 24px;
+
+            .header-title {
+              font-size: 2.2rem;
               margin: 0;
             }
           }
-  
-          .post-tags {
-            display: flex;
-            position: relative;
-            margin: 0 0 8px 0;
-  
-            &:last-child {
-              padding-bottom: 24px;
-              margin-bottom: 0;
-            }
-  
-            .tags-header {
-                margin: 0 8px 0 0;
-            }
-  
-            .tags {
-              margin: 0 8px 0 0;
-            }
-          }
-  
-          .post-catagories {
-            display: flex;
-            position: relative;
-            margin: 0 0 8px 0;
-  
-            &:last-child {
-              padding-bottom: 24px;
-              margin-bottom: 0;
-            }
-  
-            .categories-header {
-                margin: 0 8px 0 0;
-            }
-  
-            .categories {
-              margin: 0 8px 0 0;
-            }
-          }
-  
-          .post-content,
+
           .post-excerpt {
-            position: relative;
-            margin: 16px 0;
-  
-            &:last-child {
-              padding-bottom: 24px;
-              margin-bottom: 0;
+            padding: 12px 24px 0 24px;
+          }
+
+          .post-items {
+            display: flex;
+            flex-direction: column;
+
+            .sub-item {
+              padding: 12px 24px 0 24px;
+              margin: 0;
+
+              &:last-child {
+                padding: 12px 24px 12px 24px;
+              }
+
+              .sub-item-content {
+                margin: 0;
+
+                i {
+                  font-size: 0.6rem;
+                  margin: 0 8px 0 0;
+                  color: white;
+                }
+
+                .item-title {
+                  font-weight: 600;
+                }
+              }
+
+              .sub-item-tags {
+                display: flex;
+                flex-direction: row;
+                margin: 4px 0 0 0;
+
+                .tag {
+                  font-size: 1.2rem;
+                  line-height: 1.2rem;
+                  margin: 0 8px 0 0;
+                  color: #707070;
+                }
+              }
             }
           }
         }
