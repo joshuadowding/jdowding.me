@@ -139,6 +139,9 @@
                 "name" : "Java EE"
               },
               {
+                "name" : "Gradle"
+              },
+              {
                 "name" : "Spring"
               },
               {

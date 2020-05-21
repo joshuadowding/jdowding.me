@@ -6,18 +6,16 @@
 html {
   body {
     @media screen and (max-width: 1199px) {
-      .body-content {
-        .posts {
-          .post {
-            .post-image {
+      .post-wrapper {
+        .post {
+          .post-image {
+            width: 540px;
+
+            .image-wrapper {
               width: 540px;
 
-              .image-wrapper {
+              .image {
                 width: 540px;
-
-                .image {
-                  width: 540px;
-                }
               }
             }
           }
@@ -26,57 +24,47 @@ html {
     }
 
     @media screen and (max-width: 991px) {
-      .body-content {
-        .posts {
-          .post {
-            display: flex;
-            flex-direction: column;
-            max-height: unset;
-
-            .post-image {
-              width: 100%;
-              padding-right: 0;
-              margin-right: 0;
-
-              &.post-carousel {
-                .slick-arrow {
-                  &.slick-next {
-                    right: 0;
-                  }
-                }
-              }
-
-              .image-wrapper {
-                width: 100%;
-
-                .image {
-                  width: 100%;
-                }
-              }
-            }
-
-            .post-body {
-              max-height: 350px;
-              height: unset;
-              width: 95%;
-              border-top-right-radius: $border-radius-default;
-              border-bottom-left-radius: $border-radius-default;
-            }
-          }
-        }
-
+      .post-wrapper {
         .post {
+          display: flex;
+          flex-direction: column;
+          max-height: unset;
+
           &.full-spread {
             .post-image {
               margin-bottom: 16px;
             }
           }
-        }
-      }
 
-      .list-group {
-        &.experience-group {
-          margin: 16px auto;
+          .post-image {
+            width: 100%;
+            padding-right: 0;
+            margin-right: 0;
+
+            &.post-carousel {
+              .slick-arrow {
+                &.slick-next {
+                  right: 0;
+                }
+              }
+            }
+
+            .image-wrapper {
+              width: 100%;
+
+              .image {
+                width: 100%;
+              }
+            }
+          }
+
+          .post-body {
+            max-height: 350px;
+            height: unset;
+            width: 95%;
+            border-top-right-radius: $border-radius-default;
+            border-bottom-left-radius: $border-radius-default;
+          }
         }
       }
     }
@@ -104,31 +92,31 @@ html {
         }
       }
 
-      .body-content {
-        .posts {
-          .post {
-            .post-image {
-              border-bottom-left-radius: 0;
-              border-bottom-right-radius: 0;
+      .post-wrapper {
+        .post {
+          .post-image {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            height: 256px;
+
+            .image-wrapper {
               height: 256px;
 
-              .image-wrapper {
+              .image {
                 height: 256px;
-
-                .image {
-                  height: 256px;
-                  border-bottom-left-radius: 0;
-                  border-bottom-right-radius: 0;
-                }
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
               }
             }
+          }
 
-            .post-body {
-              width: 100%;
-            }
+          .post-body {
+            width: 100%;
           }
         }
+      }
 
+      .body-content {
         .pagination {
           justify-content: center;
         }
