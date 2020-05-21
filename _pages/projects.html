@@ -55,9 +55,13 @@ permalink: /projects/
                         </p>
 
                         <div class="sub-item-tags">
-                          {% for tag in sub-item.tags %}
-                            <p class="tag">{{ tag.name }}</p>
-                          {% endfor %}
+                          <p>
+                            {% for tag in sub-item.tags %}
+                              <span class="tag">
+                                {{ tag.name }}{% if forloop.last %}{% else %},{% endif %}
+                              </span>
+                            {% endfor %}
+                          </p>
                         </div>
                       </div>
                     {% endfor %}
