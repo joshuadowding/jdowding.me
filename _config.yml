@@ -20,5 +20,4 @@ paginate_path: /page:num/
 sitemap: true
 
 sass:
-  sass_dir: css
   style: compressed

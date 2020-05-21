@@ -1,0 +1,176 @@
+---
+title: Projects
+layout: default
+permalink: /projects/
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <!-- Portfolio -->
+      <div class="post-wrapper">
+        {% for group in site.data.portfolio %}
+          {% if group.name == "main" %}
+            {% for item in group.items %}
+              <article class="post">
+                {% if item.image != null %}
+                  <div class="post-image">
+                    {% if item.link != null %}
+                      <a class="image-wrapper" href="{{ item.link }}" target="_blank">
+                        <div class="image" style="background-image: url('{{ item.image }}')"></div>
+                      </a>
+
+                      <div class="post-hint"><i class="ri-cursor-fill"></i> Visit</div>
+                    {% else %}
+                      <a class="image-wrapper carousel-toggle" href="javascript:void(0);" data-post-id="{{ item.id }}">
+                        <div class="image" style="background-image: url('{{ item.image }}')"></div>
+                      </a>
+
+                      <div class="post-hint"><i class="ri-cursor-fill"></i> View</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+
+                <div class="post-body">
+                  <div class="post-header">
+                    <h3 class="header-title" id="{{ item.id }}">
+                      {{ item.title }}
+                    </h3>
+                  </div>
+
+                  <div class="post-excerpt">
+                    {{ item.content | truncatewords:256 | markdownify | remove: '<p>' | remove: '</p>' }}
+                  </div>
+
+                  <div class="post-items">
+                    {% for sub-item in item.sub-items %}
+                      <div class="sub-item">
+                        <p class="sub-item-content">
+                          {% if sub-item.title != null %}
+                            <span class="item-title">{{ sub-item.title }}</span> - 
+                          {% endif %}
+
+                          {{ sub-item.content | markdownify | strip_html }}
+                        </p>
+
+                        <div class="sub-item-tags">
+                          <p>
+                            {% for tag in sub-item.tags %}
+                              <span class="tag">
+                                {{ tag.name }}{% if forloop.last %}{% else %},{% endif %}
+                              </span>
+                            {% endfor %}
+                          </p>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </article>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="row-wrapper">
+        <div class="row-header">
+          <h1 class="header">Other Projects.</h1>
+        </div>
+        <div class="row-content">
+
+          <!-- 'Other Projects' Feature -->
+          <div class="scroll-wrapper">
+            <div class="feature-wrapper">
+              <div class="feature-list-wrapper">
+                <div class="feature-list">
+                  {% for group in site.data.portfolio %}
+                    {% if group.name == "other" %}
+                      {% for item in group.items %}
+                        <div class="feature-item">
+                          <div class="item-header">
+                            <p class="header-content">{{ item.type }} <i class="ri-checkbox-blank-circle-fill"></i> {{ item.company }}</p>
+                            <h6 class="header-title">{{ item.title }}</h6>
+                          </div>
+                          <div class="item-body">
+                            <p class="body-content">
+                              {{ item.content | markdownify | remove: '<p>' | remove: '</p>' }}
+                            </p>
+
+                            {% if item.link != null %}
+                              <a class="body-link" href="{{ item.link }}" target="_blank">
+                                Learn More ->
+                              </a>
+                            {% endif %}
+                          </div>
+                        </div>
+                      {% endfor %}
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row-wrapper">
+        <div class="row-header">
+          <h1 class="header">Condensed Resume.</h1>
+        </div>
+        <div class="row-content">
+
+          <!-- 'Resume' Feature -->
+          <div class="scroll-wrapper">
+            <div class="feature-wrapper">
+              <div class="feature-list-wrapper">
+                <div class="feature-list">
+                  {% for member in site.data.resume %}
+                    <div class="feature-item">
+                      {% if member.type == "present" %}
+                        <div class="item-present"><p class="label">Current</p></div>
+                      {% endif %}
+
+                      <div class="item-header">
+                        <h6 class="header-title">{{ member.position }}</h6>
+                        <p class="header-subtitle">{{ member.company }}</p>
+                      </div>
+                      <div class="item-body">
+                        <p>{{ member.date }}</p>
+                        <p>{{ member.location }}</p>
+                        <p>{{ member.term }}</p>
+                      </div>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="carousel-wrapper">
+  <div class="carousel-close-wrapper">
+    <a class="carousel-close" href="javascript:void(0);">
+      <i class="ri-close-circle-fill"></i>
+    </a>
+  </div>
+
+  {% for member in site.data.portfolio %}
+    {% if member.slide-images != empty %}
+      <div class="post-carousel" data-post-id="{{ member.id }}">
+        {% for slide_image in member.slide-images %}
+          <a class="image-wrapper carousel-toggle" href="javascript:void(0);" data-post-id="{{ member.id }}">
+            <img class="image" src="{{ slide_image.image }}" />
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

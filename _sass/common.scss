@@ -1,0 +1,79 @@
+$L1: #FFFFFF; // White
+$L2: #EEF1F4; // White (Dark)
+$L3: #707070; // Grey (Light)
+$D1: #272727; // Grey (Dark)
+$D2: #191919; // Black (Light)
+$D3: #000000; // Black
+$B1: #3095E5; // Blue
+
+$border-radius: .35rem;
+
+:root {
+  --box-shadow: #{transparentize($L3, 0.75)};
+
+  --background-colour: #{$L2};
+  --foreground-colour: #{$L1};
+
+  --link-colour: #{$B1};
+  --text-colour: #{$D2};
+
+  --link-colour-disabled: #{$L3};
+  --text-colour-invert: #{$L1};
+
+  ul {
+    &.invert {
+      color: var(--text-colour-invert);
+
+      li {
+        color: var(--text-colour-invert);
+        list-style: square outside url('../img/bullet-w.png');
+
+        p {
+          color: var(--text-colour-invert);
+        }
+      }
+    }
+
+    li {
+      list-style: square outside url('../img/bullet.png');
+    }
+  }
+}
+
+:root.theme-dark {
+  --box-shadow: #{transparentize($D3, 0.75)};
+
+  --background-colour: #{$D1};
+  --foreground-colour: #{$D2};
+
+  --link-colour: #{$B1};
+  --text-colour: #{$L1};
+
+  --link-colour-disabled: #{$L3};
+  --text-colour-invert: #{$D2};
+
+  ul {
+    &.invert {
+      color: var(--text-colour-invert);
+
+      li {
+        color: var(--text-colour-invert);
+        list-style: square outside url('../img/bullet.png');
+
+        p {
+          color: var(--text-colour-invert);
+        }
+      }
+    }
+
+    li {
+      list-style: square outside url('../img/bullet-w.png');
+    }
+  }
+}
+
+@mixin box-shadow-default() {
+  -webkit-box-shadow: 0px 5px 15px 0px var(--box-shadow);
+  -moz-box-shadow: 0px 5px 15px 0px var(--box-shadow);
+  box-shadow: 0px 5px 15px 0px var(--box-shadow);
+}

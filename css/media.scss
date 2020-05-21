@@ -1,28 +1,19 @@
 ---
 ---
 
-/*!
- * joshuadowding.github.io
- * Copyright 2019-2020 Joshua Dowding
- */
-
-@import '../css/common.scss';
-
 html {
   body {
     @media screen and (max-width: 1199px) {
-      .body-content {
-        .posts {
-          .post {
-            .post-image {
+      .post-wrapper {
+        .post {
+          .post-image {
+            width: 540px;
+
+            .image-wrapper {
               width: 540px;
 
-              .image-wrapper {
+              .image {
                 width: 540px;
-
-                .image {
-                  width: 540px;
-                }
               }
             }
           }
@@ -31,57 +22,45 @@ html {
     }
 
     @media screen and (max-width: 991px) {
-      .body-content {
-        .posts {
-          .post {
-            display: flex;
-            flex-direction: column;
-            max-height: unset;
-
-            .post-image {
-              width: 100%;
-              padding-right: 0;
-              margin-right: 0;
-
-              &.post-carousel {
-                .slick-arrow {
-                  &.slick-next {
-                    right: 0;
-                  }
-                }
-              }
-
-              .image-wrapper {
-                width: 100%;
-
-                .image {
-                  width: 100%;
-                }
-              }
-            }
-
-            .post-body {
-              max-height: 350px;
-              height: unset;
-              width: 95%;
-              border-top-right-radius: $border-radius-default;
-              border-bottom-left-radius: $border-radius-default;
-            }
-          }
-        }
-
+      .post-wrapper {
         .post {
+          display: flex;
+          flex-direction: column;
+          max-height: unset;
+
           &.full-spread {
             .post-image {
               margin-bottom: 16px;
             }
           }
-        }
-      }
 
-      .list-group {
-        &.experience-group {
-          margin: 16px auto;
+          .post-image {
+            width: 100%;
+            padding-right: 0;
+            margin-right: 0;
+
+            &.post-carousel {
+              .slick-arrow {
+                &.slick-next {
+                  right: 0;
+                }
+              }
+            }
+
+            .image-wrapper {
+              width: 100%;
+
+              .image {
+                width: 100%;
+              }
+            }
+          }
+
+          .post-body {
+            max-height: 350px;
+            height: unset;
+            width: 95%;
+          }
         }
       }
     }
@@ -99,6 +78,7 @@ html {
 
           .header-menu {
             display: flex;
+            margin: 0 0 0 auto;
 
             .link-icon {
               &.menu-toggle {
@@ -109,31 +89,41 @@ html {
         }
       }
 
-      .body-content {
-        .posts {
-          .post {
-            .post-image {
-              border-bottom-left-radius: 0;
-              border-bottom-right-radius: 0;
-              height: 256px;
-
-              .image-wrapper {
-                height: 256px;
-
-                .image {
-                  height: 256px;
-                  border-bottom-left-radius: 0;
-                  border-bottom-right-radius: 0;
-                }
-              }
-            }
-
-            .post-body {
-              width: 100%;
-            }
-          }
+      .row-wrapper {
+        .row-header {
+          width: 25%;
         }
 
+        .row-content {
+          width: 75%;
+        }
+      }
+
+      .post-wrapper {
+        .post {
+          .post-image {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            height: 256px;
+
+            .image-wrapper {
+              height: 256px;
+
+              .image {
+                height: 256px;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+              }
+            }
+          }
+
+          .post-body {
+            width: 100%;
+          }
+        }
+      }
+
+      .body-content {
         .pagination {
           justify-content: center;
         }
@@ -160,6 +150,24 @@ html {
             padding: 8px 32px 8px 32px;
             text-align: right;
           }
+        }
+      }
+
+      .row-wrapper {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+
+        .row-header {
+          width: 100%;
+
+          .header {
+            text-align: center;
+          }
+        }
+
+        .row-content {
+          width: 100%;
         }
       }
     }
