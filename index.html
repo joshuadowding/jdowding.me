@@ -53,17 +53,17 @@ layout: default
 
         <div class="pagination">
           {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path }}" class="button previous">Previous</a>
+            <a href="{{ paginator.previous_page_path }}" class="button previous"><i class="ri-arrow-left-s-line"></i></a>
           {% else %}
-            <span class="button button-disabled previous">Previous</span>
+            <span class="button button-disabled previous"><i class="ri-arrow-left-s-line"></i></span>
           {% endif %}
 
-          <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+          <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
 
           {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}" class="button next">Next</a>
+            <a href="{{ paginator.next_page_path }}" class="button next"><i class="ri-arrow-right-s-line"></i></a>
           {% else %}
-            <span class="button button-disabled next">Next</span>
+            <span class="button button-disabled next"><i class="ri-arrow-right-s-line"></i></span>
           {% endif %}
         </div>
       </div>
