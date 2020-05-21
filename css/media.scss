@@ -30,7 +30,15 @@ html {
 
           &.full-spread {
             .post-image {
-              margin-bottom: 16px;
+              margin: 0 0 32px 0;
+            }
+
+            .related-posts {
+              margin: 32px 0 0 0;
+            }
+
+            .post-body {
+              max-height: unset;
             }
           }
 

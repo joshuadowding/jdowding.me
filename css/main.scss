@@ -473,31 +473,19 @@ html {
             .post-title {
               margin: 0;
             }
-  
-            .post-subtitle {
-              margin: 0;
-              margin-top: 6px;
-            }
-  
-            .post-date {
-              margin: 0;
-              margin-top: 6px;
-            }
-  
-            .post-tags {
+
+            .post-metadata {
               display: flex;
-              margin: 0;
-              margin-top: 6px;
-  
-              .tag {
-                margin-right: 6px;
-                margin-bottom: 0;
+              align-items: center;
+              margin: 8px 0 0 0;
+
+              .post-date {
+                margin: 0 12px 0 0;
               }
-            }
   
-            .post-catagories {
-              margin: 0;
-              margin-top: 6px;
+              .reading-time {
+                margin: 0 4px 0 0;
+              }
             }
           }
   
@@ -511,6 +499,11 @@ html {
   
             .post-content {
               margin: 0;
+
+              h2, h3, h4, h5, h6 {
+                font-weight: 600;
+                margin: 16px 0 8px;
+              }
             }
           }
   
