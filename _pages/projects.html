@@ -162,15 +162,17 @@ permalink: /projects/
     </a>
   </div>
 
-  {% for member in site.data.portfolio %}
-    {% if member.slide-images != empty %}
-      <div class="post-carousel" data-post-id="{{ member.id }}">
-        {% for slide_image in member.slide-images %}
-          <a class="image-wrapper carousel-toggle" href="javascript:void(0);" data-post-id="{{ member.id }}">
-            <img class="image" src="{{ slide_image.image }}" />
-          </a>
-        {% endfor %}
-      </div>
-    {% endif %}
+  {% for group in site.data.portfolio %}
+    {% for item in group.items %}
+      {% if item.slide-images != null %}
+        <div class="post-carousel" data-post-id="{{ item.id }}">
+          {% for slide-image in item.slide-images %}
+            <a class="image-wrapper carousel-toggle" href="javascript:void(0);" data-post-id="{{ item.id }}">
+              <img class="image" src="{{ slide-image.image }}" />
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </div>

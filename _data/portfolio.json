@@ -113,20 +113,20 @@
       },
       {
         "id": "item-3",
-        "title": "MSX International",
-        "image": "/img/portfolio/portals/portals-1-1.jpg",
-        "slide-images": [
+        "title" : "MSX International",
+        "image" : "/img/portfolio/portals/portals-1-1.jpg",
+        "slide-images" : [
           {
-            "image": "/img/portfolio/portals/portals-1-1.jpg"
+            "image" : "/img/portfolio/portals/portals-1-1.jpg"
           },
           {
-            "image": "/img/portfolio/portals/portals-2-1.jpg"
+            "image" : "/img/portfolio/portals/portals-2-1.jpg"
           },
           {
-            "image": "/img/portfolio/portals/portals-3-1.jpg"
+            "image" : "/img/portfolio/portals/portals-3-1.jpg"
           },
           {
-            "image": "/img/portfolio/portals/portals-4-1.jpg"
+            "image" : "/img/portfolio/portals/portals-4-1.jpg"
           }
         ],
         "content": "As a trainee, I contributed to a number of different **full-stack** and **front-end** (B2B) projects, including:",

@@ -1066,7 +1066,7 @@ html {
         }
 
         i {
-          color: var(--text-colour-invert);
+          color: var(--text-colour);
         }
 
         .carousel.close {
@@ -1091,6 +1091,7 @@ html {
           height: 64px;
           border: 0;
           background: transparent;
+          color: var(--text-colour);
 
           &:hover {
             i {
@@ -1111,12 +1112,16 @@ html {
           }
 
           i {
-            color: var(--text-colour-invert);
+            color: var(--text-colour);
           }
         }
 
+        .slick-slide > div {
+          height: 100%;
+        }
+
         .image-wrapper {
-          display: flex;
+          display: flex !important;
           justify-content: center;
           align-items: center;
           align-content: center;
