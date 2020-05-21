@@ -1,7 +1,7 @@
 # joshuadowding.github.io
 Personal blog and portfolio.
 
-[![CodeFactor](https://www.codefactor.io/repository/github/joshuadowding/joshuadowding.github.io/badge)](https://www.codefactor.io/repository/github/joshuadowding/joshuadowding.github.io)
+[![CodeFactor](https://www.codefactor.io/repository/github/joshuadowding/jdowding.me/badge)](https://www.codefactor.io/repository/github/joshuadowding/jdowding.me)
 
 ## Installation & Deployment
 Install Jekyll and Bundler:
