@@ -1,45 +1,35 @@
-$colour-white: #FEFCFF;
-$colour-d-black: #191919;
-$colour-l-black: #272727;
-$colour-grey: #696969;
-$colour-blue: #3095E5;
+$L1: #FFFFFF; // White
+$L2: #EEF1F4; // White (Dark)
+$L3: #707070; // Grey (Light)
+$D1: #272727; // Grey (Dark)
+$D2: #191919; // Black (Light)
+$D3: #000000; // Black
+$B1: #3095E5; // Blue
 
-@mixin colour-d-black($alpha){ background: rgba(25, 25, 25, $alpha); }
-
-$box-shadow-default: rgba(0, 0, 0, 0.25);
-$border-radius-default: .35rem;
-
-@mixin transition-colour-text-highlight($duration) {
-  -webkit-transition: color $duration ease-in-out;
-  -ms-transition: color $duration ease-in-out;
-  transition: color $duration ease-in-out;
-}
-
-@mixin box-shadow-default() {
-  -webkit-box-shadow: 0px 5px 15px 0px $box-shadow-default;
-  -moz-box-shadow: 0px 5px 15px 0px $box-shadow-default;
-  box-shadow: 0px 5px 15px 0px $box-shadow-default;
-}
+$border-radius: .35rem;
 
 :root {
-  --colour-background: #{$colour-white};
-  --colour-background-darker: #{$colour-white};
-  --colour-background-invert: #{$colour-l-black};
-  --colour-button-background-disabled: #{$colour-grey};
-  --colour-button-disabled: #{$colour-l-black};
-  --colour-text: #{$colour-l-black};
-  --colour-text-invert: #{$colour-white};
+  --box-shadow: #{transparentize($L3, 0.75)};
+
+  --background-colour: #{$L2};
+  --foreground-colour: #{$L1};
+
+  --link-colour: #{$B1};
+  --text-colour: #{$D2};
+
+  --link-colour-disabled: #{$L3};
+  --text-colour-invert: #{$L1};
 
   ul {
     &.invert {
-      color: var(--colour-text-invert);
+      color: var(--text-colour-invert);
 
       li {
-        color: var(--colour-text-invert);
+        color: var(--text-colour-invert);
         list-style: square outside url('../img/bullet-w.png');
 
         p {
-          color: var(--colour-text-invert);
+          color: var(--text-colour-invert);
         }
       }
     }
@@ -51,24 +41,27 @@ $border-radius-default: .35rem;
 }
 
 :root.theme-dark {
-  --colour-background: #{$colour-l-black};
-  --colour-background-darker: #{$colour-d-black};
-  --colour-background-invert: #{$colour-white};
-  --colour-button-background-disabled: #{$colour-grey};
-  --colour-button-disabled: #{$colour-white};
-  --colour-text: #{$colour-white};
-  --colour-text-invert: #{$colour-l-black};
+  --box-shadow: #{transparentize($D3, 0.75)};
+
+  --background-colour: #{$D1};
+  --foreground-colour: #{$D2};
+
+  --link-colour: #{$B1};
+  --text-colour: #{$L1};
+
+  --link-colour-disabled: #{$L3};
+  --text-colour-invert: #{$D2};
 
   ul {
     &.invert {
-      color: var(--colour-text-invert);
+      color: var(--text-colour-invert);
 
       li {
-        color: var(--colour-text-invert);
+        color: var(--text-colour-invert);
         list-style: square outside url('../img/bullet.png');
 
         p {
-          color: var(--colour-text-invert);
+          color: var(--text-colour-invert);
         }
       }
     }
@@ -77,4 +70,10 @@ $border-radius-default: .35rem;
       list-style: square outside url('../img/bullet-w.png');
     }
   }
+}
+
+@mixin box-shadow-default() {
+  -webkit-box-shadow: 0px 5px 15px 0px var(--box-shadow);
+  -moz-box-shadow: 0px 5px 15px 0px var(--box-shadow);
+  box-shadow: 0px 5px 15px 0px var(--box-shadow);
 }

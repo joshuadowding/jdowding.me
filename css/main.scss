@@ -14,13 +14,13 @@ html {
 
   body {
     min-width: 320px;
-    background-color: var(--colour-background);
+    background-color: var(--background-colour);
 
     h1 {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 2.4rem;
       font-weight: 700;
-      color: var(--colour-text);
+      color: var(--text-colour);
       margin: 24px 0 12px;
 
       &.post-title {
@@ -38,7 +38,7 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 2.2rem;
       font-weight: 700;
-      color: var(--colour-text);
+      color: var(--text-colour);
       margin: 24px 0 12px;
 
       &.group-header {
@@ -51,7 +51,7 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 2rem;
       font-weight: 700;
-      color: var(--colour-text);
+      color: var(--text-colour);
       margin: 24px 0 12px;
     }
 
@@ -59,7 +59,7 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.8rem;
       font-weight: 500;
-      color: var(--colour-text);
+      color: var(--text-colour);
       margin: 24px 0 12px;
     }
 
@@ -67,7 +67,7 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.6rem;
       font-weight: 500;
-      color: var(--colour-text);
+      color: var(--text-colour);
       margin: 24px 0 12px;
     }
 
@@ -75,7 +75,7 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 500;
-      color: var(--colour-text);
+      color: var(--text-colour);
       margin: 24px 0 12px;
 
       span {
@@ -91,7 +91,7 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 400;
-      color: var(--colour-text);
+      color: var(--text-colour);
       line-height: 2.4rem;
     }
 
@@ -99,45 +99,45 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 400;
-      color: var(--colour-text);
+      color: var(--text-colour);
       line-height: 2.4rem;
 
       &.button {
         position: relative;
         display: inline-block;
         font-weight: 500;
-        color: var(--colour-text);
+        color: var(--text-colour);
         padding: 4px 8px;
         min-width: 64px;
         text-align: center;
-        border-radius: $border-radius-default;
-        background-color: var(--colour-text);
+        border-radius: $border-radius;
+        background-color: var(--text-colour);
         @include box-shadow-default;
 
         &.button-disabled {
-          color: var(--colour-button-background-disabled);
-          background-color: var(--colour-button-disabled);
+          color: var(--link-colour-disabled);
+          background-color: var(--foreground-colour);
           cursor: default;
 
           &:hover {
-            color: var(--colour-button-background-disabled);
-            background-color: var(--colour-button-disabled);
+            color: var(--link-colour-disabled);
+            background-color: var(--foreground-colour);
           }
         }
 
         &:hover {
-          color: $colour-white;
-          background-color: $colour-blue;
-          border-color: $colour-blue;
+          color: var(--text-colour-invert);
+          background-color: var(--link-colour);
+          border-color: var(--link-colour);
         }
       }
 
       &.badge {
         font-size: 1.2rem;
         margin: 0;
-        background-color: var(--colour-background-invert);
-        color: var(--colour-text-invert);
-        border-radius: $border-radius-default;
+        background-color: var(--background-colour-invert);
+        color: var(--text-colour-invert);
+        border-radius: $border-radius;
         padding: 4px 8px;
       }
     }
@@ -146,7 +146,7 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 400;
-      color: var(--colour-text);
+      color: var(--text-colour);
       line-height: 2.4rem;
       margin: 0 0 12px 0;
 
@@ -155,7 +155,7 @@ html {
       }
 
       &.experience-header {
-        color: var(--colour-text-invert);
+        color: var(--text-colour-invert);
         font-weight: 600;
         font-size: 1.6rem;
       }
@@ -165,10 +165,10 @@ html {
       font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       font-weight: 400;
-      color: $colour-blue;
+      color: var(--link-colour);
 
       &:hover {
-        color: $colour-blue;
+        color: var(--link-colour);
         text-decoration: none;
       }
 
@@ -182,7 +182,7 @@ html {
       }
 
       &.inline-link {
-        color: var(--colour-text);
+        color: var(--text-colour);
         font-size: 1.4rem;
 
         &.small {
@@ -194,40 +194,40 @@ html {
         position: relative;
         display: inline-block;
         font-weight: 500;
-        color: var(--colour-text);
+        color: var(--text-colour);
         padding: 4px 8px;
         min-width: 64px;
         text-align: center;
-        background-color: var(--colour-background-darker);
-        border-radius: $border-radius-default;
+        background-color: var(--foreground-colour);
+        border-radius: $border-radius;
         @include box-shadow-default;
 
         &.button-disabled {
-          color: var(--colour-button-background-disabled);
-          background-color: var(--colour-button-disabled);
+          color: var(--link-colour-disabled);
+          background-color: var(--foreground-colour);
           cursor: default;
 
           &:hover {
-            color: var(--colour-button-background-disabled);
-            background-color: var(--colour-button-disabled);
+            color: var(--link-colour-disabled);
+            background-color: var(--foreground-colour);
           }
         }
 
         &:hover {
-          color: $colour-white;
-          background-color: $colour-blue;
-          border-color: $colour-blue;
+          color: var(--text-colour-invert);
+          background-color: var(--link-colour);
+          border-color: var(--link-colour);
         }
       }
 
       &.title-button {
-        color: var(--colour-text);
+        color: var(--text-colour);
 
         &:hover {
-          color: $colour-blue !important;
+          color: var(--link-colour) !important;
 
           .post-title {
-            color: $colour-blue !important;
+            color: var(--link-colour) !important;
           }
         }
       }
@@ -242,10 +242,10 @@ html {
     i {
       font-size: 2.8rem;
       font-weight: 400;
-      color: var(--colour-text);
+      color: var(--text-colour);
 
       &:hover {
-        color: $colour-blue;
+        color: var(--link-colour);
       }
     }
 
@@ -254,7 +254,7 @@ html {
         font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 1.4rem;
         font-weight: 400;
-        color: var(--colour-text);
+        color: var(--text-colour);
         margin: 0 0 2px 0;
       }
 
@@ -307,13 +307,13 @@ html {
             justify-content: center;
             flex-direction: row;
             align-items: center;
-            color: var(--colour-text);
+            color: var(--text-colour);
             margin: 0 8px 0 0;
             height: 32px;
             width: 32px;
 
             &:hover {
-              color: $colour-blue;
+              color: var(--link-colour);
             }
 
             &:last-child {
@@ -338,15 +338,15 @@ html {
               }
 
               .nav-link {
-                color: var(--colour-text);
+                color: var(--text-colour);
                 padding: 0;
 
                 &:hover {
-                  color: $colour-blue;
+                  color: var(--link-colour);
                 }
 
                 &.selected {
-                  color: $colour-blue;
+                  color: var(--link-colour);
                 }
               }
             }
@@ -361,13 +361,13 @@ html {
             justify-content: center;
             flex-direction: row;
             align-items: center;
-            color: var(--colour-text);
+            color: var(--text-colour);
             margin: 0 8px 0 0;
             height: 32px;
             width: 32px;
 
             &:hover {
-              color: $colour-blue;
+              color: var(--link-colour);
             }
 
             &:last-child {
@@ -424,13 +424,13 @@ html {
             justify-content: center;
             flex-direction: row;
             align-items: center;
-            color: var(--colour-text);
+            color: var(--text-colour);
             margin: 0 8px 0 0;
             height: 32px;
             width: 32px;
 
             &:hover {
-              color: $colour-blue;
+              color: var(--link-colour);
             }
 
             &:last-child {
@@ -458,7 +458,7 @@ html {
         max-height: 360px;
   
         &:not(.full-spread) {
-          border-radius: $border-radius-default;
+          border-radius: $border-radius;
         }
   
         &.full-spread {
@@ -546,7 +546,7 @@ html {
           width: 640px;
           position: relative;
           z-index: 1000;
-          border-radius: $border-radius-default;
+          border-radius: $border-radius;
           @include box-shadow-default;
   
           .image-wrapper {
@@ -559,8 +559,8 @@ html {
               background-size: cover;
               background-repeat: no-repeat;
               background-position: center;
-              background-color: $colour-grey;
-              border-radius: $border-radius-default;
+              background-color: var(--link-colour-disabled);
+              border-radius: $border-radius;
             }
           }
         }
@@ -576,10 +576,9 @@ html {
           left: 16px;
           padding: 6px 12px 6px 6px;
           color: white;
-          @include colour-d-black(0.95);
-          border-radius: $border-radius-default;
+          background: rgba(25, 25, 25, .95);
+          border-radius: $border-radius;
           pointer-events: none;
-          @include box-shadow-default;
   
           i {
             font-size: 2rem;
@@ -595,26 +594,26 @@ html {
           height: 350px;
           position: relative;
           z-index: 999;
-          border-top-right-radius: $border-radius-default;
-          border-bottom-right-radius: $border-radius-default;
-          background-color: var(--colour-background-darker);
+          border-top-right-radius: $border-radius;
+          border-bottom-right-radius: $border-radius;
+          background-color: var(--foreground-colour);
           @include box-shadow-default;
   
           &::-webkit-scrollbar {
-            background-color: var(--colour-background-darker);
+            background-color: var(--foreground-colour);
             width: 8px;
-            border-top-right-radius: $border-radius-default;
-            border-bottom-right-radius: $border-radius-default;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
           }
   
           &::-webkit-scrollbar-track {
-            border-top-right-radius: $border-radius-default;
-            border-bottom-right-radius: $border-radius-default;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
           }
   
           &::-webkit-scrollbar-thumb {
-            background-color: var(--colour-button-background-disabled);
-            border-radius: $border-radius-default;
+            background-color: var(--link-colour-disabled);
+            border-radius: $border-radius;
             transition: all .35s ease-in-out;
             -moz-transition: all .35s ease-in-out;
             -webkit-transition: all .35s ease-in-out;
@@ -622,21 +621,21 @@ html {
   
           &:hover {
             &::-webkit-scrollbar {
-              background-color: var(--colour-background-darker);
+              background-color: var(--foreground-colour);
               width: 8px;
-              border-top-right-radius: $border-radius-default;
-              border-bottom-right-radius: $border-radius-default;
+              border-top-right-radius: $border-radius;
+              border-bottom-right-radius: $border-radius;
             }
   
             &::-webkit-scrollbar-track {
-              background-color: var(--colour-background-darker);
-              border-top-right-radius: $border-radius-default;
-              border-bottom-right-radius: $border-radius-default;
+              background-color: var(--foreground-colour);
+              border-top-right-radius: $border-radius;
+              border-bottom-right-radius: $border-radius;
             }
   
             &::-webkit-scrollbar-thumb {
-              background-color: var(--colour-text);
-              border-radius: $border-radius-default;
+              background-color: var(--text-colour);
+              border-radius: $border-radius;
               transition: all .35s ease-in-out;
               -moz-transition: all .35s ease-in-out;
               -webkit-transition: all .35s ease-in-out;
@@ -649,7 +648,7 @@ html {
             a {
               &:hover {
                 .header-title {
-                  color: $colour-blue;
+                  color: var(--link-colour);
                 }
               }
             }
@@ -721,13 +720,13 @@ html {
       overflow-x: scroll;
 
       &::-webkit-scrollbar {
-        background-color: var(--colour-background);
+        background-color: var(--background-colour);
         height: 8px;
       }
 
       &::-webkit-scrollbar-thumb {
-        background-color: var(--colour-button-background-disabled);
-        border-radius: $border-radius-default;
+        background-color: var(--link-colour-disabled);
+        border-radius: $border-radius;
         transition: all .35s ease-in-out;
         -moz-transition: all .35s ease-in-out;
         -webkit-transition: all .35s ease-in-out;
@@ -735,17 +734,17 @@ html {
 
       &:hover {
         &::-webkit-scrollbar {
-          background-color: var(--colour-background);
+          background-color: var(--background-colour);
           height: 8px;
         }
 
         &::-webkit-scrollbar-track {
-          background-color: var(--colour-background);
+          background-color: var(--background-colour);
         }
 
         &::-webkit-scrollbar-thumb {
-          background-color: var(--colour-text);
-          border-radius: $border-radius-default;
+          background-color: var(--text-colour);
+          border-radius: $border-radius;
           transition: all .35s ease-in-out;
           -moz-transition: all .35s ease-in-out;
           -webkit-transition: all .35s ease-in-out;
@@ -800,15 +799,15 @@ html {
             width: 300px;
             padding: 16px;
             margin: 0 16px 0 0;
-            border-radius: $border-radius-default;
-            background-color: var(--colour-background-darker);
+            border-radius: $border-radius;
+            background: var(--foreground-colour);
             @include box-shadow-default;
 
             .item-present {
               position: absolute;
               top: -8px;
               left: -8px;
-              background: $colour-blue;
+              background: var(--link-colour);
               padding: 3px 6px;
               border-radius: .25rem;
               @include box-shadow-default;
@@ -847,7 +846,7 @@ html {
 
                 &.external-link {
                   &:hover {
-                    color: $colour-blue;
+                    color: var(--link-colour);
                   }
                 }
               }
@@ -900,7 +899,7 @@ html {
       z-index: 2000;
       top: 0;
       right: 0;
-      background-color: var(--colour-background-invert);
+      background-color: var(--foreground-colour);
       overflow-x: hidden;
       transition: 0.25s;
       @include box-shadow-default;
@@ -916,7 +915,7 @@ html {
 
         .menu-toggle {
           padding: 8px 8px 8px 32px;
-          color: var(--colour-text-invert);
+          color: var(--text-colour);
 
           &#close {
             position: relative;
@@ -925,7 +924,7 @@ html {
           }
 
           i {
-            color: var(--colour-text-invert);
+            color: var(--text-colour);
           }
         }
       }
@@ -935,18 +934,18 @@ html {
           font-family: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-size: 1.8rem;
           font-weight: 700;
-          color: var(--colour-text-invert);
+          color: var(--text-colour);
           padding: 8px 8px 8px 32px;
           text-decoration: none;
           display: block;
           transition: 0.25s;
 
           &:hover {
-            color: $colour-blue;
+            color: var(--link-colour);
           }
 
           &.selected {
-            color: $colour-blue;
+            color: var(--link-colour);
           }
         }
       }
@@ -973,7 +972,7 @@ html {
 
         .related-post {
           background-color: #191919;
-          border-radius: $border-radius-default;
+          border-radius: $border-radius;
           @include box-shadow-default;
           padding: 12px;
           margin-bottom: 16px;
@@ -1025,7 +1024,7 @@ html {
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: $colour-d-black;
+      background-color: $D2;
       z-index: 1001;
 
       &.show {
@@ -1045,12 +1044,12 @@ html {
 
         &:hover {
           i {
-            color: $colour-blue;
+            color: var(--link-colour);
           }
         }
 
         i {
-          color: $colour-white;
+          color: var(--text-colour-invert);
         }
 
         .carousel.close {
@@ -1078,7 +1077,7 @@ html {
 
           &:hover {
             i {
-              color: $colour-blue;
+              color: var(--link-colour);
             }
           }
 
@@ -1095,7 +1094,7 @@ html {
           }
 
           i {
-            color: $colour-white;
+            color: var(--text-colour-invert);
           }
         }
 
@@ -1112,7 +1111,7 @@ html {
             max-width: 1024px;
             margin-left: 64px;
             margin-right: 64px;
-            border-radius: $border-radius-default;
+            border-radius: $border-radius;
             @include box-shadow-default;
             background-size: cover;
             background-repeat: no-repeat;
