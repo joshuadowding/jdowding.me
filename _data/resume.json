@@ -1,19 +1,19 @@
 [
   {
-    "position": "President & Editor-in-Chief",
-    "company": "The Ruskin Journal",
-    "date": "Sep. 2019 - Present",
-    "location": "Cambridge, Cambridgeshire, UK",
-    "term": "Volunteer (Fixed-Term, Volunteer)",
-    "type": "present"
-  },
-  {
     "position": "Contract Software Developer",
     "company": "Esperus Systems",
     "date": "Dec. 2019 - Jan. 2020",
     "location": "London, Greater London, UK",
     "term": "Contract (Fixed-Term, Full-Time)",
     "type": "past"
+  },
+  {
+    "position": "President & Editor-in-Chief",
+    "company": "The Ruskin Journal",
+    "date": "Sep. 2019 - Present",
+    "location": "Cambridge, Cambridgeshire, UK",
+    "term": "Volunteer (Fixed-Term, Volunteer)",
+    "type": "present"
   },
   {
     "position": "MSc Computer Science",
@@ -40,7 +40,7 @@
     "type": "past"
   },
   {
-    "position": "Contract Copywriter",
+    "position": "Website Administrator",
     "company": "Allweathers",
     "date": "Jan. 2018 - Apr. 2018",
     "location": "Billericay, Essex, UK",
