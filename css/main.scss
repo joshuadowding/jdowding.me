@@ -840,12 +840,6 @@ html {
                 font-weight: 600;
                 font-size: 1.6rem;
                 line-height: 2.2rem;
-
-                &.external-link {
-                  &:hover {
-                    color: var(--link-colour);
-                  }
-                }
               }
 
               .header-subtitle {
@@ -982,46 +976,67 @@ html {
       }
 
       .related-posts {
-        h4 {
+        .list-title {
           font-weight: 700;
+          margin: 0 0 16px 0;
         }
 
         .related-post {
           background-color: var(--foreground-colour);
           border-radius: $border-radius;
+          padding: 16px;
+          margin: 0 0 16px 0;
           @include box-shadow-default;
-          padding: 12px;
-          margin-bottom: 16px;
 
           .post-header {
-            margin-bottom: 4px;
+            margin: 0 0 8px 0;
 
-            h5 {
-              margin-top: 4px;
-              margin-bottom: 4px;
-              color: var(--text-colour) !important;
+            .post-title {
               font-weight: 600;
+              font-size: 1.6rem;
+              line-height: 2.2rem;
+              margin: 0;
+              color: var(--text-colour);
             }
 
-            p {
-              color: var(--text-colour)  !important;
+            .post-metadata {
+              font-weight: 600;
+              font-size: 1.2rem;
+              line-height: 1.2rem;
+              margin: 8px 0 0 0;
+              color: var(--text-colour);
+
+              span {
+                font-weight: 600;
+                font-size: 1.2rem;
+                line-height: 1.2rem;
+              }
             }
           }
 
           .post-excerpt {
             p {
+              margin: 0;
+              font-size: 1.2rem;
+              line-height: 1.8rem;
+              color: var(--text-colour);
+
               &:empty {
                 margin: 0;
               }
+            }
 
-              color: var(--text-colour)  !important;
+            a, span {
+              font-size: 1.2rem;
+              line-height: 1.8rem;
             }
           }
-        }
 
-        &:first-child {
-          h4 {
-            margin-top: 0;
+          .post-link {
+            display: block;
+            margin: 8px 0 0 0;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
           }
         }
       }

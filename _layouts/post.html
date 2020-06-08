@@ -30,7 +30,7 @@ layout: default
         </div>
         <div class="col-lg-4">
           <div class="related-posts">
-            <h4>Related Articles</h4>
+            <h4 class="list-title">Related Articles</h4>
 
             {% assign maxRelated = 4 %}
             {% assign minCommonTags =  2 %}
@@ -55,18 +55,18 @@ layout: default
               {% if sameTagCount >= minCommonTags %}
                 <div class="related-post">
                   <div class="post-header">
-                    <a href="{{ site.baseurl }}{{ post.url }}">
-                      <h5>{{ post.title }}</h5>
-                    </a>
-                    <p>
+                    <h5 class="post-title">{{ post.title }}</h5>
+                    <p class="post-metadata">
                       {{ page.date | date: "%B %e, %Y" }}
                     </p>
                   </div>
                   <div class="post-excerpt">
-                    <p>
-                      {{ post.excerpt | truncatewords:32 }}
-                    </p>
+                    {{ post.excerpt | truncatewords:32 }}
                   </div>
+
+                  <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">
+                    Read More ->
+                  </a>
                 </div>
 
                 {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
