@@ -126,8 +126,8 @@ $(document).ready(function () {
       });
     });
   } else {
-    $("#nav-link-scribbles").addClass("selected");
-    $("#sidenav-link-scribbles").addClass("selected");
+    $("#nav-link-scraps").addClass("selected");
+    $("#sidenav-link-scraps").addClass("selected");
   }
 });
 
