@@ -665,6 +665,10 @@ html {
             padding: 12px 24px 0 24px;
           }
 
+          .post-link {
+            padding: 12px 24px 0 24px;
+          }
+
           .post-items {
             display: flex;
             flex-direction: column;
@@ -950,6 +954,8 @@ html {
       }
 
       .pagination {
+        justify-content: flex-end;
+
         .page_number {
           display: flex;
           justify-content: center;
@@ -981,7 +987,7 @@ html {
         }
 
         .related-post {
-          background-color: #191919;
+          background-color: var(--foreground-colour);
           border-radius: $border-radius;
           @include box-shadow-default;
           padding: 12px;
@@ -993,18 +999,12 @@ html {
             h5 {
               margin-top: 4px;
               margin-bottom: 4px;
-              color: white !important;
+              color: var(--text-colour) !important;
               font-weight: 600;
             }
 
             p {
-              color: white !important;
-            }
-          }
-
-          .post-tags {
-            span {
-              color: white !important;
+              color: var(--text-colour)  !important;
             }
           }
 
@@ -1014,7 +1014,7 @@ html {
                 margin: 0;
               }
 
-              color: white !important;
+              color: var(--text-colour)  !important;
             }
           }
         }
