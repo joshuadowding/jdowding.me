@@ -189,6 +189,7 @@
       {
         "id" : "item-5",
         "title" : "Scribe",
+        "link" : "https://github.com/joshuadowding/scribe",
         "content": "An alternative word processor that uses 'content blocks' to break-down documents into 'cards and stacks'. Written in JavaScript (NodeJS) and Electron.",
         "type" : "Desktop Application",
         "company" : "Dissertaion Project"
