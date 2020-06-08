@@ -391,33 +391,30 @@ html {
 
       .footer-inner {
         display: flex;
+        position: relative;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         height: 92px;
         width: 100%;
 
-        .footer-title {
-          .footer-copyright {
-            font-size: 1.4rem;
+        .footer-copyright {
+          text-align: center;
+          margin: 0;
+
+          p, a, span {
+            font-size: 1.2rem;
+            line-height: 1.8rem;
             font-weight: 500;
             margin: 0;
-
-            #copyright-year {
-              font-size: 1.4rem;
-              font-weight: 500;
-            }
           }
-        }
-
-        .footer-separator {
-          width: auto;
-          flex-grow: 1;
-          margin: 0 0 0 16px;
         }
 
         .footer-menu {
           display: flex;
           margin: 0 0 0 16px;
+          position: absolute;
+          right: 0;
 
           .link-icon {
             display: flex;
@@ -456,20 +453,24 @@ html {
         margin: 24px 0;
         min-height: 256px;
         max-height: 360px;
-  
+
         &:not(.full-spread) {
           border-radius: $border-radius;
         }
-  
+
         &.full-spread {
           display: block;
           max-height: unset;
           min-height: unset;
           margin: 0 !important;
-  
+          background-color: var(--foreground-colour);
+          border-radius: $border-radius;
+          padding: 32px;
+          @include box-shadow-default;
+
           .post-header {
-            margin-bottom: 16px;
-  
+            margin: 0 0 16px 0;
+
             .post-title {
               margin: 0;
             }
@@ -477,18 +478,15 @@ html {
             .post-metadata {
               display: flex;
               align-items: center;
-              margin: 8px 0 0 0;
+              margin: 16px 0 16px 0;
 
               .post-date {
-                margin: 0 12px 0 0;
-              }
-  
-              .reading-time {
-                margin: 0 4px 0 0;
+                font-weight: 600;
+                margin: 0;
               }
             }
           }
-  
+
           .post-body {
             height: unset;
             width: 100% !important;
@@ -496,27 +494,22 @@ html {
             padding: 0;
             overflow: hidden;
             background-color: unset;
-  
+
             .post-content {
               margin: 0;
-
-              h2, h3, h4, h5, h6 {
-                font-weight: 600;
-                margin: 16px 0 8px;
-              }
             }
           }
-  
+
           .post-image {
             width: 100%;
             height: 430px;
             margin: 0;
             margin-bottom: 16px;
-  
+
             .image-wrapper {
               width: 100%;
               height: 430px;
-  
+
               .image {
                 background-size: cover;
                 width: 100%;
