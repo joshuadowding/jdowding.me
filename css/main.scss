@@ -462,7 +462,7 @@ html {
           display: block;
           max-height: unset;
           min-height: unset;
-          margin: 0 !important;
+          margin: 0;
           background-color: var(--foreground-colour);
           border-radius: $border-radius;
           padding: 32px;
@@ -659,7 +659,7 @@ html {
           }
 
           .post-link {
-            padding: 12px 24px 0 24px;
+            padding: 12px 24px 12px 24px;
           }
 
           .post-items {

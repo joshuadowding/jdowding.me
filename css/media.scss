@@ -1,5 +1,6 @@
 ---
 ---
+@import 'common';
 
 html {
   body {
@@ -29,6 +30,8 @@ html {
           max-height: unset;
 
           &.full-spread {
+            margin: 0 0 32px 0;
+
             .post-image {
               margin: 0 0 32px 0;
             }
@@ -65,10 +68,32 @@ html {
           }
 
           .post-body {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
             max-height: 350px;
             height: unset;
-            width: 95%;
+            width: 100%;
           }
+        }
+      }
+
+      .row-wrapper {
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+
+        .row-header {
+          width: 100%;
+
+          .header {
+            text-align: center;
+          }
+        }
+
+        .row-content {
+          width: 100%;
         }
       }
     }
@@ -110,8 +135,6 @@ html {
       .post-wrapper {
         .post {
           .post-image {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
             height: 256px;
 
             .image-wrapper {
@@ -119,8 +142,6 @@ html {
 
               .image {
                 height: 256px;
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
               }
             }
           }
@@ -156,26 +177,8 @@ html {
         .sidenav-nav {
           .nav-item {
             padding: 8px 32px 8px 32px;
-            text-align: right;
-          }
-        }
-      }
-
-      .row-wrapper {
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-
-        .row-header {
-          width: 100%;
-
-          .header {
             text-align: center;
           }
-        }
-
-        .row-content {
-          width: 100%;
         }
       }
     }
