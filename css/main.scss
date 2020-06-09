@@ -441,10 +441,6 @@ html {
     .post-wrapper {
       position: relative;
 
-      &:not(:last-child) {
-        margin: 0 0 32px 0;
-      }
-
       .post {
         display: flex;
         position: relative;
@@ -467,6 +463,10 @@ html {
           border-radius: $border-radius;
           padding: 32px;
           @include box-shadow-default;
+
+          &:last-child {
+            margin: 0;
+          }
 
           .post-header {
             margin: 0 0 16px 0;
