@@ -441,6 +441,10 @@ html {
     .post-wrapper {
       position: relative;
 
+      &:not(:last-child) {
+        margin: 0 0 32px 0;
+      }
+
       .post {
         display: flex;
         position: relative;
