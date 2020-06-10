@@ -7,7 +7,7 @@
         "title": "The Ruskin Journal",
         "image": "/img/portfolio/journal/ruskin-journal-website-1.jpg",
         "link": "https://ruskinjournal.com/",
-        "content": "In addition to writing, editing, and curating for the magazine's website, promoting the magazine to students, working with local businesses, and conducting interviews, I also led several other projects (*somehow*):",
+        "content": "In addition to writing, editing, and curating for the magazine's website, promoting the magazine to students, working with local businesses, hosting events, and conducting interviews, I also led several other projects (somehow), including:",
         "sub-items" : [
           {
             "title" : "ruskinjournal.com",
@@ -38,7 +38,7 @@
         "title": "Esperus Systems",
         "image": "/img/portfolio/website/website-1-1.jpg",
         "link": "https://esperus.com/",
-        "content": "In addition to providing both first- and second-line support to their business clients, as well as both technical advice and support to the directorship, I also worked on a wide variety of different **full-stack** projects, including:",
+        "content": "In addition to providing both first- and second-line support to the company's business clients, I also led the development on a number of different full-stack projects, including:",
         "sub-items" : [
           {
             "title" : "esperus.com",
@@ -108,6 +108,27 @@
                 "name" : "SQL Server"
               }
             ]
+          },
+          {
+            "title" : "B2B Integrations",
+            "content" : "integrations between the company's wholesale clients and it's custom stock management system.",
+            "tags" : [
+              {
+                "name" : ".NET"
+              },
+              {
+                "name" : "VB.NET"
+              },
+              {
+                "name" : "RESTful Web API"
+              },
+              {
+                "name" : "Windows Forms"
+              },
+              {
+                "name" : "SQL Server"
+              }
+            ]
           }
         ]
       },
@@ -129,7 +150,7 @@
             "image" : "/img/portfolio/portals/portals-4-1.jpg"
           }
         ],
-        "content": "As a trainee, I contributed to a number of different **full-stack** and **front-end** (B2B) projects, including:",
+        "content": "As I began to learn the ropes, I also began to work on a wide variety of different projects, including:",
         "sub-items" : [
           {
             "title" : "Kaleidoscope",
@@ -166,6 +187,9 @@
                 "name" : "Java EE"
               },
               {
+                "name" : "JavaServer Pages"
+              },
+              {
                 "name" : "Sass"
               },
               {
@@ -176,7 +200,22 @@
               },
               {
                 "name" : "Oracle SQL"
+              }
+            ]
+          },
+          {
+            "title" : "Data Transformation Tools",
+            "content" : "a graphical application to help transform XML-formated data into a proprietary format.",
+            "tags" : [
+              {
+                "name" : "Java SE"
               },
+              {
+                "name" : "Swing"
+              },
+              {
+                "name" : "CloverETL (CloverDX)"
+              }
             ]
           }
         ]

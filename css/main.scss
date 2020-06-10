@@ -660,15 +660,27 @@ html {
 
           .post-excerpt {
             padding: 12px 24px 0 24px;
+
+            &:last-child {
+              padding: 12px 24px 12px 24px;
+            }
           }
 
           .post-link {
-            padding: 12px 24px 12px 24px;
+            padding: 12px 24px 0 24px;
+
+            &:last-child {
+              padding: 12px 24px 12px 24px;
+            }
           }
 
           .post-items {
             display: flex;
             flex-direction: column;
+
+            &:last-child {
+              padding-bottom: 12px;
+            }
 
             .sub-item {
               padding: 12px 24px 0 24px;
